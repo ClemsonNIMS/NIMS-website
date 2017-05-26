@@ -1,2 +1,2 @@
-# ClemsonNIMS.github.io
+ClemsonNIMS.github.io
 Connecting students with resources
