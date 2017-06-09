@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NIMS Partners</title>
+	
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/nivo-lightbox.css" rel="stylesheet" />
+	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+	<link href="css/animations.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+	<link href="color/default.css" rel="stylesheet" />
+    <!-- =======================================================
+        Theme Name: Bocor
+        Theme URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
+        Author: BootstrapMade
+        Author URL: https://bootstrapmade.com
+    ======================================================= -->
+    <script id="org-preview-template" type="text/html">
+	<div class="col-md-4">
+		<div class="animated fadeInDown animated">
+				<div class="org-box">
+					<div class="org-desc">						
+						<h5>{{orgName}}</h5>
+					<div class="divider-header"></div>
+						<p>
+							{{orgDescription}}
+						</p>	
+					</div>
+				</div>
+		</div>
+	</div>
+	</script>
+
+	<script type="text/template" id="test">
+
+	<div class="col-md-4">
+		<div class="animated fadeInDown animated">
+				<div class="org-box">
+					<div class="org-desc">						
+						<h5>{{orgName}}</h5>
+					<div class="divider-header"></div>
+						<p>
+							{{orgDescription}}
+						</p>	
+					</div>
+				</div>
+		</div>
+	</div>
+	</script>
+	
+	<script type="text/javascript" src="js/mustache.js"> </script>
+	<script>
+		var view = {
+        	orgName : "Joe",
+        	orgDescription : "Web Developer"
+        };
+
+        function makeRows(){
+       		var template = document.getElementById("test").innerHTML;
+        	var output = Mustache.render(template, view);
+        	document.getElementById('orgs-rows').innerHTML = output;
+        	//$('orgs-rows').html(output);
+    	}
+    </script>
+
+</head>
+
+<body id="body" onload="makeRows()">
+	<section class="home-section color-dark bg-gray">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div>
+					<div class="section-heading text-center">
+					<h2 class="h-bold">Innovation Organizations</h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="text-center">
+		<div class="container" >
+    	<div class="row animatedParent" id="orgs-rows">	
+    	
+		<!--
+        
+            <div class="col-md-4">
+				<div class="animated fadeInDown animated">
+				<a href="orgs.html">
+                	<div class="org-box">
+						<div class="org-desc">						
+							<h5>Makerspace</h5>
+							<div class="divider-header"></div>
+							<p>
+							3D printing, lasers, Owen Phillips - open to all. What more could you need?
+							</p>	
+						</div>
+                	</div>
+                </a>
+				</div>
+            </div>
+			<div class="col-md-4">
+				<div class="animated fadeInDown slow">
+				<a href="orgs.html">
+                	<div class="org-box" href="index">
+						<div class="org-desc">
+							<h5>DML Labs</h5>
+							<div class="divider-header"></div>
+							<p>
+							The Digital Media and Learning Lab in Tillman provides a space to work on application design, video production, music mixing and virtual reality applications. It's also filled to the brim with toys and gadgets for those much needed breaks!
+							</p>
+						</div>	
+                	</div>
+                </a>
+				</div>
+            </div>
+			<div class="col-md-4">
+				<div class="animated fadeInDown slower">
+				<a href="#">
+                	<div class="org-box">
+						<div class="org-desc">
+							<h5>DEN</h5>
+							<div class="divider-header"></div>
+							<p>
+							Clemson's Design and Entrepreneurship Network gives students the confidence and knowledge necessary to start their own buisness with no prior experience. Bring those shower thoughts and make some money!
+							</p>
+						</div>
+				</a>
+				</div>
+		-->
+		</div>
+        </div>		
+		</div>
+	
+	</section>
+
+	<script src="js/jquery.min.js"></script>	 
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.easing.min.js"></script>	
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/nivo-lightbox.min.js"></script>
+	
+    <script src="js/custom.js"></script>
+	<script src="js/css3-animate-it.js"></script>
+</body>
