@@ -1,25 +1,22 @@
 function buildPreviewCards(){
-	$.getJSON("orgData.json", buildPreviewCardsHelper);
+	$.getJSON("/assets/orgData.json", buildPreviewCardsHelper);
 }
 
 function buildPreviewCardsHelper(orgs){
 	$.get("templates.html", function(templates){
-		var rowSize = 3;
-    	var template = $(templates).filter("#org-preview-template").html();
-    	var target = parent.document.getElementById("org-previews");
-    	var rowContent = "";
-        console.log("start");
-    	for(ndx=0; ndx<orgs.length+rowSize; ndx+=rowSize){
-            console.log("ndx");
-    		rowContent += "<div class='row animatedParent'>";
-    		for(col=0; col<rowSize && ndx+col<orgs.length; col++){
-                console.log(ndx+col);
-				var output = Mustache.render(template, orgs[ndx+col]);
-        		rowContent += output;
+    	var template = $(templates).filter("#org-preview-template").html(); 
+    	var content = "<div class='row'>";
+        //console.log("start");
+    	for(ndx=0; ndx<orgs.length; ndx++){
+    		content += Mustache.render(template, orgs[ndx]);
         	}
-        	target.innerHTML += (rowContent + "</div>");
-        	rowContent = "";
-        }
+        parent.document.getElementById("org-previews").innerHTML = (content + '</div>');
+    });
+}
 
+function buildNavbar(){
+    $.get("templates.html", function(templates){
+        var template = $(templates).filter("#navbar-template").html();
+        parent.document.getElementById("navbar").innerHTML = template;
     });
 }
