@@ -13,95 +13,72 @@
 	
 	<!-- css -->
 	<link rel="stylesheet" href="/assets/main.css">
-	
-	<!-- =======================================================
-	    Theme Name: Bocor
-	    Theme URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
-	    Author: BootstrapMade
-	    Author URL: https://bootstrapmade.com
-	======================================================= -->
-
+  <link rel="stylesheet" href="/assets/css/common.css">
 </head>
 
-<body id="page-top">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+<body id="body" onload="buildNavbar()">
+  <div id=navbar>
+  <!-- template will build navbar -->
+  </div>
 
-    <!-- Navbar Start -->
-        <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">NIMS</a>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#orgs">Organizations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Resources</a>
-          </li>
-        </ul>
-        <!-- Search not yet enabled
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        -->
-      </div>
-    </nav>
-<!-- Navbar End -->
-
-<!-- About Start -->
-<section id="about" class="home-section color-dark bg-white">
-    <div class="container marginbot-50">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="animatedParent">
-            <div class="section-heading text-center animated bounceInDown">
-              <h2 class="h-bold">Our Mission</h2>
-              <div class="divider-header"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+  <div class="header">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 animatedParent">
-          <div class="text-center">
-            <p>
-              NIMS seeks to connect students with resources they might not be aware of. Clemson has so many amazing groups, clubs, shops and opportunities that it's hard to keep track of them all. That's where we come in; your one-stop-shop for all things making, learning and playing at Clemson.
-            </p>
-            <p>
-              We also provide services for student organizations and clubs. We want to connect people with a passion to create and use this energy to drive improvements that benefit everyone. NIMS aims to champion student groups and leverage the Network to get dedicated space, resources and funding. If two heads are better than one, we're shooting for 2000.
-            </p>
-            <a href="#service" class="btn btn-skin btn-scroll">What we do</a>
-          </div>
-        </div>
-      </div>
+      <h1>{{ site.fullTitle }}</h1>
+    </div>
+  </div>
+  
+  <!-- About Start -->
+  <section id="about" class="section">
+    <div class="container">
+      <h1 class="section-header">Our Mission</h1>
+      <p>
+        NIMS seeks to connect students with resources they might not be aware of. Clemson has so many amazing groups, clubs, shops and opportunities that it's hard to keep track of them all. That's where we come in; your one-stop-shop for all things making, learning and playing at Clemson.
+      </p>
+      <p>
+        We also provide services for student organizations and clubs. We want to connect people with a passion to create, and use this energy to drive  improvements that benefit everyone. NIMS aims to champion student groups and leverage the Network to get dedicated space, resources and funding.
+      </p>
     </div>
   </section>
-	<!-- About End -->
+  <!-- About End -->
+
+  <!-- Resources Start -->
+  <section id="about" class="section secondary">
+    <div class="container">
+      <h1 class="section-header">Available Resources</h1>
+      <p>
+      Our main focus is facilitating the exposure of resources available to Clemson University students. We have conducted extensive interviews to identify spaces open to student from any major and the tools they provide. Whether you're looking for woodworing tools, a space to record your music video, or where to 3D print a model of your own head, NIMS has got you covered. Take a look out our resources section to begin exploring!
+      </p>
+    </div>
+  </section>
+  <!-- Resources End -->
+
+  <!-- Events Start -->
+  <section id="events" class="section last-child">
+    <div class="container">
+      <h1 class="section-header">Events</h1>
+      <p>
+      We love to show off all the amazing things Clemson students are making, and have hosted several events aimed at doing just that. Since NIMS is primarily a network we strive to promote interaction between groups who are designing combat robots, innovating in the education field, or just having fun building! Take a look at some of the events we've put on, and sign up on our newsletter to hear about our future plans.
+      </p>
+    </div>
+  </section>
+  <!-- Events End -->
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+      Clemson Network for Innovation and Marketable Skills<br>
+      NIMS@clemson.edu
+      </p>
+    </div>
+  </footer>
+  <!-- Footer End -->
 
 	<!-- Core JavaScript Files -->
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/tether/dist/js/tether.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+  <script src="assets/js/template-builder.js"></script>
 </body>
 
 </html>
