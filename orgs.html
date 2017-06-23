@@ -1,70 +1,47 @@
-
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>NIMS Partners</title>
 	
     <!-- css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/nivo-lightbox.css" rel="stylesheet" />
-	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-	<link href="css/animations.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-	<link href="color/default.css" rel="stylesheet" />
-    <!-- =======================================================
-        Theme Name: Bocor
-        Theme URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
-        Author: BootstrapMade
-        Author URL: https://bootstrapmade.com
-    ======================================================= -->
-	
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/common.css">
 	
 </head>
 
-<body id="body" onload="buildPreviewCards()">
-	<section class="home-section color-dark bg-gray">
-		<div class="container marginbot-50">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div>
-					<div class="section-heading text-center">
-					<h2 class="h-bold">Innovation Organizations</h2>
-					<div class="divider-header"></div>
-					</div>
-					</div>
-				</div>
-			</div>
+<body onload="buildNavbar()">
+	<div id="navbar">
+	</div>
 
-		</div>
-	</section>
+	<div class="header">
+      <div class="container">
+      	<h1>Innovative Organizations</h1>
+      </div>
+    </div>
 
-	<section class="home-section color-dark bg-gray">
-		<div class="text-center">
-		<div class="container">
-		<div id="org-previews">
-		<!-- Script will place org preview cards 3 to a row -->
-		</div>
-		</div>
-		</div>
-	</section>
+    <div class="container">
+      <div class="card-deck" id="org-previews">
+      </div>
+    </div>
 
-	<script src="js/mustache.js"></script>
-	<script src="js/template-builder.js"></script>
+  <!-- Core JavaScript Files -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/tether/dist/js/tether.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+  <script src="assets/js/mustache.js"></script>
+  <script src="assets/js/template-builder.js"></script>
 
-	<script src="js/jquery.min.js"></script>	 
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.sticky.js"></script>
-    <script src="js/jquery.easing.min.js"></script>	
-	<script src="js/jquery.scrollTo.js"></script>
-	<script src="js/jquery.appear.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="js/nivo-lightbox.min.js"></script>
-	<script src="js/css3-animate-it.js"></script>
+  <!-- Page Building -->
+  <script type="text/javascript">
+  	buildPreviewCards();
+  </script>
+
 </body>
