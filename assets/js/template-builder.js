@@ -20,3 +20,10 @@ function buildNavbar(){
         parent.document.getElementById("navbar").innerHTML = template;
     });
 }
+
+function buildFooter(){
+    $.get("templates.html", function(templates){
+        var template = $(templates).filter("#footer-template").html();
+        parent.document.getElementById("footer").innerHTML = template;
+    });
+}
