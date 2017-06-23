@@ -5,12 +5,12 @@ function buildPreviewCards(){
 function buildPreviewCardsHelper(orgs){
 	$.get("templates.html", function(templates){
     	var template = $(templates).filter("#org-preview-template").html(); 
-    	var content = "<div class='row'>";
+    	var content = "";
         //console.log("start");
     	for(ndx=0; ndx<orgs.length; ndx++){
     		content += Mustache.render(template, orgs[ndx]);
         	}
-        parent.document.getElementById("org-previews").innerHTML = (content + '</div>');
+        parent.document.getElementById("org-previews").innerHTML = (content);
     });
 }
 

@@ -1,15 +1,32 @@
 <script type="text/template" id="org-preview-template">
-  <div class="col-sm-6 col-md-4">
     <div class="card mb-3">
-      <div class="card-block">
-	    <h4 class="card-title">{{name}}</h4>
+      	<div class="card-header">
+    	  <ul class="nav nav-tabs card-header-tabs">
+    	    <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#info-card-tab{{uuid}}">Info</a>
+            </li>
+            <li class="nav-item">
+        	  <a class="nav-link" data-toggle="tab" href="#resource-card-tab{{uuid}}">Resources</a>
+        	</li>
+    	  </ul>
+    	</div>
+    	<div class="card-block">
+	      <h4 class="card-title">{{name}}</h4>
 		  <div class="divider-header"></div>
-		    <p class="card-text">
-			  {{shortDescription}}
-			</p>	
-	   </div>
-	</div>
-  </div> 
+		  <div class="tab-content">
+  	        <div class="tab-pane active" id="info-card-tab{{uuid}}" role="tabpanel">
+  	  	      <p class="card-text">
+		      {{shortDescription}}
+		      </p>	
+  	        </div>
+  	        <div class="tab-pane" id="resource-card-tab{{uuid}}" role="tabpanel">
+  	  	      <p class="card-text">
+		      Resources
+		      </p>	
+  	        </div>
+  	      </div>
+	    </div>
+	</div>	
 </script>
 
 <script type="text/template" id="navbar-template">
