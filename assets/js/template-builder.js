@@ -1,29 +1,34 @@
 function buildPreviewCards(){
-	$.getJSON("/assets/orgData.json", buildPreviewCardsHelper);
-}
+	$.getJSON("/assets/orgData.json", function(orgs){
+      $.get("templates.html", function(templates){
+        var template = $(templates).filter("#org-preview-template").html(); 
+        var $content = $("<div class='card-deck'></div>");
+        for(ndx=0; ndx<orgs.length; ndx++){
+          var $card = $(Mustache.render(template, orgs[ndx]));
+          var $list = $("<ul>");
+          $.each(orgs[ndx].resources, function(index, value){
+            $list.append($("<li>"+value+"</li>"));
+          });
+          $list.append($("</ul>"));
 
-function buildPreviewCardsHelper(orgs){
-	$.get("templates.html", function(templates){
-    	var template = $(templates).filter("#org-preview-template").html(); 
-    	var content = "";
-        //console.log("start");
-    	for(ndx=0; ndx<orgs.length; ndx++){
-    		content += Mustache.render(template, orgs[ndx]);
-        	}
-        parent.document.getElementById("org-previews").innerHTML = (content);
+          $card.find("#resource-card-tab" + orgs[ndx].uuid).append($list);
+          $content.append($card);
+        }
+        $("#org-previews").append($content);
+      });
     });
 }
 
 function buildNavbar(){
     $.get("templates.html", function(templates){
-        var template = $(templates).filter("#navbar-template").html();
-        parent.document.getElementById("navbar").innerHTML = template;
+        var $template = $(templates).filter("#navbar-template").html();
+        $("#navbar").append($template);
     });
 }
 
 function buildFooter(){
     $.get("templates.html", function(templates){
-        var template = $(templates).filter("#footer-template").html();
-        parent.document.getElementById("footer").innerHTML = template;
+        var $template = $(templates).filter("#footer-template").html();
+        $("#footer").append($template);
     });
 }
