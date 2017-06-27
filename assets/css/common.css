@@ -39,3 +39,6 @@
     text-align: center;
     background-color: #2a2730;
 }
+.card.even-spacing {
+  margin: 0rem 1rem 1rem 1rem;
+}
