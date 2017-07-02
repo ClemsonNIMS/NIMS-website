@@ -22,16 +22,39 @@
 	</div>
 
 	<div class="header">
-      <div class="container">
-      	<h1>Innovative Organizations</h1>
+    <div class="container">
+    	<h1>Innovative Organizations</h1>
+
+      <p>
+        <button class="btn btn-secondary" type="button" onclick="toggle('filters')">
+          Filter
+        </button>
+      </p>
+      <div class="collapse filter" id="filters">
+        <a onclick="filterResources('')">
+          All
+        </a>
+        <a class="filter" onclick="filterResources('Test1a')">
+          Test1a
+        </a>
+        <a class="filter" onclick="filterResources('Test2a')">
+          Test2a
+        </a>
+        <a class="filter" onclick="filterResources('Test3a')">
+          Test3a
+        </a>
+        <a class="filter" onclick="filterResources('Test4a')">
+          Test4a
+        </a>
       </div>
-    </div>
+    </div>    
+  </div>
 
-    <div class="container org-spacing" id="org-previews">
-    </div>
-
-    <div id="footer">
-    </div>
+  <div class="container org-spacing" id="org-previews">
+  </div>
+  
+  <div id="footer">
+  </div>
 
   <!-- Core JavaScript Files -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -39,6 +62,7 @@
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
   <script src="assets/js/mustache.js"></script>
   <script src="assets/js/template-builder.js"></script>
+  <script src="assets/js/filters.js"></script>
 
   <!-- Page Building -->
   <script type="text/javascript">

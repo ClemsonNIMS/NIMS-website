@@ -5,9 +5,9 @@ function buildPreviewCards(){
         var $content = $("<div class='card-deck'></div>");
         for(ndx=0; ndx<orgs.length; ndx++){
           var $card = $(Mustache.render(template, orgs[ndx]));
-          var $list = $("<ul>");
+          var $list = $("<ul class='resource-list'>");
           $.each(orgs[ndx].resources, function(index, value){
-            $list.append($("<li>"+value+"</li>"));
+            $list.append($("<li class='"+value.toLowerCase()+"'>"+value+"</li>"));
           });
           $list.append($("</ul>"));
 
