@@ -1,4 +1,23 @@
+/* Main Section Blocks and Containers */
+.section {
+  padding-bottom: 50px;
+}
+.section.last-child {
+  padding-bottom: 0;
+}
+.section-header {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: .08rem solid #eee;
+}
+.container.org-spacing {
+  padding: 2rem 0rem 2rem 0rem;
+}
+.bg-grey {
+  background: #f7f7f7;
+}
 
+/* Header and Footer */
 .header {
   position: relative;
   padding: 2rem 0rem;
@@ -15,32 +34,34 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F66733', endColorstr='#f87f54', GradientType=0);
   background-repeat: repeat-x;
 }
-
-.section {
-  padding-bottom: 50px;
-}
-.bg-grey {
-  background: #f7f7f7;
-}
-.section.last-child {
-  padding-bottom: 0;
-}
-.section-header {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  border-bottom: .08rem solid #eee;
-}
 .footer {
-    padding-top: 1.8rem;
-    padding-bottom: 1.3rem;
-    color: #99979c;
-    text-align: center;
-    background-color: #2a2730;
+  padding-top: 1.8rem;
+  padding-bottom: 1.3rem;
+  color: #99979c;
+  text-align: center;
+  background-color: #2a2730;
 }
+
+/* Cards */
 .card.even-spacing {
   margin: 0rem 1rem 1rem 1rem;
 }
-.container.org-spacing {
-  padding: 2rem 0rem 2rem 0rem;
+.card.filter {
+  color: #000000; 
+  background-color: #ffffff;
 }
+
+/* Buttons */
+.collapse.filter {
+  /* Allows child text to be solid */
+  background-color:rgba(255,255,255,.4);
+  
+}
+
+/* Links */
+.a.filter {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
 
