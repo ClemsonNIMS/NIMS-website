@@ -30,22 +30,28 @@
           Filter
         </button>
       </p>
-      <div class="collapse filter" id="filters">
-        <a onclick="filterResources('')">
-          All
-        </a>
-        <a class="filter" onclick="filterResources('Test1a')">
-          Test1a
-        </a>
-        <a class="filter" onclick="filterResources('Test2a')">
-          Test2a
-        </a>
-        <a class="filter" onclick="filterResources('Test3a')">
-          Test3a
-        </a>
-        <a class="filter" onclick="filterResources('Test4a')">
-          Test4a
-        </a>
+      <div class="container filter" id="filters" style="display: none;">
+        <div class="row">
+          <div class="col" onclick="filterResources('')">All</div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <div class="filter-panel" onclick="filterResources('test1a')">
+              <p>Test1a</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="filter-panel" onclick="filterResources('test2a')">
+              <p>Test2a</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="filter-panel" onclick="filterResources('test3a')">
+              <p>Test3a</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>    
   </div>
