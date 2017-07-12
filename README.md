@@ -1,3 +1,3 @@
-https://clemsonnims.github.io/
+https://clemsonnims.github.io/ <br />
 Clemson Network for Innovation and Marketable Skills
-~Connecting students with resources~
+Connecting students with resources
