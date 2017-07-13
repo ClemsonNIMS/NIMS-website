@@ -15,7 +15,7 @@ $("#subscribeButton").click(function(){
       url: "https://api.sendgrid.com/v3/contactdb/recipients",
       type: "post",
       headers: {
-          "Authorization": "Bearer <<replace with token>>"
+          "Authorization": "Bearer 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"
       },
       dataType: 'application/json',
    	  data: userData,
