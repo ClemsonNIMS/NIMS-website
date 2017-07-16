@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>NIMS Partners</title>
+    <title>Resources</title>
 	
     <!-- css -->
     <link rel="stylesheet" href="/assets/main.css">
@@ -23,8 +23,37 @@
 
 	<div class="header">
     <div class="container">
-    	<h1>Innovative Organizations</h1>   
-    </div>
+    	<h1>Available Resources</h1>
+
+      <p>
+        <button class="btn btn-secondary" type="button" onclick="toggle('filters')">
+          Filter
+        </button>
+      </p>
+      <div class="container filter" id="filters" style="display: none;">
+        <div class="row">
+          <div class="col" onclick="filterResources('')">All</div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 col-md-2">
+            <div class="filter-panel" onclick="filterResources('test1a')">
+              <p>Test1a</p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-2">
+            <div class="filter-panel" onclick="filterResources('test2a')">
+              <p>Test2a</p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-2">
+            <div class="filter-panel" onclick="filterResources('test3a')">
+              <p>Test3a</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
   </div>
 
   <div class="container org-spacing" id="org-previews">
