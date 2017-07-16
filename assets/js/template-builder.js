@@ -1,14 +1,32 @@
-function buildPreviewCards(){
+function buildPreviewCardsOrgs(){
 	$.getJSON("/assets/orgData.json", function(orgs){
       $.get("templates.html", function(templates){
-        var template = $(templates).filter("#org-preview-template").html(); 
+        var template = $(templates).filter("#card-preview-orgs").html(); 
         var $content = $("<div class='card-deck'></div>");
         for(ndx=0; ndx<orgs.length; ndx++){
           var $card = $(Mustache.render(template, orgs[ndx]));
+          $content.append($card);
+        }
+        $("#org-previews").append($content);
+      });
+    });
+}
+
+function buildPreviewCardsResources(){
+  $.getJSON("/assets/orgData.json", function(orgs){
+      $.get("templates.html", function(templates){
+        var template = $(templates).filter("#card-preview-resources").html(); 
+        var $content = $("<div class='card-deck'></div>");
+        for(ndx=0; ndx<orgs.length; ndx++){
+          //Resource page should only include orgs with resources
+          if(orgs[ndx].resources.length === 0) continue;
+
+          var $card = $(Mustache.render(template, orgs[ndx]));
           var $list = $("<ul class='resource-list'>");
-          $.each(orgs[ndx].resources, function(index, value){
+           $.each(orgs[ndx].resources, function(index, value){
+            //eventually make class the item category, not the specific item
             $list.append($("<li class='"+value.toLowerCase()+"'>"+value+"</li>"));
-          });
+            });
           $list.append($("</ul>"));
 
           $card.find("#resource-card-tab" + orgs[ndx].uuid).append($list);

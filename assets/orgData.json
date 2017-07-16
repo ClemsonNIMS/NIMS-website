@@ -1,20 +1,22 @@
 [
 	{
-	"name" : "testName1",
-	"shortDescription" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ipsum quis velit sagittis sollicitudin.",
-	"resources" : ["test1a","test1b"],
+	"name" : "Makerspace",
+	"shortDescription" : "The Clemson Makerspace is the first 3D printing lab available to all students, free of charge.",
+	"resources" : ["3D Printer","Laser Cutter", "CAD Software", "Adobe Illustrator"],
+	"restrictedTo" : ["All Majors"],
 	"uuid" : 1
 	},
 	{
-	"name" : "testName2",
-	"shortDescription" : "Donec sit amet erat eget sem porttitor laoreet. Aenean porttitor lacus sed facilisis rutrum. Donec gravida magna nec tellus pretium, faucibus facilisis eros mattis. ",
-	"resources" : ["test2a","test2b"],
+	"name" : "Visualization Studio",
+	"shortDescription" : "The visualization studio gives students a chance to explore the fascinating worlds of virtual and augmented reality.",
+	"resources" : ["Occulus Rift","HTC Vive", "Playstation VR", "Samsung Gear 360", "Samsung Gear VR", "Intel RealSense Dev Kit"],
+	"restrictedTo" : ["All Majors"],
 	"uuid" : 2
 	},
 	{
 	"name" : "testName3",
-	"shortDescription" : "Phasellus ut fringilla urna. In vulputate sem ex.",
-	"resources" : ["test3a","test3b"],
+	"shortDescription" : "",
+	"resources" : [],
 	"uuid" : 3
 	},
 	{
