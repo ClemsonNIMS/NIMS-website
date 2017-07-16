@@ -60,13 +60,7 @@
   padding-bottom: 100%;
   background-color: #000000;
 }
-/* Don't make items square when stacked vertically*/
-@media(max-width: 576px){
-  .filter-panel{
-    padding-bottom: 10%;
-    margin-bottom: 2%;
-  }
-}
+
 .filter-panel p{
   margin: 0;
   position: absolute;
