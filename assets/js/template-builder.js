@@ -2,7 +2,7 @@ function buildPreviewCardsOrgs(){
 	$.getJSON("/assets/orgData.json", function(orgs){
       $.get("templates.html", function(templates){
         var template = $(templates).filter("#card-preview-orgs").html(); 
-        var $content = $("<div class='card-deck'></div>");
+        var $content = $("<div class='row no-gutters'></div>");
         for(ndx=0; ndx<orgs.length; ndx++){
           var $card = $(Mustache.render(template, orgs[ndx]));
           $content.append($card);
@@ -16,10 +16,10 @@ function buildPreviewCardsResources(){
   $.getJSON("/assets/orgData.json", function(orgs){
       $.get("templates.html", function(templates){
         var template = $(templates).filter("#card-preview-resources").html(); 
-        var $content = $("<div class='card-deck'></div>");
+        var $content = $("<div class='row no-gutters'></div>");
         for(ndx=0; ndx<orgs.length; ndx++){
           //Resource page should only include orgs with resources
-          if(orgs[ndx].resources.length === 0) continue;
+          if(!orgs[ndx].resources || !orgs[ndx].resources.length) continue;
 
           var $card = $(Mustache.render(template, orgs[ndx]));
           var $list = $("<ul class='resource-list'>");
@@ -29,7 +29,7 @@ function buildPreviewCardsResources(){
             });
           $list.append($("</ul>"));
 
-          $card.find("#resource-card-tab" + orgs[ndx].uuid).append($list);
+          $card.find("#list").append($list);
           $content.append($card);
         }
         $("#org-previews").append($content);

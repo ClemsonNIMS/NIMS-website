@@ -43,10 +43,10 @@
 }
 
 /* Cards */
-.card.even-spacing {
+.card.preview {
   margin: 0rem 1rem 1rem 1rem;
+  width: 100%;
 }
-
 
 /* Resource Filtering */
 .container.filter {

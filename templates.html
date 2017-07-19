@@ -1,28 +1,32 @@
 <script type="text/template" id="card-preview-orgs">
-  <div class="card even-spacing text-center" id="{{uuid}}">
-    <h2 class="card-header">{{name}}</h2>
-    <div class="card-block">
-		  <p class="card-text">{{shortDescription}}</p>
+  <div class="col-sm-12 col-md-6 d-flex align-items-stretch">
+    <div class="card preview text-center" id="{{uuid}}">
+      <h2 class="card-header">{{name}}</h2>
+      <div class="card-block">
+	  	  <p class="card-text">{{shortDescription}}</p>
+      </div>
+      <div class="card-footer">View More Info</div>
+	  </div>
     </div>
-    <div class="card-footer">View More Info</div>
-	</div>	
 </script>
 
 <script type="text/template" id="card-preview-resources">
-  <div class="card even-spacing text-center" id="{{uuid}}">
-    <h2 class="card-header">{{name}}</h2>
-    <div class="card-block">
-      <div class="tab-pane text-left" id="resource-card-tab{{uuid}}" role="tabpanel"></div>
-    </div>
-    <div class="card-footer">View More Info</div>
-  </div>  
+  <div class="col-sm-12 col-md-6 d-flex align-items-stretch">
+    <div class="card preview text-center" id="{{uuid}}">
+      <h2 class="card-header">{{name}}</h2>
+      <div class="card-block">
+        <div class="tab-pane text-left" id="list""></div>
+      </div>
+      <div class="card-footer">View More Info</div>
+    </div>  
+  </div>
 </script>
 
 <script type="text/template" id="footer-template">
   <footer class="footer">
     <div class="container">
       <p>
-      Clemson Network for Innovation and Marketable Skills<br>
+      Network for Innovation and Marketable Skills<br>
       NIMS@clemson.edu
       </p>
     </div>
