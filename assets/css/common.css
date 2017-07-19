@@ -46,8 +46,17 @@
 .card.preview {
   margin: 0rem 1rem 1rem 1rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-block.expandable {
+  display: flex;
+  flex-direction: column;
 }
 
+.btn.show-more {
+  margin-top: auto;
+}
 /* Resource Filtering */
 .container.filter {
   /* Allows child text to be solid */
@@ -69,5 +78,6 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+
 
 

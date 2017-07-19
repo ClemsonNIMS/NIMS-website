@@ -23,3 +23,8 @@ function filterResources(input) {
 function toggle(divId) {
     $('#' + divId).slideToggle("300");
 }
+
+$('.card-footer').click(function(){
+  console.log("test expand");
+  $(this).addClass('test');
+})
