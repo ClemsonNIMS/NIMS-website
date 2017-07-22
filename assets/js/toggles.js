@@ -21,10 +21,19 @@ function filterResources(input) {
 }
 
 function toggle(divId) {
-    $('#' + divId).slideToggle("300");
+  console.log("test toggle");
+  $('#' + divId).slideToggle("300");
 }
 
-$('.card-footer').click(function(){
-  console.log("test expand");
-  $(this).addClass('test');
-})
+// Allows for toggling of fullscreen card and makes extra info visible
+$(document).on("click",".expandable", function(){
+
+  if($(this).text().toLowerCase() === "view more"){
+      $(this).parents('.align-items-stretch').addClass('col-12').removeClass('col-md-6');
+      $(this).text("View Less");
+  } else if ($(this).text().toLowerCase() === "view less"){
+      $(this).parents('.align-items-stretch').removeClass('col-12').addClass('col-md-6');
+      $(this).text("View More");
+  }
+  
+});
