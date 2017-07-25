@@ -1,7 +1,6 @@
 function filterResources(input) {
 
   var filter = input.toLowerCase();
-  //console.log("Filter: " + filter);
 
   $('.card').each(function(ndx, card){
     var cardResources = $(this).find(".resource-list").text().toLowerCase();
@@ -9,19 +8,15 @@ function filterResources(input) {
     if(cardResources.indexOf(filter) !== -1){
         //Card resource list contains the filter, so show it
         this.style.display = "";
-        //console.log("Showing " + $(this).find(".card-title").text());
-        //console.log("Filter index: " + cardResources.indexOf(filter));   
     } else {
         //Card resource list does not contain the filter, so hide it
         this.style.display = "none";
-        //console.log("Hiding " + $(this).find(".card-title").text());
-        //console.log("Filter index: " + cardResources.indexOf(filter));
     }
   });
 }
 
+//Allows the filter options to be toggled, can be used for any div
 function toggle(divId) {
-  console.log("test toggle");
   $('#' + divId).slideToggle("300");
 }
 
@@ -29,11 +24,14 @@ function toggle(divId) {
 $(document).on("click",".expandable", function(){
 
   if($(this).text().toLowerCase() === "view more"){
-      $(this).parents('.align-items-stretch').addClass('col-12').removeClass('col-md-6');
+      $(this).parents('.align-items-stretch').removeClass('col-md-6');
+      $(this).parents('.align-items-stretch').find('#list').addClass('col-md-6');
+      $(this).parents('.align-items-stretch').find('[role=infoToggle]').removeClass('hidden-xs-up');
       $(this).text("View Less");
   } else if ($(this).text().toLowerCase() === "view less"){
-      $(this).parents('.align-items-stretch').removeClass('col-12').addClass('col-md-6');
+      $(this).parents('.align-items-stretch').addClass('col-md-6');
+      $(this).parents('.align-items-stretch').find('#list').removeClass('col-md-6');
+      $(this).parents('.align-items-stretch').find('[role=infoToggle]').addClass('hidden-xs-up');
       $(this).text("View More");
   }
-  
 });

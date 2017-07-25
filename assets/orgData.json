@@ -4,6 +4,7 @@
 	"shortDescription" : "The Clemson Makerspace is the first 3D printing lab available to all students, free of charge.",
 	"resources" : ["3D Printer","Laser Cutter", "CAD Software", "Adobe Illustrator"],
 	"restrictedTo" : ["All Majors"],
+	"hours" : "Monday-Friday : 8am-10am, 3pm-6pm</br>Saturday : 12pm-5pm</br>Sunday : Closed",
 	"uuid" : 1
 	},
 	{
