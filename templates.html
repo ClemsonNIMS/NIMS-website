@@ -4,26 +4,39 @@
       <h2 class="card-header">{{name}}</h2>
       <div class="card-block flexed">
 	  	  <p class="card-text">{{shortDescription}}</p>
+        <!--
         <button type="button" class="btn btn-secondary expandable">View More</button>
+        -->
       </div>
 	  </div>
     </div>
 </script>
 
 <script type="text/template" id="card-preview-resources">
-  <div class="col-sm-12 col-md-6 d-flex align-items-stretch">
+  <div class="col-sm-12 col-lg-6 d-flex align-items-stretch">
     <div class="card preview text-center" id="{{uuid}}">
       <h2 class="card-header">{{name}}{{^name}}Unnamed{{/name}}</h2>
       <div class="card-block flexed">
-        <div class="row">
-          <div class="text-left" id="list"></div>
-          <div class="hidden-xs-up col-md-6" id="hours" role="infoToggle">{{{hours}}}{{^hours}}Hours not Available{{/hours}}</div>
+        <div class="row no-gutters">
+          <div class="text-left col-sm-12 col-lg-6 mb-2" id="resources">
+            {{#resources}}
+            - {{.}} <br>
+            {{/resources}}
+          </div>
+          <div class="col-sm-12 col-lg-6 mb-2" id="hours" role="infoToggle">
+            {{#hours}}
+              {{.}} <br>
+            {{/hours}}
+            {{^hours}}Hours not Available{{/hours}}
+          </div>
         </div>
-        <div class="row hidden-xs-up" role="infoToggle">
-          <div class="col-md-6" id="restrictions">{{restricitons}}{{^restricitons}}Restrictions not Available{{/restricitons}}</div>
-          <div class="col-md-6" id ="contact">{{contact}}{{^contact}}Contact not Available{{/contact}}</div>
+        <div class="row no-gutters" role="infoToggle">
+          <div class="col-sm-12 col-md-6 mb-1" id="restrictions">{{restricitons}}{{^restricitons}}Restrictions not Available{{/restricitons}}</div>
+          <div class="col-sm-12 col-md-6 mb-1" id ="contact">{{contact}}{{^contact}}Contact not Available{{/contact}}</div>
         </div>
+        <!--
         <button type="button" class="btn btn-secondary expandable">View More</button>
+        -->
       </div>
     </div>  
   </div>

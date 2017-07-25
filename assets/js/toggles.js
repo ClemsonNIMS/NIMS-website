@@ -19,19 +19,3 @@ function filterResources(input) {
 function toggle(divId) {
   $('#' + divId).slideToggle("300");
 }
-
-// Allows for toggling of fullscreen card and makes extra info visible
-$(document).on("click",".expandable", function(){
-
-  if($(this).text().toLowerCase() === "view more"){
-      $(this).parents('.align-items-stretch').removeClass('col-md-6');
-      $(this).parents('.align-items-stretch').find('#list').addClass('col-md-6');
-      $(this).parents('.align-items-stretch').find('[role=infoToggle]').removeClass('hidden-xs-up');
-      $(this).text("View Less");
-  } else if ($(this).text().toLowerCase() === "view less"){
-      $(this).parents('.align-items-stretch').addClass('col-md-6');
-      $(this).parents('.align-items-stretch').find('#list').removeClass('col-md-6');
-      $(this).parents('.align-items-stretch').find('[role=infoToggle]').addClass('hidden-xs-up');
-      $(this).text("View More");
-  }
-});
