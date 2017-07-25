@@ -22,14 +22,14 @@ function buildPreviewCardsResources(){
           if(!orgs[ndx].resources || !orgs[ndx].resources.length) continue;
 
           var $card = $(Mustache.render(template, orgs[ndx]));
-          var $list = $("<ul class='resource-list'>");
+          var $resourceList = $("<ul class='resource-list'>");
            $.each(orgs[ndx].resources, function(index, value){
             //eventually make class the item category, not the specific item
-            $list.append($("<li class='"+value.toLowerCase()+"'>"+value+"</li>"));
+            $resourceList.append($("<li class='"+value.toLowerCase()+"'>"+value+"</li>"));
             });
-          $list.append($("</ul>"));
+          $resourceList.append($("</ul>"));
+          $card.find("#list").append($resourceList);
 
-          $card.find("#list").append($list);
           $content.append($card);
         }
         $("#org-previews").append($content);
