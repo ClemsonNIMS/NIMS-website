@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Clemson NIMS</title>
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/common.css">
+</head>
+
+<body id="body">
+  <div id=navbar style="padding-top: 3.1rem">
+  <!-- template will build navbar -->
+  </div>
+
+  <div class="header">
+    <div class="container">
+      <h1>Events</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>NIMS Newsletter</h2>
+        <hr>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="iconFirstName">F</span>
+            <input type="text" placeholder="First Name" class="form-control" aria-describedby="iconFirstName" id="inputFirstName">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 ">
+          <div class="input-group">
+            <span class="input-group-addon" id="iconLastName">L</span>
+            <input type="text" placeholder="Last Name" class="form-control" aria-describedby="iconLastName" id="inputLastName">
+          </div>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-12">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">@</span>
+            <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon3" id="inputEmail">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <button class="btn btn-primary" id="subscribeButton"><i class="fa fa-user-plus"></i>Sign Up</button>
+        </div>
+      </div>
+    </section>
+  
+  </div>
+
+  <div id="footer"></div>
+
+  <!-- Core Javascript Files -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  
+  <script src="assets/js/template-builder.js"></script>
+
+  <!-- Page Building -->
+  <script type="text/javascript">
+    buildNavbar();
+    buildFooter();
+  </script>
+</body>
+

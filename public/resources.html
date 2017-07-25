@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Resources</title>
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/common.css">
+	
+</head>
+
+<body>
+	<div id="navbar" style="padding-top: 3.1rem">
+	</div>
+
+	<div class="header">
+    <div class="container">
+    	<h1>Available Resources</h1>
+
+      <p>
+        <button class="btn btn-secondary" type="button" onclick="toggle('filters')">
+          Filter
+        </button>
+      </p>
+      <div class="container filter" id="filters" style="display: none;">
+        <div class="row">
+          <div class="col" onclick="filterResources('')">All</div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 col-md-2">
+            <div class="filter-panel" onclick="filterResources('test1a')">
+              <p>Test1a</p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-2">
+            <div class="filter-panel" onclick="filterResources('test2a')">
+              <p>Test2a</p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-2">
+            <div class="filter-panel" onclick="filterResources('test3a')">
+              <p>Test3a</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <div class="container org-spacing" id="org-previews">
+  </div>
+  
+  <div id="footer">
+  </div>
+  
+  <!-- Core Javascript Files -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script src="assets/js/mustache.js"></script>
+  <script src="assets/js/template-builder.js"></script>
+
+  <!-- Page Building -->
+  <script type="text/javascript">
+    buildNavbar();
+  	buildPreviewCardsResources();
+  	setTimeout(function(){
+      buildFooter();
+    }, 500);
+  </script>
+
+</body>
