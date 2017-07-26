@@ -24,10 +24,15 @@
             {{/resources}}
           </div>
           <div class="col-sm-12 col-lg-6 mb-2" id="hours" role="infoToggle">
-            {{#hours}}
-              {{.}} <br>
-            {{/hours}}
-            {{^hours}}Hours not Available{{/hours}}
+              {{#hours}}
+              <div class="date-time" id="{{day}}">
+                <div class="day">{{day}}</div><div class="time">{{time}}</div>
+              </div>
+              </br>
+              {{/hours}}
+              {{^hours}}Hours not Available{{/hours}}
+            </ul>
+          
           </div>
         </div>
         <div class="row no-gutters" role="infoToggle">

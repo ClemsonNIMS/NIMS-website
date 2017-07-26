@@ -12,7 +12,7 @@ function buildPreviewCardsOrgs(){
     });
 }
 
-function buildPreviewCardsResources(){
+function buildPreviewCardsResources(callback){
   $.getJSON("/assets/orgData.json", function(orgs){
       $.get("templates.html", function(templates){
         var template = $(templates).filter("#card-preview-resources").html(); 
@@ -27,6 +27,7 @@ function buildPreviewCardsResources(){
         $("#org-previews").append($content);
       });
     });
+  callback();
 }
 
 function buildNavbar(){
@@ -41,4 +42,22 @@ function buildFooter(){
         var $template = $(templates).filter("#footer-template").html();
         $("#footer").append($template);
     });
+}
+
+var highlightToday = function (){
+  var weekday = new Array(7);
+    weekday[0] =  "sunday";
+    weekday[1] = "monday";
+    weekday[2] = "tuesday";
+    weekday[3] = "wednesday";
+    weekday[4] = "thursday";
+    weekday[5] = "friday";
+    weekday[6] = "saturday";
+
+  var today = weekday[new Date().getDay()];
+  $('.date-time').each(function(ndx, row){
+    $(row).addClass("today");
+  });
+  console.log($('.card'));
+  console.log('test');
 }

@@ -57,6 +57,7 @@
 .btn.expandable {
   margin-top: auto;
 }
+
 /* Resource Filtering */
 .container.filter {
   /* Allows child text to be solid */
@@ -69,7 +70,6 @@
   padding-bottom: 100%;
   background-color: #000000;
 }
-
 .filter-panel p{
   margin: 0;
   position: absolute;
@@ -79,5 +79,21 @@
   transform: translate(-50%, -50%);
 }
 
+/* Operating Hours */
+.date-time {
+  padding-left: 2rem;
+}
+.today {
+  font-weight: bold;
+  color: #F66733;
+}
+.day {
+  float: left;
+  display: inline-block;
+}
+.time {
+  float: right;
+  display: inline-block;
+}
 
 

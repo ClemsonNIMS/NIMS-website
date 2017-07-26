@@ -78,11 +78,12 @@
 
   <script src="assets/js/mustache.js"></script>
   <script src="assets/js/template-builder.js"></script>
+  <script src="assets/js/toggles.js"></script>
 
   <!-- Page Building -->
   <script type="text/javascript">
     buildNavbar();
-  	buildPreviewCardsResources();
+  	buildPreviewCardsResources(highlightToday);
   	setTimeout(function(){
       buildFooter();
     }, 500);
