@@ -56,6 +56,7 @@ var highlightToday = function (){
     weekday[5] = "friday";
     weekday[6] = "saturday";
 
+  //finds divs where the id=today, case insensitive
   var today = weekday[new Date().getDay()];
-  $("div[id='" + today + "' i]").addClass("today");
+  $("tr[id='" + today + "' i]").addClass("today");
 }

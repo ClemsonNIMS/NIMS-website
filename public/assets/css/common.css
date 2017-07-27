@@ -53,18 +53,29 @@
   display: flex;
   flex-direction: column;
 }
+.row.resources {
+  margin-bottom: 1rem;
+}
 .resource {
   flex-grow: 1;
   display: inline-block;
 }
-.row.resources {
-  margin: 0rem 0rem 1rem 0rem;
+.table.table-sm {
+  width: 75%;
 }
-.row.hours {
-  margin: 0rem 0rem 1rem 0rem;
+.table.outer-border {
+  border: 1px solid #d5dadd;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  border-collapse: separate;
 }
-.btn.expandable {
-  margin-top: auto;
+.table.outer-border td {
+  border-top: 1px solid #e3e6e8;
+}
+/* Round corner fix for date-time table */
+.table.outer-border tr:first-child > td{
+  border-top: 0px;
 }
 
 
