@@ -1,21 +1,24 @@
-function filterResources(input) {
-
-  var filter = input.toLowerCase();
+//Allows for resources to be filtered by several fields
+$('#resourceSearch').keyup(function () {
+  // get the value of the input, which we filter on
+  var filter = $.trim($(this).val().toLowerCase().replace(/\s+/g, '')); 
 
   $('.card').each(function(ndx, card){
-    var cardResources = $(this).find(".resource-list").text().toLowerCase();
+    var cardResources = $.trim($(card).find(".resources").text().toLowerCase().replace(/\s+/g, ''));
+    var cardTitle = $.trim($(card).find('.card-header').text().toLowerCase().replace(/\s+/g, ''));
+    var restrictions = $.trim($(card).find('#restrictions').text().toLowerCase().replace(/\s+/g, ''));
+    var contact = $.trim($(card).find('#contact').text().toLowerCase().replace(/\s+/g, ''));
     
-    if(cardResources.indexOf(filter) !== -1){
+    if(cardResources.indexOf(filter)!==-1 || cardTitle.indexOf(filter)!==-1 
+        || restrictions.indexOf(filter)!==-1 || contact.indexOf(filter)!==-1){
         //Card resource list contains the filter, so show it
         this.style.display = "";
+        $(this).parent().addClass("col-sm-12").addClass("col-lg-6");
     } else {
         //Card resource list does not contain the filter, so hide it
         this.style.display = "none";
+        $(this).parent().removeClass("col-sm-12").removeClass("col-lg-6");
     }
+    console.log(filter);
   });
-}
-
-//Allows the filter options to be toggled, can be used for any div
-function toggle(divId) {
-  $('#' + divId).slideToggle("300");
-}
+});
