@@ -42,7 +42,7 @@
   background-color: #2a2730;
 }
 
-/* Cards */
+/* Card Layout */
 .card.preview {
   margin: 0rem 1rem 1rem 1rem;
   width: 100%;
@@ -53,10 +53,16 @@
   display: flex;
   flex-direction: column;
 }
-
+.row.resources {
+  margin: 0rem 0rem 1rem 0rem;
+}
+.row.hours {
+  margin: 0rem 0rem 1rem 0rem;
+}
 .btn.expandable {
   margin-top: auto;
 }
+
 
 /* Resource Filtering */
 .container.filter {
@@ -81,7 +87,7 @@
 
 /* Operating Hours */
 .date-time {
-  padding-left: 2rem;
+
 }
 .today {
   font-weight: bold;

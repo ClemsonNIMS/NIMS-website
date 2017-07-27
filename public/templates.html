@@ -17,22 +17,20 @@
     <div class="card preview text-center" id="{{uuid}}">
       <h2 class="card-header">{{name}}{{^name}}Unnamed{{/name}}</h2>
       <div class="card-block flexed">
-        <div class="row no-gutters">
-          <div class="text-left col-sm-12 col-lg-6 mb-2" id="resources">
+        <div class="row resources">
             {{#resources}}
-            - {{.}} <br>
+              <div class="text-center col-6 col-sm-4 col-md-3">{{.}}</div>
             {{/resources}}
-          </div>
-          <div class="col-sm-12 col-lg-6 mb-2" id="hours" role="infoToggle">
-              {{#hours}}
+        </div>
+        <div class="row justify-content-center hours">
+          <div class="col-12 col-sm-6 col-md-5 col-lg-7 mb-2" id="hours" role="infoToggle">
+            {{#hours}}
               <div class="date-time" id="{{day}}">
                 <div class="day">{{day}}</div><div class="time">{{time}}</div>
               </div>
               </br>
               {{/hours}}
               {{^hours}}Hours not Available{{/hours}}
-            </ul>
-          
           </div>
         </div>
         <div class="row no-gutters" role="infoToggle">
