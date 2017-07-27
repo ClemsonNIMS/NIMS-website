@@ -25,9 +25,10 @@ function buildPreviewCardsResources(callback){
           $content.append($card);
         }
         $("#org-previews").append($content);
+        highlightToday();
       });
     });
-  callback();
+  
 }
 
 function buildNavbar(){
@@ -44,9 +45,10 @@ function buildFooter(){
     });
 }
 
+//Highlights the hours for today in each resource's hours section
 var highlightToday = function (){
   var weekday = new Array(7);
-    weekday[0] =  "sunday";
+    weekday[0] = "sunday";
     weekday[1] = "monday";
     weekday[2] = "tuesday";
     weekday[3] = "wednesday";
@@ -55,9 +57,5 @@ var highlightToday = function (){
     weekday[6] = "saturday";
 
   var today = weekday[new Date().getDay()];
-  $('.date-time').each(function(ndx, row){
-    $(row).addClass("today");
-  });
-  console.log($('.card'));
-  console.log('test');
+  $("div[id='" + today + "' i]").addClass("today");
 }
