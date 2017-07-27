@@ -17,9 +17,9 @@
     <div class="card preview text-center" id="{{uuid}}">
       <h2 class="card-header">{{name}}{{^name}}Unnamed{{/name}}</h2>
       <div class="card-block flexed">
-        <div class="row resources">
+        <div class="row resources align-items-stretch">
             {{#resources}}
-              <div class="text-center col-6 col-sm-4 col-md-3">{{.}}</div>
+              <span class="resource">• {{.}}</span>
             {{/resources}}
         </div>
         <div class="row justify-content-center hours">
