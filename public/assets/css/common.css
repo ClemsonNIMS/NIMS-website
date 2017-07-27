@@ -41,6 +41,11 @@
   text-align: center;
   background-color: #2a2730;
 }
+.search-label {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 0rem;
+}
 
 /* Card Layout */
 .card.preview {
@@ -59,6 +64,7 @@
 .resource {
   flex-grow: 1;
   display: inline-block;
+  margin-right: .5rem;
 }
 .table.table-sm {
   width: 75%;
@@ -75,7 +81,7 @@
 }
 /* Round corner fix for date-time table */
 .table.outer-border tr:first-child > td{
-  border-top: 0px;
+  border-top: none;
 }
 
 
