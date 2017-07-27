@@ -4,9 +4,6 @@
       <h2 class="card-header">{{name}}</h2>
       <div class="card-block flexed">
 	  	  <p class="card-text">{{shortDescription}}</p>
-        <!--
-        <button type="button" class="btn btn-secondary expandable">View More</button>
-        -->
       </div>
 	  </div>
     </div>
@@ -22,29 +19,20 @@
               <span class="resource">• {{.}}</span>
             {{/resources}}
         </div>
-        <!--
-        <div class="row justify-content-center hours">
-          <div class="col-12 col-sm-6 col-md-5 col-lg-7 mb-2" id="hours" role="infoToggle">
-            {{#hours}}
-              <div class="date-time" id="{{day}}">
-                <div class="day">{{day}}</div><div class="time">{{time}}</div>
-              </div>
-              </br>
-              {{/hours}}
-              {{^hours}}Hours not Available{{/hours}}
-          </div>
-        </div>
-        -->
        <div class="row justify-content-center">
         <table class="table table-sm outer-border">
           <tbody>
             {{#hours}}
-            <tr id="{{day}}">
-             <td>{{day}}</td>
-             <td>{{time}}</td>
-            </tr>
+              <tr id="{{day}}">
+                <td>{{day}}</td>
+                <td>{{time}}</td>
+              </tr>
             {{/hours}}
-            {{^hours}}Hours not Available{{/hours}}
+            {{^hours}}
+              <tr>
+                <td>Hours not Available</td>
+              </tr>
+            {{/hours}}
           </tbody>
           </table>
         </div>
@@ -52,9 +40,6 @@
           <div class="col-sm-12 col-md-6 mb-1" id="restrictions">{{restricitons}}{{^restricitons}}Restrictions not Available{{/restricitons}}</div>
           <div class="col-sm-12 col-md-6 mb-1" id ="contact">{{contact}}{{^contact}}Contact not Available{{/contact}}</div>
         </div>
-        <!--
-        <button type="button" class="btn btn-secondary expandable">View More</button>
-        -->
       </div>
     </div>  
   </div>
