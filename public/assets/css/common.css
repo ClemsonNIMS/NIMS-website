@@ -13,9 +13,16 @@
 .container.org-spacing {
   padding: 2rem 0rem 2rem 0rem;
 }
-.bg-grey {
-  background: #f7f7f7;
+.email-widget {
+  margin: 1rem auto; 
+  padding: 1rem;
+  border: 1px solid #d5dadd;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  border-collapse: separate;
 }
+
 
 /* Header and Footer */
 .header {
@@ -107,9 +114,6 @@
 }
 
 /* Operating Hours */
-.date-time {
-
-}
 .today {
   font-weight: bold;
   color: #F66733;
