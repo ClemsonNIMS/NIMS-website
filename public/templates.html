@@ -12,16 +12,21 @@
 <script type="text/template" id="card-preview-resources">
   <div class="col-sm-12 col-lg-6 d-flex align-items-stretch">
     <div class="card preview text-center"">
+      <!-- Card Header -->
       <div class="card-header">
+        <!-- Org Name and Location -->
         <h2>{{name}}{{^name}}Name not Available{{/name}}</h2>
         <h5 class="card-subtitle mb-2 text-muted">{{location}}{{^location}}Location not Available{{/location}}</h5>
       </div>
+      <!-- Main Card Content -->
       <div class="card-block flexed">
+        <!-- Resources -->
         <div class="row resources align-items-stretch">
             {{#resources}}
               <span class="resource">• {{.}}</span>
             {{/resources}}
         </div>
+        <!-- Hours of Operation -->
         <div class="row justify-content-center">
           <table class="table table-sm outer-border">
             <tbody>
@@ -39,10 +44,11 @@
             </tbody>
           </table>
         </div>
+        <!-- Major Restrictions -->
         <div class="row no-gutters">
           <div class="col-12 mb-3" id="restrictions">{{restricitons}}{{^restricitons}}Restrictions not Available{{/restricitons}}</div>
         </div>
-
+        <!-- Contact Info -->
         <div class="collapse" id="contactInfo{{uuid}}">
           <div class="row justify-content-center">
             <table class="table table-sm outer-border">
@@ -62,6 +68,7 @@
             </table>
           </div>
         </div>
+        <!-- Contact Info Expand Button -->
         <p>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#contactInfo{{uuid}}" aria-expanded="false" aria-controls="contactInfo{{uuid}}">Contact Info</button>
         </p>
