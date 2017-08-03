@@ -1,6 +1,6 @@
 <script type="text/template" id="card-preview-orgs">
   <div class="col-sm-12 col-md-6 d-flex align-items-stretch">
-    <div class="card preview text-center" id="{{uuid}}">
+    <div class="card preview text-center">
       <h2 class="card-header">{{name}}</h2>
       <div class="card-block flexed">
 	  	  <p class="card-text">{{shortDescription}}</p>
@@ -11,35 +11,60 @@
 
 <script type="text/template" id="card-preview-resources">
   <div class="col-sm-12 col-lg-6 d-flex align-items-stretch">
-    <div class="card preview text-center" id="{{uuid}}">
-      <h2 class="card-header">{{name}}{{^name}}Unnamed{{/name}}</h2>
+    <div class="card preview text-center"">
+      <div class="card-header">
+        <h2>{{name}}{{^name}}Name not Available{{/name}}</h2>
+        <h5 class="card-subtitle mb-2 text-muted">{{location}}{{^location}}Location not Available{{/location}}</h5>
+      </div>
       <div class="card-block flexed">
         <div class="row resources align-items-stretch">
             {{#resources}}
               <span class="resource">• {{.}}</span>
             {{/resources}}
         </div>
-       <div class="row justify-content-center">
-        <table class="table table-sm outer-border">
-          <tbody>
-            {{#hours}}
-              <tr id="{{day}}">
-                <td>{{day}}</td>
-                <td>{{time}}</td>
-              </tr>
-            {{/hours}}
-            {{^hours}}
-              <tr>
-                <td>Hours not Available</td>
-              </tr>
-            {{/hours}}
-          </tbody>
+        <div class="row justify-content-center">
+          <table class="table table-sm outer-border">
+            <tbody>
+              {{#hours}}
+                <tr id="{{day}}">
+                  <td>{{day}}</td>
+                  <td>{{time}}</td>
+                </tr>
+              {{/hours}}
+              {{^hours}}
+                <tr>
+                  <td>Hours not Available</td>
+                </tr>
+              {{/hours}}
+            </tbody>
           </table>
         </div>
-        <div class="row no-gutters" role="infoToggle">
-          <div class="col-sm-12 col-md-6 mb-1" id="restrictions">{{restricitons}}{{^restricitons}}Restrictions not Available{{/restricitons}}</div>
-          <div class="col-sm-12 col-md-6 mb-1" id ="contact">{{contact}}{{^contact}}Contact not Available{{/contact}}</div>
+        <div class="row no-gutters">
+          <div class="col-12 mb-3" id="restrictions">{{restricitons}}{{^restricitons}}Restrictions not Available{{/restricitons}}</div>
         </div>
+
+        <div class="collapse" id="contactInfo{{uuid}}">
+          <div class="row justify-content-center">
+            <table class="table table-sm outer-border">
+              <tbody>
+              {{#contact}}
+                <tr>
+                  <td>{{name}}</td>
+                  <td>{{email}}</td>
+                </tr>
+              {{/contact}}
+              {{^contact}}
+                <tr>
+                  <td>Contact Info not Available</td>
+                </tr>
+              {{/contact}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#contactInfo{{uuid}}" aria-expanded="false" aria-controls="contactInfo{{uuid}}">Contact Info</button>
+        </p>
       </div>
     </div>  
   </div>
