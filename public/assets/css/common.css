@@ -68,7 +68,7 @@
 .row.resources {
   margin-bottom: 1rem;
 }
-.resource {
+.flex-list {
   flex-grow: 1;
   display: inline-block;
   margin-right: .5rem;
