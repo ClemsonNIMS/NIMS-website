@@ -1,0 +1,85 @@
+[
+	{
+	"name" : "Makerspace",
+	"shortDescription" : "The Clemson Makerspace is the first 3D printing lab available to all students, free of charge.",
+	"resources" : ["3D Printer","Laser Cutter", "CAD Software", "Adobe Illustrator"],
+	"restrictions" : ["All Majors"],
+	"hours" : [
+		{"day" : "Monday", "time" : "9-10:30am"},
+		{"day" : "Tuesday", "time" : "9-10:30am"},
+		{"day" : "Wednesday", "time" : "9-10:30am"},
+		{"day" : "Thursday", "time" : "9-10:30am"},
+		{"day" : "Friday", "time" : "9-10:30am"},
+		{"day" : "Saturday", "time" : "9-10:30am"},
+		{"day" : "Sunday", "time" : "1-3pm"}
+	],
+	"contact" : [{"name" : "Owen Phillips", "email" : "ophilli@g.clemson.edu"},
+				 {"name" : "test", "email" : "test@clemson.edu"}],
+	"location" : "Watt 110",
+	"uuid" : 1
+	},
+	{
+	"name" : "Visualization Studio",
+	"shortDescription" : "The visualization studio gives students a chance to explore the fascinating worlds of virtual and augmented reality.",
+	"resources" : ["Occulus Rift","HTC Vive", "Playstation VR", "Samsung Gear 360", "Samsung Gear VR", "Intel RealSense Dev Kit"],
+	"restricitons" : [],
+	"hours" : [
+		{"day" : "Monday", "time" : "9:30-10:30am"},
+		{"day" : "Tuesday", "time" : "8:00-10:30am"},
+		{"day" : "Wednesday", "time" : "10:00-10:30am"},
+		{"day" : "Thursday", "time" : "9-10:30am"},
+		{"day" : "Friday", "time" : "9-10:30am"},
+		{"day" : "Saturday", "time" : "9-10:30am"},
+		{"day" : "Sunday", "time" : "1-3pm"}
+	],
+	"uuid" : 2
+	},
+	{
+	"name" : "testName3",
+	"shortDescription" : "",
+	"resources" : [],
+	"uuid" : 3
+	},
+	{
+	"name" : "testName4",
+	"shortDescription" : "Suspendisse maximus lacus in ex accumsan, a lobortis tortor finibus.",
+	"resources" : ["test4a","test4b"],
+	"uuid" : 4
+	},
+	{
+	"name" : "testName5",
+	"shortDescription" : "Ut nulla arcu, dictum sit amet nisl ac, suscipit iaculis mauris. Donec gravida congue est at vulputate.",
+	"resources" : ["test5a","test5b"],
+	"uuid" : 5
+	},
+	{
+	"name" : "testName6",
+	"shortDescription" : "Vestibulum condimentum suscipit tortor, a accumsan urna eleifend et. Vivamus lacinia leo risus, vitae fermentum arcu porttitor interdum. Donec ullamcorper urna eget ante ornare, ac mattis turpis fermentum.",
+	"resources" : ["test6a","test6b"],
+	"uuid" : 6
+	},
+	{
+	"name" : "testName7",
+	"shortDescription" : "Proin vel diam sed nulla lobortis tempus. Nulla facilisi. Proin tempus tristique blandit.",
+	"resources" : ["test7a","test7b"],
+	"uuid" : 7
+	},
+	{
+	"name" : "testName8",
+	"shortDescription" : "Etiam velit felis, suscipit sit amet ante vel, tempor iaculis nisl.",
+	"resources" : ["test8a","test8b"],
+	"uuid" : 8
+	},
+	{
+	"name" : "testName9",
+	"shortDescription" : "Maecenas sed magna at risus congue dignissim.",
+	"resources" : ["test9a","test9b"],
+	"uuid" : 9
+	},
+	{
+	"name" : "testName10",
+	"shortDescription" : "Ut condimentum nisi eu nibh euismod, vitae ultricies sem aliquam. In eu neque ut purus tempus dapibus. Praesent vulputate, lorem in tincidunt finibus, sapien metus condimentum felis, eget rutrum magna lacus vehicula orci.",
+	"resources" : ["test10a","test10b"],
+	"uuid" : 10
+	}
+]

@@ -1,0 +1,130 @@
+/* Main Section Blocks and Containers */
+.section {
+  padding-bottom: 50px;
+}
+.section.last-child {
+  padding-bottom: 0;
+}
+.section-header {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: .08rem solid #eee;
+}
+.container.org-spacing {
+  padding: 2rem 0rem 2rem 0rem;
+}
+.email-widget {
+  margin: 1rem auto; 
+  padding: 1rem;
+  border: 1px solid #d5dadd;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  border-collapse: separate;
+}
+
+
+/* Header and Footer */
+.header {
+  position: relative;
+  padding: 2rem 2rem;
+  margin: 0rem 0rem 0rem 0rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 .15rem 0 rgba(0,0,0,.1);
+  background-color: #F66733;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F66733), to(#f87f54));
+  background-image: -webkit-linear-gradient(top, #F66733 0%, #f87f54 100%);
+  background-image:      -o-linear-gradient(top, #F66733 0%, #f87f54 100%);
+  background-image:         linear-gradient(to bottom, #F66733 0%, #f87f54 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F66733', endColorstr='#f87f54', GradientType=0);
+  background-repeat: repeat-x;
+}
+.footer {
+  padding-top: 1.8rem;
+  padding-bottom: 1.3rem;
+  color: #99979c;
+  text-align: center;
+  background-color: #2a2730;
+}
+.search-label {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 0rem;
+}
+
+/* Card Layout */
+.card.preview {
+  margin: 0rem 1rem 1rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-block.flexed {
+  display: flex;
+  flex-direction: column;
+}
+.row.resources {
+  margin-bottom: 1rem;
+}
+.resource {
+  flex-grow: 1;
+  display: inline-block;
+  margin-right: .5rem;
+}
+.table.table-sm {
+  width: 75%;
+}
+.table.outer-border {
+  border: 1px solid #d5dadd;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  border-collapse: separate;
+}
+.table.outer-border td {
+  border-top: 1px solid #e3e6e8;
+}
+/* Round corner fix for date-time table */
+.table.outer-border tr:first-child > td{
+  border-top: none;
+}
+
+
+/* Resource Filtering */
+.container.filter {
+  /* Allows child text to be solid */
+  padding: 1rem 1rem;
+  background-color:rgba(255,255,255,.4); 
+}
+.filter-panel {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+  background-color: #000000;
+}
+.filter-panel p{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Operating Hours */
+.today {
+  font-weight: bold;
+  color: #F66733;
+}
+.day {
+  float: left;
+  display: inline-block;
+}
+.time {
+  float: right;
+  display: inline-block;
+}
+
+

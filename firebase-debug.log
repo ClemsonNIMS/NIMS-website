@@ -1,0 +1,28 @@
+[debug] [2017-07-28T18:21:49.731Z] ----------------------------------------------------------------------
+[debug] [2017-07-28T18:21:49.733Z] Command:      C:\Program Files\nodejs\node.exe C:\Users\cbraeuning\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-07-28T18:21:49.733Z] CLI Version:  3.9.1
+[debug] [2017-07-28T18:21:49.733Z] Platform:     win32
+[debug] [2017-07-28T18:21:49.733Z] Node Version: v6.10.3
+[debug] [2017-07-28T18:21:49.734Z] Time:         Fri Jul 28 2017 14:21:49 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-28T18:21:49.734Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-28T18:21:49.741Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-28T18:21:49.741Z] > authorizing via signed-in user
+[debug] [2017-07-28T18:21:49.743Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/nims-b755e  
+ Fri Jul 28 2017 14:21:49 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-28T18:21:50.963Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-28T18:21:50.965Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/nims-b755e/tokens  
+ Fri Jul 28 2017 14:21:50 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-28T18:21:51.449Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\cbraeuning\workspace\NIMS'...
+[info] 
+[debug] [2017-07-28T18:21:51.452Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/nims-b755e  
+ Fri Jul 28 2017 14:21:51 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-28T18:21:51.731Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-28T18:21:51.732Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/821826932003/clients/_:getWebAppConfig  
+ Fri Jul 28 2017 14:21:51 GMT-0400 (Eastern Daylight Time)
+[debug] [2017-07-28T18:21:52.364Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
