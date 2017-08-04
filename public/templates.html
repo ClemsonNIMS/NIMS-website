@@ -10,7 +10,7 @@
 </script>
 
 <script type="text/template" id="card-preview-resources">
-  <div class="col-sm-12 col-lg-6 d-flex align-items-stretch">
+  <div class="col-sm-12 col-xl-6 d-flex align-items-stretch">
     <div class="card preview text-center"">
       <!-- Card Header -->
       <div class="card-header">
@@ -23,7 +23,7 @@
         <!-- Resources -->
         <div class="row resources align-items-stretch">
             {{#resources}}
-              <span class="resource">• {{.}}</span>
+              <span class="flex-list">• {{.}}</span>
             {{/resources}}
         </div>
         <!-- Hours of Operation -->
@@ -45,9 +45,10 @@
           </table>
         </div>
         <!-- Major Restrictions -->
-        <div class="row no-gutters">
-          <div class="col-12 mb-3" id="restrictions">{{restricitons}}{{^restricitons}}Restrictions not Available{{/restricitons}}</div>
-        </div>
+        <h5>Restrictions:</h5>
+        <p>{{restrictions}}
+        {{^restrictions}}Restriction Info not Available{{/restrictions}}</p>
+     
         <!-- Contact Info -->
         <div class="collapse" id="contactInfo{{uuid}}">
           <div class="row justify-content-center">
@@ -55,8 +56,12 @@
               <tbody>
               {{#contact}}
                 <tr>
-                  <td>{{name}}</td>
-                  <td>{{email}}</td>
+                  <td class="align-middle">
+                    <div class="row">
+                      <div class="col-md-5">{{position}}</div>
+                      <div class="col-md-7">{{name}}<br>{{email}}</div>  
+                    </div>
+                  </td>
                 </tr>
               {{/contact}}
               {{^contact}}
