@@ -58,8 +58,10 @@
                 <tr>
                   <td class="align-middle">
                     <div class="row">
-                      <div class="col-md-5">{{position}}</div>
-                      <div class="col-md-7">{{name}}<br>{{email}}</div>  
+                      <div class="col-md-5 content-middle">{{position}}</div>
+                      <!-- If name doesn't exist omit the line break to preserve formatting -->
+                      {{#name}}<div class="col-md-7">{{name}}<br><a href="mailto:{{email}}">{{email}}</a></div>{{/name}}
+                      {{^name}}<div class="col-md-7"><a href="mailto:{{email}}">{{email}}</a></div>  {{/name}}
                     </div>
                   </td>
                 </tr>
