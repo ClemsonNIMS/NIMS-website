@@ -81,6 +81,14 @@
 .table.table-sm {
   width: 75%;
 }
+.table.table-flex {
+  width: 80%;
+}
+@media (min-width: 992px) {
+  .table.table-flex {
+    width: 93%;
+  }
+}
 .table.outer-border {
   border: 1px solid #d5dadd;
   -webkit-border-radius: 1rem;
