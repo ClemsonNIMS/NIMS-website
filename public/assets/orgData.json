@@ -16,6 +16,7 @@
 				 {"position" : "Student Director", "name" : "Owen Phillips", "email" : "ophilli@g.clemson.edu"}
 				 ],
 	"location" : "Watt 110",
+	"website" : "http://cumaker.space/",
 	"uuid" : 1
 	},
 	{
@@ -35,13 +36,15 @@
 				 {"position" : "Student Director", "name" : "Thomas Birdsong", "email" : "tbirdso@g.clemson.edu"},
 				 {"position" : "Faculty Advisor", "name" : "Dr. Oyewole Oyekoya", "email" : "ooyekoy@clemson.edu"}],
 	"location" : "Watt 308",
+	"website" : "",
 	"uuid" : 2
 	},
 	{
 	"name" : "Digital Media and Learning Labs",
 	"shortDescription" : "The Digital Media and Learning labs at Clemson University's College of Education are innovative, 21st century spaces created to connect students, teachers, researchers, and partners to ideas and projects in physical and virtual environments.",
 	"resources" : ["Audio Production","Video Production","Cameras","Studio Microphones","Green Screen","Mac Computers","Game Maker","Scratch",
-					"MIT App Inventor","Final Cut Pro","Adobe CC Suite"],
+					"MIT App Inventor","Final Cut Pro","Adobe CC Suite","Lego NXT"," Makey Makey kits","Snap Circuits","Arduino Kits","Board Games",
+					"Gaming Consoles", "Video Games", "iPads", "Nexus 7s"],
 	"restrictions" : "Open to all Majors",
 	"hours" : [
 		{"day" : "Monday", "time" : "9am-9pm"},
@@ -50,21 +53,44 @@
 		{"day" : "Thursday", "time" : "9am-9pm"},
 		{"day" : "Friday", "time" : "9am-5pm"}
 	],
-	"contact" : [{"position" : "Faculty Director", "name" : "Dr. Matthew Boyer", "email" : "dmboyer@clemson.edu"},
+	"contact" : [{"position" : "General Info", "name" : "", "email" : "dmll@clemson.edu"},
+				 {"position" : "Faculty Director", "name" : "Dr. Matthew Boyer", "email" : "dmboyer@clemson.edu"},
 				 {"position" : "Faculty Director", "name" : "Dr. Danielle Herro", "email" : "dherro@clemson.edu"}],
 	"location" : "Tillman 213/219",
+	"website" : "https://www.clemson.edu/education/dmll/dml-labs.html",
 	"uuid" : 3
 	},
 	{
-	"name" : "testName4",
-	"shortDescription" : "Suspendisse maximus lacus in ex accumsan, a lobortis tortor finibus.",
-	"resources" : ["test4a","test4b"],
+	"name" : "Design and Materials Lab",
+	"shortDescription" : "The Materials Lab is fully equipped wood shop facility that enables students to work with wood and various other materials. Students are encouraged to use the shop for academic assignments and other projects, and courses are offered in furniture and product design.",
+	"resources" : ["Woodworking equipment","Basic hand tools","2 Saw Stops","2 Band Saws","Jointer","Plainer","CNC Routers","Vaccum Former",
+		"CNC Plasma Cutter","CNC Software","VCarve Software","RhinoCAM Software","4 ULS VLS660 Laser Cutters",
+		"9 Type A 3D FDM Printers","3D Potterbot 7","NEXT Engine 3D scanner","3D Digitize It","12 Computer workstations"],
+	"restrictions" : "• Open to: Architecture, Landscape Architecture, Art, and Construction Science students<br>• Training Required<br>• Personal projects not permitted<br>• Max 15 occupants",
+	"contact" : [{"position" : "Shop Manager", "name" : "Brian Leounis", "email" : "leounis@clemson.edu"}],
+	"location" : "Lee Hall - Ground Floor",
 	"uuid" : 4
 	},
 	{
-	"name" : "testName5",
+	"name" : "Cook Machine Shop",
 	"shortDescription" : "Ut nulla arcu, dictum sit amet nisl ac, suscipit iaculis mauris. Donec gravida congue est at vulputate.",
-	"resources" : ["test5a","test5b"],
+	"resources" : ["Hand tools","Mills","Lathes","Grinders","MIG Welder","Plasma Cutter","Industrial Precision Machines","Drill Press",
+					"HAAS CNC Mill","CNC Press","1 3D Printer","SolidWorks","MasterCam Software"],
+	"restrictions" : "• Open to: Mech. Engineering and members of SME ($10 fee)<br>• Training Required",
+	"hours" : [
+		{"day" : "Monday", "time" : "1-9pm"},
+		{"day" : "Tuesday", "time" : "1-9pm"},
+		{"day" : "Wednesday", "time" : "1-9pm"},
+		{"day" : "Thursday", "time" : "1-9pm"},
+		{"day" : "Friday", "time" : "1-5pm"},
+		{"day" : "https://cecas.clemson.edu/mestudentshop/hours/"}
+	],
+	"contact" : [{"position" : "Faculty Director", "name" : "Dr. Todd Schweisinger", "email" : "todds@clemson.edu"},
+				 {"position" : "Manager", "name" : "Ben Abernathy", "email" : "baabern@g.clemson.edu"},
+				 {"position" : "Asst. Manager", "name" : "Candela Kechkian", "email" : "ckechki@g.clemson.edu"},
+				 {"position" : "Equipment Manager", "name" : "Jassmyn McQuillen", "email" : "jassmym@g.clemson.edu"}],
+	"location" : "Cook Lab - First Floor",
+	"website" : "https://cecas.clemson.edu/mestudentshop/",
 	"uuid" : 5
 	},
 	{
