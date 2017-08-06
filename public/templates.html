@@ -15,7 +15,12 @@
       <!-- Card Header -->
       <div class="card-header">
         <!-- Org Name and Location -->
-        <h2>{{name}}{{^name}}Name not Available{{/name}}</h2>
+        <h2>{{#name}}
+              {{#website}}<a href="{{website}}">{{name}}</a>{{/website}}
+              {{^website}}{{name}}{{/website}}
+            {{/name}}
+            {{^name}}Name not Available{{/name}}
+        </h2>
         <h5 class="card-subtitle mb-2 text-muted">{{location}}{{^location}}Location not Available{{/location}}</h5>
       </div>
       <!-- Main Card Content -->
@@ -31,10 +36,18 @@
           <table class="table table-sm outer-border">
             <tbody>
               {{#hours}}
-                <tr id="{{day}}">
-                  <td>{{day}}</td>
-                  <td>{{time}}</td>
-                </tr>
+                {{#time}}
+                  <tr id="{{day}}">
+                    <td>{{day}}</td>
+                    <td>{{time}}</td>
+                  </tr>
+                {{/time}}
+                <!-- If time varies put a link for schedule here -->
+                {{^time}}
+                  <tr>
+                    <td colspan="2">Hours may Vary - Check <a href='{{day}}'>here</a></td>
+                  </tr>
+                {{/time}}
               {{/hours}}
               {{^hours}}
                 <tr>
@@ -46,7 +59,7 @@
         </div>
         <!-- Major Restrictions -->
         <h5>Restrictions:</h5>
-        <p>{{restrictions}}
+        <p>{{{restrictions}}}
         {{^restrictions}}Restriction Info not Available{{/restrictions}}</p>
      
         <!-- Contact Info -->
