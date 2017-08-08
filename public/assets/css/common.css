@@ -72,6 +72,19 @@
 }
 .row.resources {
   margin-bottom: 1rem;
+  padding: 0rem 1rem;
+}
+.row.restrictions {
+  display: -webkit-flex; /* Safari */
+  -webkit-justify-content: center; /* Safari 6.1+ */
+  display: flex;
+  justify-content: center;
+  padding: 0rem 2rem 1rem;
+}
+.restrictions div {
+  padding: 0rem;
+  line-height: 1.4rem;
+  margin-bottom: .3rem;
 }
 .flex-list {
   flex-grow: 1;

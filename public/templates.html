@@ -59,8 +59,12 @@
         </div>
         <!-- Major Restrictions -->
         <h5>Restrictions:</h5>
-        <p>{{{restrictions}}}
-        {{^restrictions}}Restriction Info not Available{{/restrictions}}</p>
+        <div class="row restrictions">
+          {{#restrictions}}
+            <div class="col-12">• {{.}}</div>
+          {{/restrictions}}
+        {{^restrictions}}Restriction Info not Available{{/restrictions}}
+        </div>
      
         <!-- Contact Info -->
         <div class="collapse" id="contactInfo{{uuid}}">
