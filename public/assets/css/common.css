@@ -23,24 +23,19 @@
   border-collapse: separate;
 }
 
-
 /* Header and Footer */
 .header {
   position: relative;
+  min-height: 15rem;
   padding: 2rem 2rem;
-  margin: 0rem 0rem 0rem 0rem;
+  margin-bottom: 2rem;
   font-size: 1.5rem;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 .15rem 0 rgba(0,0,0,.1);
-  background-color: #F66733;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#F66733), to(#f87f54));
-  background-image: -webkit-linear-gradient(top, #F66733 0%, #f87f54 100%);
-  background-image:      -o-linear-gradient(top, #F66733 0%, #f87f54 100%);
-  background-image:         linear-gradient(to bottom, #F66733 0%, #f87f54 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F66733', endColorstr='#f87f54', GradientType=0);
-  background-repeat: repeat-x;
+  background-image: url("/assets/img/topopattern.svg");
+  background-size: cover;
 }
+
 .footer {
   padding-top: 1.8rem;
   padding-bottom: 1.3rem;
@@ -153,4 +148,7 @@
   display: inline-block;
 }
 
-
+/* Team */
+.social-media {
+  margin: 1rem auto;
+}
