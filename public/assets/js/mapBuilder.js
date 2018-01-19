@@ -7,36 +7,60 @@ function initMap() {
   var cook = {lat: 34.676536, lng: -82.837771};
   var fDaniel = {lat: 34.675490, lng: -82.839139};
   var library = {lat: 34.6761, lng: -82.8364};
+
   var map = new google.maps.Map(document.getElementById('mapBox'), {
     zoom: 15,
     center: clemson
   });
-  var marker = new google.maps.Marker({
-    position: tillman,
-    map: map
-  });
-  var marker1 = new google.maps.Marker({
-    position: lee,
-    map: map
-  });
-  var marker2 = new google.maps.Marker({
+
+  var prev_infowindow =false; 
+
+  var mDEN = new google.maps.Marker({
     position: rhodes,
     map: map
   });
-  var marker3 = new google.maps.Marker({
+
+  var infoMakerspace = '<div class="resourceInfoWindow"><h2 class="infoHeader">'+
+                        '<a href="http://cumaker.space/" target="_blank">Makerspace</a>'+
+                        '</h2>' +
+                        '<div><ul class="popupResourceList">'+
+                        '<li><figure><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</figcaption></figure></li>'+
+                        '<li><figure><img src="assets/img/resourceIcons/cnc.svg"><figcaption>CNC</figcaption></figure></li>'+
+                        '</ul></div>'+
+                        '</div>';
+  var infoWindoMakerspace = new google.maps.InfoWindow({
+          content: infoMakerspace
+  });
+  var mMakerspace = new google.maps.Marker({
     position: watt,
     map: map
   });
-  var marker4 = new google.maps.Marker({
+  mMakerspace.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindoMakerspace.open(map, mMakerspace);
+    prev_infowindow = infoWindoMakerspace;
+  });
+
+
+  var infoCook = '<h2 class="infoHeader">'+
+                        '<a href="https://cecas.clemson.edu/mestudentshop/" target="_blank">Cook Labs</a>'+
+                        '</h2>';
+  var infoWindoCook = new google.maps.InfoWindow({
+          content: infoCook
+  });
+  var mCookLabs = new google.maps.Marker({
     position: cook,
     map: map
   });
-  var marker5 = new google.maps.Marker({
-    position: fDaniel,
-    map: map
+  mCookLabs.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindoCook.open(map, mCookLabs);
+    prev_infowindow = infoWindoCook;
   });
-  var marker6 = new google.maps.Marker({
+
+  var mGeospatial = new google.maps.Marker({
     position: library,
     map: map
   });
+
 }
