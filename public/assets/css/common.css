@@ -152,3 +152,10 @@
 .social-media {
   margin: 1rem auto;
 }
+
+/* Map */
+.mapWindow {
+  height: 25rem;
+  width: 80%;
+  margin: 0 auto;
+}

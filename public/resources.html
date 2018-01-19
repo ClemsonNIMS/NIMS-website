@@ -32,18 +32,10 @@
 	<div class="header content-middle">
     <div class="container">
     	<h1>Available Resources</h1>
-      <br>
-      <form>
-        <div class="form-group row justify-content-center">
-          <label for="resourceSearch" class="col-md-1 col-form-label search-label">Find:</label>
-          <div class="col-md-3">
-            <input type="text" class="form-control" id="resourceSearch" placeholder="3D Printers">
-          </div>
-        </div>
-      </form>
     </div>    
   </div>
  
+  <div class="mapWindow" id="mapBox"></div>
   <div class="container org-spacing" id="org-previews">
   </div>
   
@@ -58,12 +50,15 @@
 
   <script src="assets/js/mustache.js"></script>
   <script src="assets/js/template-builder.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3zanHNt38Cu-YVsTQfT7AArYlZnpOlEI&callback=initMap">
+  </script>
+  <script src="assets/js/mapBuilder.js"></script>
   <script src="assets/js/toggles.js"></script>
 
   <!-- Page Building -->
   <script type="text/javascript">
     buildNavbar();
-  	buildPreviewCardsResources();
   	setTimeout(function(){
       buildFooter();
     }, 500);
