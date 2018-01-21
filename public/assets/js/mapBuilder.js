@@ -20,14 +20,19 @@ function initMap() {
     map: map
   });
 
-  var infoMakerspace = '<div class="resourceInfoWindow"><h2 class="infoHeader">'+
-                        '<a href="http://cumaker.space/" target="_blank">Makerspace</a>'+
-                        '</h2>' +
-                        '<div><ul class="popupResourceList">'+
-                        '<li><figure><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</figcaption></figure></li>'+
-                        '<li><figure><img src="assets/img/resourceIcons/cnc.svg"><figcaption>CNC</figcaption></figure></li>'+
-                        '</ul></div>'+
-                        '</div>';
+
+  var infoMakerspace ='<div class="resourceInfoWindow">'+
+                        '<h1 class="infoHeader"><a href="http://cumaker.space/" target="_blank">Makerspace</a></h2>'+
+                        '<h4 class="infoSubHeader">Watt 110</h4>'+
+                        '<div class="row popupResourceList">'+
+                          '<div class="col"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                          '<div class="col"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
+                          '<div class="col"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
+                          '<div class="col"><img src="assets/img/resourceIcons/cnc.svg">CNC</div>'+
+                          '<div class="col"><img src="assets/img/resourceIcons/button.svg">Button Making</div>'+
+                          '<div class="col"><img src="assets/img/resourceIcons/vinylCutter.svg">Vinyl Cutting</div>'+
+                        '</div>'+
+                      '</div>';
   var infoWindoMakerspace = new google.maps.InfoWindow({
           content: infoMakerspace
   });
