@@ -10,7 +10,8 @@ function initMap() {
 
   var map = new google.maps.Map(document.getElementById('mapBox'), {
     zoom: 15,
-    center: clemson
+    center: watt;
+    mapTypeId: 'roadmap'
   });
 
   var prev_infowindow =false; 
@@ -63,7 +64,7 @@ function initMap() {
                     '<div class="col"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
                   '</div>'+
                 '</div>';
-  var infoWindoCook = new google.maps.InfoWindow({
+  var infoWindowCook = new google.maps.InfoWindow({
           content: infoCook
   });
   var mCookLabs = new google.maps.Marker({
@@ -72,13 +73,35 @@ function initMap() {
   });
   mCookLabs.addListener('click', function() {
     if(prev_infowindow) prev_infowindow.close();
-    infoWindoCook.open(map, mCookLabs);
-    prev_infowindow = infoWindoCook;
+    infoWindowCook.open(map, mCookLabs);
+    prev_infowindow = infoWindowCook;
   });
 
+/*
+  var infoGeo = '<div id="iw-container">' +
+                    '<div class="iw-title">Porcelain Factory of Vista Alegre</div>' +
+                    '<div class="iw-content">' +
+                      '<div class="iw-subTitle">History</div>' +
+                      '<img src="assets/img/resourceIcons/tools.svg" alt="Porcelain Factory of Vista Alegre" height="115" width="83">' +
+                      '<p>Founded in 1824, the Porcelain Factory of Vista Alegre was the first industrial unit dedicated to porcelain production in Portugal. For the foundation and success of this risky industrial development was crucial the spirit of persistence of its founder, José Ferreira Pinto Basto. Leading figure in Portuguese society of the nineteenth century farm owner, daring dealer, wisely incorporated the liberal ideas of the century, having become "the first example of free enterprise" in Portugal.</p>' +
+                      '<div class="iw-subTitle">Contacts</div>' +
+                      '<p>VISTA ALEGRE ATLANTIS, SA<br>3830-292 Ílhavo - Portugal<br>'+
+                      '<br>Phone. +351 234 320 600<br>e-mail: geral@vaa.pt<br>www: www.myvistaalegre.com</p>'+
+                    '</div>' +
+                    '<div class="iw-bottom-gradient"></div>' +
+                  '</div>';
+  var infoWindowGeo = new google.maps.InfoWindow({
+          content: infoGeo
+  });
   var mGeospatial = new google.maps.Marker({
     position: library,
     map: map
   });
+  mGeospatial.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindowGeo.open(map, mGeospatial);
+    prev_infowindow = infoWindowGeo;
+  });
+*/
 
 }
