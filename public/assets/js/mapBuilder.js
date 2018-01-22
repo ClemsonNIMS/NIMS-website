@@ -20,17 +20,20 @@ function initMap() {
     map: map
   });
 
-
-  var infoMakerspace ='<div class="resourceInfoWindow">'+
-                        '<h1 class="infoHeader"><a href="http://cumaker.space/" target="_blank">Makerspace</a></h2>'+
-                        '<h4 class="infoSubHeader">Watt 110</h4>'+
+  //Makerspace
+  var infoMakerspace ='<div>'+
+                        '<div>' +
+                          '<h1 class="infoHeader"><a href="http://cumaker.space/" target="_blank">Makerspace</a></h2>'+
+                          '<h4 class="infoSubHeader">Watt 110</h4>'+
+                        '</div>' +
                         '<div class="row popupResourceList">'+
                           '<div class="col"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
                           '<div class="col"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
                           '<div class="col"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
-                          '<div class="col"><img src="assets/img/resourceIcons/cnc.svg">CNC</div>'+
-                          '<div class="col"><img src="assets/img/resourceIcons/button.svg">Button Making</div>'+
+                          '<div class="col"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                          '<div class="col"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
                           '<div class="col"><img src="assets/img/resourceIcons/vinylCutter.svg">Vinyl Cutting</div>'+
+                          '<div class="col"><img src="assets/img/resourceIcons/button.svg">Button Making</div>'+
                         '</div>'+
                       '</div>';
   var infoWindoMakerspace = new google.maps.InfoWindow({
@@ -47,9 +50,19 @@ function initMap() {
   });
 
 
-  var infoCook = '<h2 class="infoHeader">'+
-                        '<a href="https://cecas.clemson.edu/mestudentshop/" target="_blank">Cook Labs</a>'+
-                        '</h2>';
+  //Mech Engineering Student Shop
+  var infoCook ='<div>'+
+                  '<div>'+
+                    '<h1 class="infoHeader"><a href="https://cecas.clemson.edu/mestudentshop/" target="_blank">Mech Eng Student Shop</a></h2>'+
+                    '<h4 class="infoSubHeader">Cook Labs</h4>'+
+                  '</div>' +
+                  '<div class="row popupResourceList">'+
+                    '<div class="col"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                    '<div class="col"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                    '<div class="col"><img src="assets/img/resourceIcons/electricTools.svg">Electric Tools</div>'+
+                    '<div class="col"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                  '</div>'+
+                '</div>';
   var infoWindoCook = new google.maps.InfoWindow({
           content: infoCook
   });
