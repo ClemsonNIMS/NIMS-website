@@ -40,6 +40,7 @@
   text-align: left;
 }
 .iw-row {
+  justify-content: center;
   text-align: center;
 }
 .iw-row div[class*="col"] {
