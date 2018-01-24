@@ -1,6 +1,8 @@
 function initMap() {
   var clemson = {lat: 34.6761, lng: -82.8364};
   var watt = {lat: 34.676071, lng: -82.837038};
+  var makerspace = {lat: 34.676285, lng:-82.836909};
+  var immersive = {lat: 34.676003, lng:-82.837025};
   var rhodes = {lat: 34.676997, lng: -82.837205};
   var tillman = {lat: 34.680067, lng: -82.837398};
   var lee = {lat: 34.674526, lng: -82.838369};
@@ -9,9 +11,9 @@ function initMap() {
   var library = {lat: 34.6761, lng: -82.8364};
 
   var map = new google.maps.Map(document.getElementById('mapBox'), {
-    zoom: 15,
+    zoom: 17,
     center: watt,
-    mapTypeId: 'roadmap'
+    mapTypeId: 'hybrid'
   });
 
   var prev_infowindow =false; 
@@ -35,19 +37,41 @@ function initMap() {
                         '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/vinylCutter.svg">Vinyl Cutting</div>'+
                         '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/button.svg">Button Making</div>'+
                       '</div>';
-  var infoWindoMakerspace = new google.maps.InfoWindow({
+  var infoWindowMakerspace = new google.maps.InfoWindow({
           content: infoMakerspace
   });
   var mMakerspace = new google.maps.Marker({
-    position: watt,
+    position: makerspace,
     map: map
   });
   mMakerspace.addListener('click', function() {
     if(prev_infowindow) prev_infowindow.close();
-    infoWindoMakerspace.open(map, mMakerspace);
-    prev_infowindow = infoWindoMakerspace;
+    infoWindowMakerspace.open(map, mMakerspace);
+    prev_infowindow = infoWindowMakerspace;
   });
 
+  //Makerspace
+  var infoImmersive ='<div class="row iw-row">'+
+                        '<div class="col-12">' +
+                          '<h1 class="infoHeader"><a href="http://vrclub.people.clemson.edu/index.html" target="_blank">Immersive Space</a></h2>'+
+                          '<h4 class="infoSubHeader">Watt 308</h4>'+
+                        '</div>' +
+                        '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vr.svg">Virtual Reality</div>'+
+                        '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
+                        '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vrDev.svg">VR Dev Kit</div>'+
+                      '</div>';
+  var infoWindowImmersive = new google.maps.InfoWindow({
+          content: infoImmersive
+  });
+  var mImmersive = new google.maps.Marker({
+    position: immersive,
+    map: map
+  });
+  mImmersive.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindowImmersive.open(map, mImmersive);
+    prev_infowindow = infoWindowImmersive;
+  });
 
   //Mech Engineering Student Shop
   var infoCook ='<div class="row iw-row">'+
