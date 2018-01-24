@@ -22,20 +22,18 @@ function initMap() {
   });
 
   //Makerspace
-  var infoMakerspace ='<div>'+
-                        '<div>' +
+  var infoMakerspace ='<div class="row iw-row">'+
+                        '<div class="col-12">' +
                           '<h1 class="infoHeader"><a href="http://cumaker.space/" target="_blank">Makerspace</a></h2>'+
                           '<h4 class="infoSubHeader">Watt 110</h4>'+
                         '</div>' +
-                        '<div class="row popupResourceList">'+
-                          '<div class="col"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
-                          '<div class="col"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
-                          '<div class="col"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
-                          '<div class="col"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
-                          '<div class="col"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
-                          '<div class="col"><img src="assets/img/resourceIcons/vinylCutter.svg">Vinyl Cutting</div>'+
-                          '<div class="col"><img src="assets/img/resourceIcons/button.svg">Button Making</div>'+
-                        '</div>'+
+                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
+                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
+                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/vinylCutter.svg">Vinyl Cutting</div>'+
+                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/button.svg">Button Making</div>'+
                       '</div>';
   var infoWindoMakerspace = new google.maps.InfoWindow({
           content: infoMakerspace
@@ -52,17 +50,15 @@ function initMap() {
 
 
   //Mech Engineering Student Shop
-  var infoCook ='<div id="iw-container">'+
-                  '<div class="iw-content">'+
-                    '<h1 class="infoHeader"><a href="https://cecas.clemson.edu/mestudentshop/" target="_blank">Mech Eng Student Shop</a></h2>'+
+  var infoCook ='<div class="row iw-row">'+
+                  '<div class="col-12">'+
+                    '<h1 class="infoHeader"><a href="https://cecas.clemson.edu/mestudentshop/" target="_blank">Student Shop</a></h2>'+
                     '<h4 class="infoSubHeader">Cook Labs</h4>'+
-                    '<ul class="iw-ul">'+
-                      '<li><img src="assets/img/resourceIcons/3dprinting.svg"><p>3D Printing</p></li>'+
-                      '<li><img src="assets/img/resourceIcons/cnc.svg"><p>CNC Milling</p></li>'+
-                      '<li><img src="assets/img/resourceIcons/electricTools.svg"><p>Electric Tools</p></li>'+
-                      '<li><img src="assets/img/resourceIcons/tools.svg"><p>Hand Tools</p></li>'+
-                    '</ul>'+
-                  '</div'+
+                  '</div>'+
+                  '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                  '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                  '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/electricTools.svg">Electric Tools</div>'+
+                  '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
                 '</div>';
   var infoWindowCook = new google.maps.InfoWindow({
           content: infoCook
@@ -78,14 +74,7 @@ function initMap() {
   });
 
 
-  var infoGeo = '<div id="iw-container">' +
-                    '<div class="iw-content">' +
-                      '<p>Founded in 1824, the Porcelain Factory of Vista Alegre was the first industrial unit dedicated to porcelain production in Portugal. For the foundation and success of this risky industrial development was crucial the spirit of persistence of its founder, JosÃ© Ferreira Pinto Basto. Leading figure in Portuguese society of the nineteenth century farm owner, daring dealer, wisely incorporated the liberal ideas of the century, having become "the first example of free enterprise" in Portugal.</p>' +
-                      '<p>VISTA ALEGRE ATLANTIS, SA<br>3830-292 Ãlhavo - Portugal<br>'+
-                      '<br>Phone. +351 234 320 600<br>e-mail: geral@vaa.pt<br>www: www.myvistaalegre.com</p>'+
-                    '</div>' +
-                    '<div class="iw-bottom-gradient"></div>' +
-                  '</div>';
+  var infoGeo = "";
   var infoWindowGeo = new google.maps.InfoWindow({
           content: infoGeo
   });

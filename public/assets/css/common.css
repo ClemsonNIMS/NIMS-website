@@ -29,6 +29,9 @@
   width: 80%;
   margin: 0 auto;
 }
+.gm-style-iw div { 
+ overflow-x: hidden !important; 
+}
 .infoHeader {
   text-align: left;
   margin-bottom: .1rem;
@@ -36,71 +39,12 @@
 .infoSubHeader {
   text-align: left;
 }
-.popupResourceList img{
-  max-width: 100%;
-  max-height: 100%;
-}
-#iw-container {
-  margin-bottom: 10px;
-}
-#iw-container .iw-title {
-  font-size: 22px;
-  font-weight: 400;
-  padding: 10px;
-  background-color: #48b5e9;
-  color: white;
-  margin: 0;
-  border-radius: 2px 2px 0 0;
-}
-#iw-container .iw-content {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-  padding: 15px 5px 20px 15px;
-  max-height: 140px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.iw-ul {
-  width: 100%;
-  display: table;
-  border-collapse: separate;
-  table-layout: fixed;
-  list-style-type: none;
-  margin: 0rem;
-  padding: 0rem;
-}
-.iw-ul li {
+.iw-row {
   text-align: center;
-  width: auto;
-  display: table-cell;
-  border: 1rem solid transparent;
-  min-width: 3rem !important;
-  max-width: 6rem !important;
 }
-.iw-ul img{
-  display: block;
-  width: auto;
-  height: auto;
-  margin: auto;
-  min-width: 3rem !important;
-  max-width: 6rem !important;
-}
-.iw-subTitle {
-  font-size: 16px;
-  font-weight: 700;
-  padding: 5px 0;
-}
-.iw-bottom-gradient {
-  position: absolute;
-  width: 326px;
-  height: 25px;
-  bottom: 10px;
-  right: 18px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+.iw-row div[class*="col"] {
+  margin-bottom: 1rem;
+  overflow-y: hidden;
 }
 /* Header and Footer */
 .header {
