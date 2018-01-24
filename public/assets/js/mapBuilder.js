@@ -10,7 +10,7 @@ function initMap() {
 
   var map = new google.maps.Map(document.getElementById('mapBox'), {
     zoom: 15,
-    center: watt;
+    center: watt,
     mapTypeId: 'roadmap'
   });
 
@@ -52,17 +52,17 @@ function initMap() {
 
 
   //Mech Engineering Student Shop
-  var infoCook ='<div>'+
-                  '<div>'+
+  var infoCook ='<div id="iw-container">'+
+                  '<div class="iw-content">'+
                     '<h1 class="infoHeader"><a href="https://cecas.clemson.edu/mestudentshop/" target="_blank">Mech Eng Student Shop</a></h2>'+
                     '<h4 class="infoSubHeader">Cook Labs</h4>'+
-                  '</div>' +
-                  '<div class="row popupResourceList">'+
-                    '<div class="col"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
-                    '<div class="col"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
-                    '<div class="col"><img src="assets/img/resourceIcons/electricTools.svg">Electric Tools</div>'+
-                    '<div class="col"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
-                  '</div>'+
+                    '<ul class="iw-ul">'+
+                      '<li><img src="assets/img/resourceIcons/3dprinting.svg"><p>3D Printing</p></li>'+
+                      '<li><img src="assets/img/resourceIcons/cnc.svg"><p>CNC Milling</p></li>'+
+                      '<li><img src="assets/img/resourceIcons/electricTools.svg"><p>Electric Tools</p></li>'+
+                      '<li><img src="assets/img/resourceIcons/tools.svg"><p>Hand Tools</p></li>'+
+                    '</ul>'+
+                  '</div'+
                 '</div>';
   var infoWindowCook = new google.maps.InfoWindow({
           content: infoCook
@@ -77,15 +77,11 @@ function initMap() {
     prev_infowindow = infoWindowCook;
   });
 
-/*
+
   var infoGeo = '<div id="iw-container">' +
-                    '<div class="iw-title">Porcelain Factory of Vista Alegre</div>' +
                     '<div class="iw-content">' +
-                      '<div class="iw-subTitle">History</div>' +
-                      '<img src="assets/img/resourceIcons/tools.svg" alt="Porcelain Factory of Vista Alegre" height="115" width="83">' +
-                      '<p>Founded in 1824, the Porcelain Factory of Vista Alegre was the first industrial unit dedicated to porcelain production in Portugal. For the foundation and success of this risky industrial development was crucial the spirit of persistence of its founder, José Ferreira Pinto Basto. Leading figure in Portuguese society of the nineteenth century farm owner, daring dealer, wisely incorporated the liberal ideas of the century, having become "the first example of free enterprise" in Portugal.</p>' +
-                      '<div class="iw-subTitle">Contacts</div>' +
-                      '<p>VISTA ALEGRE ATLANTIS, SA<br>3830-292 Ílhavo - Portugal<br>'+
+                      '<p>Founded in 1824, the Porcelain Factory of Vista Alegre was the first industrial unit dedicated to porcelain production in Portugal. For the foundation and success of this risky industrial development was crucial the spirit of persistence of its founder, JosÃ© Ferreira Pinto Basto. Leading figure in Portuguese society of the nineteenth century farm owner, daring dealer, wisely incorporated the liberal ideas of the century, having become "the first example of free enterprise" in Portugal.</p>' +
+                      '<p>VISTA ALEGRE ATLANTIS, SA<br>3830-292 Ãlhavo - Portugal<br>'+
                       '<br>Phone. +351 234 320 600<br>e-mail: geral@vaa.pt<br>www: www.myvistaalegre.com</p>'+
                     '</div>' +
                     '<div class="iw-bottom-gradient"></div>' +
@@ -102,6 +98,6 @@ function initMap() {
     infoWindowGeo.open(map, mGeospatial);
     prev_infowindow = infoWindowGeo;
   });
-*/
+
 
 }
