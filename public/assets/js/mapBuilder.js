@@ -102,7 +102,7 @@ function initMap() {
   var infoMakerspace =  '<div class="iw-container">'+
                           '<div class="row iw-row">'+
                             '<div class="col-12">' +
-                              '<h2 class="infoHeader"><a href="http://cumaker.space/" target="_blank">Makerspace</a></h2>'+
+                              '<h2 class="infoHeader">Makerspace</h2>'+
                               '<h4 class="infoSubHeader">Watt 110</h4>'+
                             '</div>' +
                             '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
@@ -115,7 +115,7 @@ function initMap() {
                           '</div>'+
                         '</div>'+
                         '<div class="iw-footer">'+
-                          '<button type="button" class="btn btn-primary">Primary</button>'+
+                          '<a class="btn btn-primary" role="button" href="http://cumaker.space/" target="_blank">More Info</a>'+
                         '</div>';
                         
   var infoWindowMakerspace = new google.maps.InfoWindow({
@@ -132,21 +132,23 @@ function initMap() {
   });
 
   //Makerspace
-  var infoImmersive =  '<div class="iw-container">'+
-                          '<div class="row iw-row">'+
-                            '<div class="col-12">' +
-                              '<h1 class="infoHeader"><a href="http://vrclub.people.clemson.edu/index.html" target="_blank">Immersive Space</a></h2>'+
-                              '<h4 class="infoSubHeader">Watt 308</h4>'+
-                            '</div>' +
-                            '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vr.svg">Virtual Reality</div>'+
-                            '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
-                            '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vrDev.svg">VR Dev Kit</div>'+
-                          '</div>'+
-                        '</div>';
+  var infoImmersive = '<div class="iw-container">'+
+                        '<div class="row iw-row">'+
+                          '<div class="col-12">' +
+                            '<h2 class="infoHeader">Immersive Space</h2>'+
+                            '<h4 class="infoSubHeader">Watt 308</h4>'+
+                          '</div>' +
+                          '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vr.svg">Virtual Reality</div>'+
+                          '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
+                          '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vrDev.svg">VR Dev Kit</div>'+
+                        '</div>'+
+                      '</div>'+
+                      '<div class="iw-footer">'+
+                        '<a class="btn btn-primary" role="button" href="http://vrclub.people.clemson.edu/index.html" target="_blank">More Info</a>'+
+                      '</div>';
   var infoWindowImmersive = new google.maps.InfoWindow({
           content: infoImmersive
   });
- 
   var mImmersive = new google.maps.Marker({
     position: immersive,
     map: map
@@ -158,18 +160,23 @@ function initMap() {
   });
 
   //Mech Engineering Student Shop
-  var infoCook ='<div class="row iw-row">'+
-                  '<div class="col-12">'+
-                    '<h1 class="infoHeader"><a href="https://cecas.clemson.edu/mestudentshop/" target="_blank">Student Shop</a></h2>'+
-                    '<h4 class="infoSubHeader">Cook Labs</h4>'+
+  var infoCook = '<div class="iw-container">'+
+                    '<div class="row iw-row">'+
+                      '<div class="col-12">'+
+                        '<h2 class="infoHeader">ME Shop</h2>'+
+                        '<h4 class="infoSubHeader">Cook Labs</h4>'+
+                      '</div>' +
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/electricTools.svg">Electric Tools</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                    '</div>'+
                   '</div>'+
-                  '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
-                  '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
-                  '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/electricTools.svg">Electric Tools</div>'+
-                  '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
-                '</div>';
+                  '<div class="iw-footer">'+
+                    '<a class="btn btn-primary" role="button" href="https://cecas.clemson.edu/mestudentshop/" target="_blank">More Info</a>'
+                  '</div>';
   var infoWindowCook = new google.maps.InfoWindow({
-          content: infoCook
+    content: infoCook
   });
   var mCookLabs = new google.maps.Marker({
     position: cook,
@@ -181,10 +188,9 @@ function initMap() {
     prev_infowindow = infoWindowCook;
   });
 
-
   var infoGeo = "";
   var infoWindowGeo = new google.maps.InfoWindow({
-          content: infoGeo
+    content: infoGeo
   });
   var mGeospatial = new google.maps.Marker({
     position: library,
@@ -194,10 +200,6 @@ function initMap() {
     if(prev_infowindow) prev_infowindow.close();
     infoWindowGeo.open(map, mGeospatial);
     prev_infowindow = infoWindowGeo;
-  });
-
-   $(document).ready(function() {
-        $('.iw-container').closest('.gm-style-iw').parent().addClass('custom-iw');
   });
 }
 
