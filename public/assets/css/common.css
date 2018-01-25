@@ -36,8 +36,10 @@
 .infoSubHeader {
   text-align: left;
 }
-
+/* Infowindow */
 .gm-style-iw {
+  min-width: 310px;
+  min-height: 270px;
   width: 100% !important;
   top: 15px !important;
   left: 0px !important;
@@ -53,6 +55,7 @@
 .iw-row {
   max-height: 14rem;
   overflow-y: auto;
+  display: flex;
   justify-content: center;
   text-align: center;
 }
@@ -66,33 +69,6 @@
   bottom: 0;
   margin-bottom: .5rem;
   text-align: center;
-}
-.custom-iw .gm-style-iw {
-  top: 15px !important;
-  left: 0 !important;
-  border-radius: 2px;
-}
-.custom-iw>div:first-child>div:nth-child(2) {
-    display:none;
-}
-.custom-iw .gm-style-iw, .custom-iw .gm-style-iw>div, .custom-iw .gm-style-iw>div>div {
-    width:100% !important;
-    max-width:100% !important;
-}
-/** set here the width **/
-.custom-iw, .custom-iw>div:first-child>div:last-child {
-    width: 342px !important;
-}
-.custom-iw>div:first-child>div:last-child {
-    left:0 !important;
-    top:0px;
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px;
-    z-index:-1 !important;
-}
-/** close-button **/
-.custom-iw>div:last-child {
-    top:1px !important;
-    right:0 !important;
 }
 
 /* Header and Footer */
