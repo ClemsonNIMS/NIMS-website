@@ -13,30 +13,111 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('mapBox'), {
     zoom: 17,
     center: watt,
-    mapTypeId: 'hybrid'
+    styles: [
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.business",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.business",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "visibility": "on"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      }
+    ]
   });
 
   var prev_infowindow =false; 
 
-  var mDEN = new google.maps.Marker({
-    position: rhodes,
-    map: map
-  });
-
   //Makerspace
-  var infoMakerspace ='<div class="row iw-row">'+
-                        '<div class="col-12">' +
-                          '<h1 class="infoHeader"><a href="http://cumaker.space/" target="_blank">Makerspace</a></h2>'+
-                          '<h4 class="infoSubHeader">Watt 110</h4>'+
-                        '</div>' +
-                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
-                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
-                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
-                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
-                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
-                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/vinylCutter.svg">Vinyl Cutting</div>'+
-                        '<div class="col-4 col-md-3 col-lg-2"><img src="assets/img/resourceIcons/button.svg">Button Making</div>'+
-                      '</div>';
+  var infoMakerspace =  '<div class="iw-container">'+
+                          '<div class="row iw-row">'+
+                            '<div class="col-12">' +
+                              '<h2 class="infoHeader"><a href="http://cumaker.space/" target="_blank">Makerspace</a></h2>'+
+                              '<h4 class="infoSubHeader">Watt 110</h4>'+
+                            '</div>' +
+                            '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                            '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
+                            '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
+                            '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                            '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                            '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/vinylCutter.svg">Vinyl Cutting</div>'+
+                            '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/button.svg">Button Making</div>'+
+                          '</div>'+
+                        '</div>'+
+                        '<div class="iw-footer">'+
+                          '<button type="button" class="btn btn-primary">Primary</button>'+
+                        '</div>';
+                        
   var infoWindowMakerspace = new google.maps.InfoWindow({
           content: infoMakerspace
   });
@@ -51,18 +132,21 @@ function initMap() {
   });
 
   //Makerspace
-  var infoImmersive ='<div class="row iw-row">'+
-                        '<div class="col-12">' +
-                          '<h1 class="infoHeader"><a href="http://vrclub.people.clemson.edu/index.html" target="_blank">Immersive Space</a></h2>'+
-                          '<h4 class="infoSubHeader">Watt 308</h4>'+
-                        '</div>' +
-                        '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vr.svg">Virtual Reality</div>'+
-                        '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
-                        '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vrDev.svg">VR Dev Kit</div>'+
-                      '</div>';
+  var infoImmersive =  '<div class="iw-container">'+
+                          '<div class="row iw-row">'+
+                            '<div class="col-12">' +
+                              '<h1 class="infoHeader"><a href="http://vrclub.people.clemson.edu/index.html" target="_blank">Immersive Space</a></h2>'+
+                              '<h4 class="infoSubHeader">Watt 308</h4>'+
+                            '</div>' +
+                            '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vr.svg">Virtual Reality</div>'+
+                            '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
+                            '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vrDev.svg">VR Dev Kit</div>'+
+                          '</div>'+
+                        '</div>';
   var infoWindowImmersive = new google.maps.InfoWindow({
           content: infoImmersive
   });
+ 
   var mImmersive = new google.maps.Marker({
     position: immersive,
     map: map
@@ -112,5 +196,8 @@ function initMap() {
     prev_infowindow = infoWindowGeo;
   });
 
-
+   $(document).ready(function() {
+        $('.iw-container').closest('.gm-style-iw').parent().addClass('custom-iw');
+  });
 }
+
