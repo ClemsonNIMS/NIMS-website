@@ -4,3 +4,4 @@ _site
 firebase-debug.log
 *.log
  /index.html
+.DS_Store

@@ -14,7 +14,7 @@
   padding: 2rem 0rem 2rem 0rem;
 }
 .email-widget {
-  margin: 1rem auto; 
+  margin: 1rem auto;
   padding: 1rem;
   border: 1px solid #d5dadd;
   -webkit-border-radius: 1rem;
@@ -36,6 +36,43 @@
 .infoSubHeader {
   text-align: left;
 }
+
+/* Map filters */
+.map-filter-header {
+	margin: 25px 10% 0px;
+	font-size: 24px;
+}
+
+.filter-icons {
+	margin: 0px 10%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.filter-icons div {
+	margin: 10px;
+	flex-basis: 100px;
+	font-size: 14px;
+	transition: color 0.25s;
+}
+
+.filter-icons div:hover, .filter-icons div.selected {
+	color: #e16337;
+	cursor: pointer;
+	transition: color 0.25s;
+}
+
+.filter-icons img {
+	display: block;
+}
+
+.filter-icons span {
+	display: block;
+	margin-top: 5px;
+	text-align: center;
+}
+
 /* Infowindow */
 .gm-style-iw {
   min-width: 310px;
@@ -44,8 +81,8 @@
   top: 15px !important;
   left: 0px !important;
 }
-.gm-style-iw div { 
- overflow-x: hidden !important; 
+.gm-style-iw div {
+ overflow-x: hidden !important;
 }
 .iw-container {
   padding-left: 1rem;
@@ -97,8 +134,8 @@
   padding-top: 0rem;
 }
 .content-middle {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -178,5 +215,3 @@
 .social-media {
   margin: 1rem auto;
 }
-
-

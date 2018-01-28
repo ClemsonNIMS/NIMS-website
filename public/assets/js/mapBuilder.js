@@ -1,3 +1,5 @@
+var mapMarkers;
+
 function initMap() {
   var clemson = {lat: 34.6761, lng: -82.8364};
   var watt = {lat: 34.676071, lng: -82.837038};
@@ -96,7 +98,7 @@ function initMap() {
     ]
   });
 
-  var prev_infowindow =false; 
+  var prev_infowindow =false;
 
   //Makerspace
   var infoMakerspace =  '<div class="iw-container">'+
@@ -117,7 +119,7 @@ function initMap() {
                         '<div class="iw-footer">'+
                           '<a class="btn btn-primary" role="button" href="http://cumaker.space/" target="_blank">More Info</a>'+
                         '</div>';
-                        
+
   var infoWindowMakerspace = new google.maps.InfoWindow({
           content: infoMakerspace
   });
@@ -201,5 +203,83 @@ function initMap() {
     infoWindowGeo.open(map, mGeospatial);
     prev_infowindow = infoWindowGeo;
   });
+
+	// Map filters
+	mapMarkers = [
+		[mMakerspace, infoMakerspace],
+		[mImmersive, infoImmersive],
+		[mCookLabs, infoCook],
+		[mGeospatial, infoGeo]
+	];
+
+	var locationResources,
+		mockInfoWindow,
+		markerCol4Divs,
+		filterIcons;
+
+	for (mapMarker of mapMarkers) {
+		mockInfoWindow = document.createElement('div');
+		mockInfoWindow.innerHTML = mapMarker[1];
+		markerCol4Divs = mockInfoWindow.querySelectorAll('div.col-4');
+		locationResources = [];
+
+		for (markerCol4Div of markerCol4Divs) {
+			locationResources.push(markerCol4Div.innerText);
+		}
+
+		mapMarker[1] = locationResources;
+	}
+
+	filterIcons = document.querySelectorAll('.filter-icons div');
+
+	for (filterIcon of filterIcons) {
+		filterIcon.addEventListener('click', filterMap);
+	}
 }
 
+function filterMap() {
+	var filterText = this.innerText.trim(),
+		previousFilterIcon = document.querySelector('.filter-icons .selected'),
+		locationHasResource;
+
+	if (previousFilterIcon)
+		previousFilterIcon.classList.remove('selected');
+
+	if (previousFilterIcon !== this) {
+		this.classList.add('selected');
+
+		for (mapMarker of mapMarkers) {
+			locationHasResource = false;
+
+			for (resource of mapMarker[1]) {
+				if (resource === filterText) {
+					locationHasResource = true;
+					break;
+				}
+			}
+
+			mapMarker[0].setVisible(locationHasResource);
+		}
+	} else {
+		for (mapMarker of mapMarkers) {
+			mapMarker[0].setVisible(true);
+		}
+	}
+
+
+
+	// 	shownMarkers = [];
+    //
+	// for (var i = 0; i < mapMarkers.length; i++) {
+	// 	for (var j = 0; j < mapMarkers[i][1].length; j++) {
+	// 		if (mapMarkers[i][1][j] === filterText) {
+	// 			shownMarkers.push(i);
+	// 			break;
+	// 		}
+	// 	}
+	// }
+    //
+	// for (var i = 0; i < mapMarkers.length; i++) {
+	// 	if (shownMarkers.includes(i) || shownMarkers)
+	// }
+}

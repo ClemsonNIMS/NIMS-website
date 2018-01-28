@@ -8,7 +8,7 @@
   <meta name="author" content="">
 
   <title>Resources</title>
-	
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="all" href="/assets/css/common.css">
 
@@ -22,7 +22,7 @@
   ga('create', 'UA-103290240-1', 'auto');
   ga('send', 'pageview');
   </script>
-	
+
 </head>
 
 <body>
@@ -32,16 +32,58 @@
 	<div class="header content-middle">
     <div class="container">
     	<h1>Available Resources</h1>
-    </div>    
+    </div>
   </div>
- 
+
   <div class="mapWindow" id="mapBox"></div>
-  <div class="container org-spacing" id="org-previews">
+  <h2 class="map-filter-header">Map Filter</h2>
+  <div class="filter-icons">
+    <div>
+      <img src="/assets/img/resourceIcons/3dprinting.svg">
+	  <span>3D Printing</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/3dscanning.svg">
+	  <span>3D Scanning</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/button.svg">
+	  <span>Button Making</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/cnc.svg">
+	  <span>CNC Milling</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/electricTools.svg">
+	  <span>Electric Tools</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/laserCutter.svg">
+	  <span>Laser Cutter</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/tools.svg">
+	  <span>Hand Tools</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/vinylCutter.svg">
+	  <span>Vinyl Cutting</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/vr.svg">
+	  <span>Virtual Reality</span>
+    </div>
+	<div>
+      <img src="/assets/img/resourceIcons/vrDev.svg">
+	  <span>VR Dev Kit</span>
+    </div>
   </div>
-  
+  <div class="container org-spacing" id="org-previews"></div>
+
   <div id="footer">
   </div>
-  
+
   <!-- Core Javascript Files -->
   <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
@@ -50,7 +92,7 @@
 
   <script src="assets/js/mustache.js"></script>
   <script src="assets/js/template-builder.js"></script>
-  <script async defer
+  <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3zanHNt38Cu-YVsTQfT7AArYlZnpOlEI&callback=initMap">
   </script>
   <script src="assets/js/mapBuilder.js"></script>
