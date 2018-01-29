@@ -239,9 +239,53 @@ function initMap() {
 
 function filterMap() {
 	var filterText = this.innerText.trim(),
-		previousFilterIcon = document.querySelector('.filter-icons .selected'),
-		locationHasResource;
+		unselectResource, locationHasResource, resourceText, showMarker;
 
+  var filterIcons = [].slice.call(document.querySelectorAll('.filter-icons .selected'));
+  unselectResource = false;
+  filterIcons.every(function(arrVal){
+    console.log("filter: " + filterText);
+    console.log("item: " + arrVal.innerText.trim());
+    if(filterText === arrVal.innerText.trim()){
+      unselectResource = true;
+      return false;
+    }
+    return true;
+  });
+  if(unselectResource){
+    console.log("unselect " + filterText);
+    this.classList.remove('selected');
+    filterIcons.splice(filterIcons.indexOf(this),1);
+  } else {
+      this.classList.add('selected');
+      filterIcons.push(this);
+    } 
+
+  console.log(filterIcons);
+  for (mapMarker of mapMarkers) {
+    console.log("searching");
+    showMarker = true;
+    filterIcons.every(function(arrVal){
+      locationHasResource = false;
+      resourceText = arrVal.innerText.trim();
+      for (resource of mapMarker[1]) {
+        // console.log(resourceText);
+        // console.log(resource);
+        if (resource === resourceText) {
+          locationHasResource = true;
+          break;
+        }
+      }
+      if(!locationHasResource){
+        showMarker = false;
+        return false;
+      }
+      return true;
+    });
+    mapMarker[0].setVisible(showMarker);
+  }
+
+  /*
 	if (previousFilterIcon)
 		previousFilterIcon.classList.remove('selected');
 
@@ -264,7 +308,8 @@ function filterMap() {
 		for (mapMarker of mapMarkers) {
 			mapMarker[0].setVisible(true);
 		}
-	}
+    */
+	
 
 
 
