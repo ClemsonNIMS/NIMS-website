@@ -241,90 +241,45 @@ function filterMap() {
 	var filterText = this.innerText.trim(),
 		unselectResource, locationHasResource, resourceText, showMarker;
 
+  //filterIcons returns a nodeList, so convert to an array for easier push/deletes
   var filterIcons = [].slice.call(document.querySelectorAll('.filter-icons .selected'));
   unselectResource = false;
+  //this loop determines if we are selecting an active filter, interpreted as clearing that filter
   filterIcons.every(function(arrVal){
-    console.log("filter: " + filterText);
-    console.log("item: " + arrVal.innerText.trim());
     if(filterText === arrVal.innerText.trim()){
       unselectResource = true;
-      return false;
+      return false; //used to exit Array.every
     }
-    return true;
+    return true; //default to true so Array.every continues
   });
   if(unselectResource){
-    console.log("unselect " + filterText);
+    //remove the selected class and update filter array
     this.classList.remove('selected');
     filterIcons.splice(filterIcons.indexOf(this),1);
   } else {
+      //otherwise it's a new resource so show that in the DOM
       this.classList.add('selected');
       filterIcons.push(this);
     } 
-
-  console.log(filterIcons);
+  //now go through each marker and see if it matches all the filters
   for (mapMarker of mapMarkers) {
-    console.log("searching");
-    showMarker = true;
+    showMarker = true; //master truth 
     filterIcons.every(function(arrVal){
-      locationHasResource = false;
+      locationHasResource = false; //local truth per resource
       resourceText = arrVal.innerText.trim();
       for (resource of mapMarker[1]) {
-        // console.log(resourceText);
-        // console.log(resource);
         if (resource === resourceText) {
           locationHasResource = true;
           break;
         }
       }
       if(!locationHasResource){
+        //if the marker is missing even 1 resource don't show it
         showMarker = false;
-        return false;
+        return false; //break out of Array.every
       }
-      return true;
+      return true; //return true to continue with Array.every
     });
     mapMarker[0].setVisible(showMarker);
   }
-
-  /*
-	if (previousFilterIcon)
-		previousFilterIcon.classList.remove('selected');
-
-	if (previousFilterIcon !== this) {
-		this.classList.add('selected');
-
-		for (mapMarker of mapMarkers) {
-			locationHasResource = false;
-
-			for (resource of mapMarker[1]) {
-				if (resource === filterText) {
-					locationHasResource = true;
-					break;
-				}
-			}
-
-			mapMarker[0].setVisible(locationHasResource);
-		}
-	} else {
-		for (mapMarker of mapMarkers) {
-			mapMarker[0].setVisible(true);
-		}
-    */
-	
-
-
-
-	// 	shownMarkers = [];
-    //
-	// for (var i = 0; i < mapMarkers.length; i++) {
-	// 	for (var j = 0; j < mapMarkers[i][1].length; j++) {
-	// 		if (mapMarkers[i][1][j] === filterText) {
-	// 			shownMarkers.push(i);
-	// 			break;
-	// 		}
-	// 	}
-	// }
-    //
-	// for (var i = 0; i < mapMarkers.length; i++) {
-	// 	if (shownMarkers.includes(i) || shownMarkers)
-	// }
 }
