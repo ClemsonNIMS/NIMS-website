@@ -218,6 +218,9 @@ function initMap() {
 		filterIcons;
 
 	for (mapMarker of mapMarkers) {
+		// Google heavily abstracts their API from the DOM so instead of using
+		// regex to extract the resources from the HTML text, an element is
+		// created from it
 		mockInfoWindow = document.createElement('div');
 		mockInfoWindow.innerHTML = mapMarker[1];
 		markerCol4Divs = mockInfoWindow.querySelectorAll('div.col-4');
@@ -238,48 +241,47 @@ function initMap() {
 }
 
 function filterMap() {
-	var filterText = this.innerText.trim(),
-		unselectResource, locationHasResource, resourceText, showMarker;
+	var selectedFilters,
+		filterTexts,
+		noMatches,
+		visible,
+		noSpacesMatchText;
 
-  //filterIcons returns a nodeList, so convert to an array for easier push/deletes
-  var filterIcons = [].slice.call(document.querySelectorAll('.filter-icons .selected'));
-  unselectResource = false;
-  //this loop determines if we are selecting an active filter, interpreted as clearing that filter
-  filterIcons.every(function(arrVal){
-    if(filterText === arrVal.innerText.trim()){
-      unselectResource = true;
-      return false; //used to exit Array.every
-    }
-    return true; //default to true so Array.every continues
-  });
-  if(unselectResource){
-    //remove the selected class and update filter array
-    this.classList.remove('selected');
-    filterIcons.splice(filterIcons.indexOf(this),1);
-  } else {
-      //otherwise it's a new resource so show that in the DOM
-      this.classList.add('selected');
-      filterIcons.push(this);
-    } 
-  //now go through each marker and see if it matches all the filters
-  for (mapMarker of mapMarkers) {
-    showMarker = true; //master truth 
-    filterIcons.every(function(arrVal){
-      locationHasResource = false; //local truth per resource
-      resourceText = arrVal.innerText.trim();
-      for (resource of mapMarker[1]) {
-        if (resource === resourceText) {
-          locationHasResource = true;
-          break;
-        }
-      }
-      if(!locationHasResource){
-        //if the marker is missing even 1 resource don't show it
-        showMarker = false;
-        return false; //break out of Array.every
-      }
-      return true; //return true to continue with Array.every
-    });
-    mapMarker[0].setVisible(showMarker);
-  }
+	// Toggles the pressed filter
+	this.classList.toggle('selected');
+
+	// All active filters
+	selectedFilters = document.querySelectorAll('.filter-icons .selected');
+	filterTexts = [];
+
+	// Resource names of all active filters
+	for (selectedFilter of selectedFilters) {
+		filterTexts.push(selectedFilter.innerText.trim());
+	}
+
+	noMatches = true;
+
+	// For every mapMarker, set it visible if it matches all filters and not
+	// visible otherwise
+	for (mapMarker of mapMarkers) {
+		visible = true;
+
+		for (filterText of filterTexts) {
+			if (!mapMarker[1].includes(filterText)) {
+				visible = false;
+				break;
+			}
+		}
+
+		mapMarker[0].setVisible(visible);
+
+		if (visible)
+			noMatches = false;
+	}
+
+	// If no matches were found, make the "No spaces match the filters" text
+	// visible and not visible otherwise
+	noSpacesMatchText = document.querySelector('.no-spaces-match');
+
+	noSpacesMatchText.classList.toggle('visible', noMatches);
 }
