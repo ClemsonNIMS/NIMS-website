@@ -1,19 +1,19 @@
 [
 	{
 	"name" : "Makerspace",
-	"shortDescription" : "The Clemson Makerspace is the first 3D printing lab available to all students, free of charge.",
+	"shortDescription" : "The Clemson Makerspace is the first open and accessible makerspace for all students.",
 	"resources" : ["Type A 3D FDM Printer", "Lulzbot Mini 3D Printer", "Formlabs SLA 3D Printer", "Epilog Fusion Laser Cutter", "CNC Mill",
 		"CAD Software", "Adobe Illustrator", "Button Maker"],
 	"restrictions" : ["Open to all Majors"],
 	"hours" : [
-		{"day" : "Monday", "time" : "9-10am, 3-8pm"},
-		{"day" : "Tuesday", "time" : "9-10am, 3-8pm"},
-		{"day" : "Wednesday", "time" : "9-10am, 3-8pm"},
-		{"day" : "Thursday", "time" : "9-10am, 3-8pm"},
-		{"day" : "Friday", "time" : "9-10am, 12-4pm"}
+		{"day" : "Monday", "time" : "8-10am, 3-8pm"},
+		{"day" : "Tuesday", "time" : "8-9am, 4-8pm"},
+		{"day" : "Wednesday", "time" : "8-10am, 3-8pm"},
+		{"day" : "Thursday", "time" : "8-9am, 4-8pm"},
+		{"day" : "Friday", "time" : "8-10am, 1:30-5:30pm"}
 	],
-	"contact" : [{"position" : "General Info", "name" : "", "email" : "makerspace@g.clemson.edu"}, 
-				 {"position" : "Student Director", "name" : "Owen Phillips", "email" : "ophilli@g.clemson.edu"}
+	"contact" : [{"position" : "General Info", "name" : "", "email" : "makerspace@clemson.edu"}, 
+				 {"position" : "President", "name" : "Owen Phillips", "email" : "ophilli@clemson.edu"}
 				 ],
 	"location" : "Watt 110",
 	"website" : "http://cumaker.space/",
