@@ -39,8 +39,24 @@
 
 /* Map filters */
 .map-filter-header {
-	margin: 25px 10% 0px;
+	margin: 10px 10% 0px;
 	font-size: 24px;
+}
+
+/* Clear Filter Text */
+.map-filter-clear  {
+    position: relative;
+    top: -20px; left: 75px;
+    margin: 0px 15% 10px;
+    font-size: 11px;
+}
+
+.button {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 6px;
 }
 
 .filter-icons {
