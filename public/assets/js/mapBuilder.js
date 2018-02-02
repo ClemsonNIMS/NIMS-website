@@ -1,4 +1,5 @@
-var mapMarkers;
+var mapMarkers,
+	clearFiltersButton;
 
 function initMap() {
   var clemson = {lat: 34.6761, lng: -82.8364};
@@ -236,8 +237,23 @@ function initMap() {
 	filterIcons = document.querySelectorAll('.filter-icons div');
 
 	for (filterIcon of filterIcons) {
-		filterIcon.addEventListener('click', filterMap);
+		filterIcon.addEventListener('click', function () {
+			// Toggles the pressed filter
+			this.classList.toggle('selected');
+
+			filterMap();
+		});
 	}
+
+	clearFiltersButton = document.querySelector('.clear-filters');
+
+	clearFiltersButton.addEventListener('click', () => {
+		$('.filter-icons div').each((i, icon) => {
+			icon.classList.toggle('selected', false);
+		});
+
+		filterMap();
+	});
 }
 
 function filterMap() {
@@ -245,9 +261,6 @@ function filterMap() {
 		filterTexts,
 		noMatches,
 		visible;
-
-	// Toggles the pressed filter
-	this.classList.toggle('selected');
 
 	// All active filters
 	selectedFilters = document.querySelectorAll('.filter-icons .selected');
@@ -276,6 +289,12 @@ function filterMap() {
 
 		if (visible)
 			noMatches = false;
+	}
+
+	if (filterTexts.length > 0) {
+		$('.clear-filters').toggleClass('visible', true);
+	} else {
+		$('.clear-filters').toggleClass('visible', false);
 	}
 
 	// If no matches were found, make the "No spaces match the filters" text

@@ -43,12 +43,21 @@
 	font-size: 24px;
 }
 
-/* Clear Filter Text */
-.map-filter-clear  {
-    position: relative;
-    top: -20px; left: 75px;
-    margin: 0px 15% 10px;
-    font-size: 11px;
+.clear-filters {
+	display: none;
+	margin-left: 20px;
+	color: #e13737;
+	font-size: 16px;
+	font-weight: normal;
+	vertical-align: middle;
+	opacity: 0;
+	cursor: pointer;
+	transition: opacity 0.25s;
+}
+
+.clear-filters.visible {
+	display: inline-block;
+	opacity: 1;
 }
 
 .button {
@@ -75,11 +84,8 @@
 	border-style: solid;
 	border-color: rgba(225, 99, 55, 0);
 	border-radius: 8px;
-	transition: border-color 0.25s;
-}
-
-.filter-icons div:hover {
 	cursor: pointer;
+	transition: border-color 0.25s;
 }
 
 .filter-icons div.selected {
