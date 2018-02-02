@@ -88,20 +88,6 @@
 	text-align: center;
 }
 
-.no-spaces-match {
-	margin: 0px 10%;
-	display: block;
-	color: #e13737;
-	text-align: center;
-	font-weight: bold;
-	opacity: 0;
-	transition: opacity 0.25s;
-}
-
-.no-spaces-match.visible {
-	opacity: 1;
-}
-
 /* Infowindow */
 .gm-style-iw {
   min-width: 310px;

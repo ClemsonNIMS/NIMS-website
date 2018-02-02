@@ -244,8 +244,7 @@ function filterMap() {
 	var selectedFilters,
 		filterTexts,
 		noMatches,
-		visible,
-		noSpacesMatchText;
+		visible;
 
 	// Toggles the pressed filter
 	this.classList.toggle('selected');
@@ -281,7 +280,6 @@ function filterMap() {
 
 	// If no matches were found, make the "No spaces match the filters" text
 	// visible and not visible otherwise
-	noSpacesMatchText = document.querySelector('.no-spaces-match');
-
-	noSpacesMatchText.classList.toggle('visible', noMatches);
+	if (noMatches)
+		$('.modal.no-matches').modal();
 }
