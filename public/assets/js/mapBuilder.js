@@ -12,6 +12,7 @@ function initMap() {
   var cook = {lat: 34.676536, lng: -82.837771};
   var fDaniel = {lat: 34.675490, lng: -82.839139};
   var library = {lat: 34.6761, lng: -82.8364};
+  var dml = {lat: 34.679914, lng:-82.837424};
 
   var map = new google.maps.Map(document.getElementById('mapBox'), {
     zoom: 17,
@@ -189,6 +190,37 @@ function initMap() {
     if(prev_infowindow) prev_infowindow.close();
     infoWindowCook.open(map, mCookLabs);
     prev_infowindow = infoWindowCook;
+  });
+
+  //Digital Media and Learning
+  var infoDML = '<div class="iw-container">'+
+                    '<div class="row iw-row">'+
+                      '<div class="col-12">'+
+                        '<h2 class="infoHeader">DML Labs</h2>'+
+                        '<h4 class="infoSubHeader">Tillman 213</h4>'+
+                      '</div>' +
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/microphone.svg">Audio Production</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/videocamera.svg">Video Production</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/circuits.svg">Circuit Kits</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/microcontrollers.svg">Micro-controllers</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/greenscreen.svg">Green Screen</div>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="iw-footer">'+
+                    '<a class="btn btn-primary" role="button" href="https://cecas.clemson.edu/mestudentshop/" target="_blank">More Info</a>'
+                  '</div>';
+  var infoWindowDML = new google.maps.InfoWindow({
+    content: infoDML
+  });
+  var mDML = new google.maps.Marker({
+    position: tillman,
+    map: map
+  });
+  mDML.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindowDML.open(map, mDML);
+    prev_infowindow = infoWindowDML;
   });
 
   var infoGeo = "";
