@@ -208,7 +208,7 @@ function initMap() {
                     '</div>'+
                   '</div>'+
                   '<div class="iw-footer">'+
-                    '<a class="btn btn-primary" role="button" href="https://cecas.clemson.edu/mestudentshop/" target="_blank">More Info</a>'
+                    '<a class="btn btn-primary" role="button" href="https://www.clemson.edu/education/dmll/dml-labs.html" target="_blank">More Info</a>'
                   '</div>';
   var infoWindowDML = new google.maps.InfoWindow({
     content: infoDML
@@ -222,6 +222,42 @@ function initMap() {
     infoWindowDML.open(map, mDML);
     prev_infowindow = infoWindowDML;
   });
+
+  //Digital Design Shop
+  var infoDDS = '<div class="iw-container">'+
+                    '<div class="row iw-row">'+
+                      '<div class="col-12">'+
+                        '<h2 class="infoHeader">Digital Design Shop</h2>'+
+                        '<h4 class="infoSubHeader">Lee Hall</h4>'+
+                      '</div>' +
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/bandsaw.svg">Band Saws</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                      '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/3dscanning.svg">3D Scanning</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="iw-footer">'+
+                    '<a class="btn btn-primary" role="button" href="http://www.clemson.edu/caah/departments/architecture/campuses/cusa-dds/index.html" target="_blank">More Info</a>'
+                  '</div>';
+  var infoWindowDDS = new google.maps.InfoWindow({
+    content: infoDDS
+  });
+  var mDDS = new google.maps.Marker({
+    position: lee,
+    map: map
+  });
+  mDDS.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindowDDS.open(map, mDDS);
+    prev_infowindow = infoWindowDDS;
+  });
+
+
+
+
+
 
   var infoGeo = "";
   var infoWindowGeo = new google.maps.InfoWindow({
