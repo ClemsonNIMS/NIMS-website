@@ -1,5 +1,6 @@
 var mapMarkers,
-	clearFiltersButton;
+	clearFiltersButton,
+	filterTexts;
 
 function initMap() {
   var clemson = {lat: 34.6761, lng: -82.8364};
@@ -303,72 +304,66 @@ function initMap() {
 	}
 
 	filterIcons = document.querySelectorAll('.filter-icons div');
+	clearFiltersButton = document.querySelector('.clear-filters');
+	filterTexts = [];
 
 	for (filterIcon of filterIcons) {
 		filterIcon.addEventListener('click', function () {
-			// Toggles the pressed filter
-			this.classList.toggle('selected');
-
-			filterMap.call(this);
+			// Add the filter to the list and apply it
+			filterTexts.push(this.innerText.trim());
+			filterMap(this);
 		});
 	}
 
-	clearFiltersButton = document.querySelector('.clear-filters');
-
 	clearFiltersButton.addEventListener('click', function () {
+		// Deselect all filters
+		filterTexts = [];
+
+		filterMap();
+		
 		$('.filter-icons div').each((i, icon) => {
 			icon.classList.toggle('selected', false);
 		});
-
-		filterMap();
 	});
 }
 
-function filterMap() {
-	var selectedFilters,
-		filterTexts,
-		noMatches,
-		visible;
+function filterMap(filterDiv) {
+	var visible;
+		visibleMapMarkers = [];
 
-	// All active filters
-	selectedFilters = document.querySelectorAll('.filter-icons .selected');
-	filterTexts = [];
-
-	// Resource names of all active filters
-	for (selectedFilter of selectedFilters) {
-		filterTexts.push(selectedFilter.innerText.trim());
-	}
-
-	noMatches = true;
-
-	// For every mapMarker, set it visible if it matches all filters and not
-	// visible otherwise
-	for (mapMarker of mapMarkers) {
+	// Get all markers visible after the filter is applied
+	for (var i = 0; i < mapMarkers.length; i++) {
 		visible = true;
 
 		for (filterText of filterTexts) {
-			if (!mapMarker[1].includes(filterText)) {
+			if (!mapMarkers[i][1].includes(filterText)) {
 				visible = false;
 				break;
 			}
 		}
 
-		mapMarker[0].setVisible(visible);
-
 		if (visible)
-			noMatches = false;
+			visibleMapMarkers.push(i);
 	}
 
+	// If there are still matches after the filter is applied, display
+	// the filter. Otherwise, remove the filter and alert the user.
+	if (visibleMapMarkers.length > 0) {
+		if (filterDiv !== undefined)
+			filterDiv.classList.toggle('selected');
+
+		for (var i = 0; i < mapMarkers.length; i++) {
+			mapMarkers[i][0].setVisible(visibleMapMarkers.includes(i));
+		}
+	} else {
+		filterTexts.pop();
+		$('.modal.no-matches').modal();
+	}
+
+	// If there are filters applied, show the 'Clear filters' button
 	if (filterTexts.length > 0) {
 		$('.clear-filters').toggleClass('visible', true);
 	} else {
 		$('.clear-filters').toggleClass('visible', false);
-	}
-
-	// If no matches were found, make the "No spaces match the filters" text
-	// visible and not visible otherwise
-	if (noMatches) {
-		$('.modal.no-matches').modal();
-		this.classList.toggle('selected', false);
 	}
 }
