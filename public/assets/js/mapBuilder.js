@@ -103,6 +103,8 @@ function initMap() {
 
   var prev_infowindow =false;
 
+  mapMarkers = [];
+
   //Makerspace
   var infoMakerspace =  '<div class="iw-container">'+
                           '<div class="row iw-row">'+
@@ -136,6 +138,8 @@ function initMap() {
     prev_infowindow = infoWindowMakerspace;
   });
 
+  mapMarkers.push([mMakerspace, infoMakerspace]);
+
   //Makerspace
   var infoImmersive = '<div class="iw-container">'+
                         '<div class="row iw-row">'+
@@ -163,6 +167,8 @@ function initMap() {
     infoWindowImmersive.open(map, mImmersive);
     prev_infowindow = infoWindowImmersive;
   });
+
+  mapMarkers.push([mImmersive, infoImmersive]);
 
   //Mech Engineering Student Shop
   var infoCook = '<div class="iw-container">'+
@@ -192,6 +198,8 @@ function initMap() {
     infoWindowCook.open(map, mCookLabs);
     prev_infowindow = infoWindowCook;
   });
+
+  mapMarkers.push([mCookLabs, infoCook]);
 
   //Digital Media and Learning
   var infoDML = '<div class="iw-container">'+
@@ -224,6 +232,8 @@ function initMap() {
     prev_infowindow = infoWindowDML;
   });
 
+  mapMarkers.push([mDML, infoDML]);
+
   //Digital Design Shop
   var infoDDS = '<div class="iw-container">'+
                     '<div class="row iw-row">'+
@@ -255,8 +265,7 @@ function initMap() {
     prev_infowindow = infoWindowDDS;
   });
 
-
-
+  mapMarkers.push([mDDS, infoDDS]);
 
 
 
@@ -274,13 +283,7 @@ function initMap() {
     prev_infowindow = infoWindowGeo;
   });
 
-	// Map filters
-	mapMarkers = [
-		[mMakerspace, infoMakerspace],
-		[mImmersive, infoImmersive],
-		[mCookLabs, infoCook],
-		[mGeospatial, infoGeo]
-	];
+  mapMarkers.push([mGeospatial, infoGeo]);
 
 	var locationResources,
 		mockInfoWindow,
@@ -320,7 +323,7 @@ function initMap() {
 		filterTexts = [];
 
 		filterMap();
-		
+
 		$('.filter-icons div').each((i, icon) => {
 			icon.classList.toggle('selected', false);
 		});
