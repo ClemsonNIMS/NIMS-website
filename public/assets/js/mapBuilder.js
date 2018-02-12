@@ -309,13 +309,13 @@ function initMap() {
 			// Toggles the pressed filter
 			this.classList.toggle('selected');
 
-			filterMap();
+			filterMap.call(this);
 		});
 	}
 
 	clearFiltersButton = document.querySelector('.clear-filters');
 
-	clearFiltersButton.addEventListener('click', () => {
+	clearFiltersButton.addEventListener('click', function () {
 		$('.filter-icons div').each((i, icon) => {
 			icon.classList.toggle('selected', false);
 		});
@@ -367,6 +367,8 @@ function filterMap() {
 
 	// If no matches were found, make the "No spaces match the filters" text
 	// visible and not visible otherwise
-	if (noMatches)
+	if (noMatches) {
 		$('.modal.no-matches').modal();
+		this.classList.toggle('selected', false);
+	}
 }
