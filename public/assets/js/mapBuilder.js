@@ -211,6 +211,8 @@ function initMap() {
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/microphone.svg">Audio Production</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/videocamera.svg">Video Production</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                      '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vr.svg">Virtual Reality</div>'+
+                      '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vrDev.svg">VR Dev Kit</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/circuits.svg">Circuit Kits</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/microcontrollers.svg">Micro-controllers</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/greenscreen.svg">Green Screen</div>'+
