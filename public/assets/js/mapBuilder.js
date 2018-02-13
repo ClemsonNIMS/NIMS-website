@@ -176,11 +176,15 @@ function initMap() {
                       '<div class="col-12">'+
                         '<h2 class="infoHeader">ME Shop</h2>'+
                         '<h4 class="infoSubHeader">Cook Labs</h4>'+
-                      '</div>' +
-                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                      '</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/lathe.svg">Lathes</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/bandsaw.svg">Bandsaws</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/drillpress.svg">Drill Press</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/grinder.svg">Grinders</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/electricTools.svg">Electric Tools</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
                     '</div>'+
                   '</div>'+
                   '<div class="iw-footer">'+
@@ -242,7 +246,7 @@ function initMap() {
                       '<div class="col-12">'+
                         '<h2 class="infoHeader">Digital Design Shop</h2>'+
                         '<h4 class="infoSubHeader">Lee Hall</h4>'+
-                      '</div>' +
+                      '</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/bandsaw.svg">Band Saws</div>'+
@@ -266,7 +270,6 @@ function initMap() {
     infoWindowDDS.open(map, mDDS);
     prev_infowindow = infoWindowDDS;
   });
-
   mapMarkers.push([mDDS, infoDDS]);
 
 
