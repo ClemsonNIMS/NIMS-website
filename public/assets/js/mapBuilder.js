@@ -272,8 +272,35 @@ function initMap() {
   });
   mapMarkers.push([mDDS, infoDDS]);
 
+  //Design Innovation Studio
+  var infoDIS = '<div class="iw-container">'+
+                    '<div class="row iw-row">'+
+                      '<div class="col-12">'+
+                        '<h2 class="infoHeader">Design Innovation Studio</h2>'+
+                        '<h4 class="infoSubHeader">Fluor Daniel 111</h4>'+
+                      '</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/soldering.svg">Soldering</div>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="iw-footer">'+
+                    '<a class="btn btn-primary" role="button" href="https://www.clemson.edu/cecas/departments/me/academics/undergraduate/design/design_innovation_studio.html" target="_blank">More Info</a>'
+                  '</div>';
+  var infoWindowDIS = new google.maps.InfoWindow({
+    content: infoDIS
+  });
+  var mDIS = new google.maps.Marker({
+    position: fDaniel,
+    map: map
+  });
+  mDIS.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindowDIS.open(map, mDIS);
+    prev_infowindow = infoWindowDIS;
+  });
+  mapMarkers.push([mDIS, infoDIS]);
 
-
+  /*
   var infoGeo = "";
   var infoWindowGeo = new google.maps.InfoWindow({
     content: infoGeo
@@ -289,7 +316,7 @@ function initMap() {
   });
 
   mapMarkers.push([mGeospatial, infoGeo]);
-
+  */
 	var locationResources,
 		mockInfoWindow,
 		markerCol4Divs,
