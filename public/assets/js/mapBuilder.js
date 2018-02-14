@@ -12,7 +12,7 @@ function initMap() {
   var lee = {lat: 34.674526, lng: -82.838369};
   var cook = {lat: 34.676536, lng: -82.837771};
   var fDaniel = {lat: 34.675490, lng: -82.839139};
-  var library = {lat: 34.6761, lng: -82.8364};
+  var adobe = {lat: 34.676776, lng: -82.836178};
   var dml = {lat: 34.679914, lng:-82.837424};
 
   var map = new google.maps.Map(document.getElementById('mapBox'), {
@@ -176,11 +176,15 @@ function initMap() {
                       '<div class="col-12">'+
                         '<h2 class="infoHeader">ME Shop</h2>'+
                         '<h4 class="infoSubHeader">Cook Labs</h4>'+
-                      '</div>' +
-                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                      '</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/lathe.svg">Lathes</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/bandsaw.svg">Bandsaws</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/drillpress.svg">Drill Press</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/grinder.svg">Grinders</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/electricTools.svg">Electric Tools</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
                     '</div>'+
                   '</div>'+
                   '<div class="iw-footer">'+
@@ -211,6 +215,8 @@ function initMap() {
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/microphone.svg">Audio Production</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/videocamera.svg">Video Production</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/3dprinting.svg">3D Printing</div>'+
+                      '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vr.svg">Virtual Reality</div>'+
+                      '<div class="col-4 col-md-3"><img src="assets/img/resourceIcons/vrDev.svg">VR Dev Kit</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/circuits.svg">Circuit Kits</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/microcontrollers.svg">Micro-controllers</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/greenscreen.svg">Green Screen</div>'+
@@ -240,7 +246,7 @@ function initMap() {
                       '<div class="col-12">'+
                         '<h2 class="infoHeader">Digital Design Shop</h2>'+
                         '<h4 class="infoSubHeader">Lee Hall</h4>'+
-                      '</div>' +
+                      '</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/laserCutter.svg"><figcaption>Laser Cutting</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/cnc.svg">CNC Milling</div>'+
                       '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/bandsaw.svg">Band Saws</div>'+
@@ -264,11 +270,67 @@ function initMap() {
     infoWindowDDS.open(map, mDDS);
     prev_infowindow = infoWindowDDS;
   });
-
   mapMarkers.push([mDDS, infoDDS]);
 
+  //Design Innovation Studio
+  var infoDIS = '<div class="iw-container">'+
+                    '<div class="row iw-row">'+
+                      '<div class="col-12">'+
+                        '<h2 class="infoHeader">Design Innovation Studio</h2>'+
+                        '<h4 class="infoSubHeader">Fluor Daniel 111</h4>'+
+                      '</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/tools.svg">Hand Tools</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/soldering.svg">Soldering</div>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="iw-footer">'+
+                    '<a class="btn btn-primary" role="button" href="https://www.clemson.edu/cecas/departments/me/academics/undergraduate/design/design_innovation_studio.html" target="_blank">More Info</a>'
+                  '</div>';
+  var infoWindowDIS = new google.maps.InfoWindow({
+    content: infoDIS
+  });
+  var mDIS = new google.maps.Marker({
+    position: fDaniel,
+    map: map
+  });
+  mDIS.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindowDIS.open(map, mDIS);
+    prev_infowindow = infoWindowDIS;
+  });
+  mapMarkers.push([mDIS, infoDIS]);
 
+  //Adobe Creative Studio
+  var infoAdobe = '<div class="iw-container">'+
+                    '<div class="row iw-row">'+
+                      '<div class="col-12">'+
+                        '<h2 class="infoHeader">Adobe Creative Studio</h2>'+
+                        '<h4 class="infoSubHeader">Cooper 5th Floor</h4>'+
+                      '</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/microphone.svg">Audio Production</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/videocamera.svg">Video Production</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/greenscreen.svg">Green Screen</div>'+
+                      '<div class="col-4 col-sm-3"><img src="assets/img/resourceIcons/teleprompter.svg">Teleprompter</div>'+
+                    '</div>'+
+                  '</div>'+
+                  '<div class="iw-footer">'+
+                    '<a class="btn btn-primary" role="button" href="http://coe.clemson.edu/adobe-digital-studio/" target="_blank">More Info</a>'
+                  '</div>';
+  var infoWindowAdobe = new google.maps.InfoWindow({
+    content: infoAdobe
+  });
+  var mAdobe = new google.maps.Marker({
+    position: adobe,
+    map: map
+  });
+  mAdobe.addListener('click', function() {
+    if(prev_infowindow) prev_infowindow.close();
+    infoWindowAdobe.open(map, mAdobe);
+    prev_infowindow = infoWindowAdobe;
+  });
+  mapMarkers.push([mAdobe, infoAdobe]);
 
+  /*
   var infoGeo = "";
   var infoWindowGeo = new google.maps.InfoWindow({
     content: infoGeo
@@ -284,6 +346,7 @@ function initMap() {
   });
 
   mapMarkers.push([mGeospatial, infoGeo]);
+  */
 
 	var locationResources,
 		mockInfoWindow,
