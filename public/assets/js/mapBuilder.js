@@ -312,8 +312,20 @@ function initMap() {
 
 	for (filterIcon of filterIcons) {
 		filterIcon.addEventListener('click', function () {
-			// Add the filter to the list and apply it
-			filterTexts.push(this.innerText.trim());
+			var filterText,
+				index;
+
+			// Add the filter to the list and apply it, or removes the filter if
+			// it is already applied
+			filterText = this.innerText.trim();
+			index = filterTexts.indexOf(filterText);
+
+			if (index < 0) {
+				filterTexts.push(filterText);
+			} else {
+				filterTexts.splice(index, 1);
+			}
+
 			filterMap(this);
 		});
 	}
