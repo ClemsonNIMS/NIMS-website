@@ -29,13 +29,6 @@
   width: 80%;
   margin: 0 auto;
 }
-.infoHeader {
-  text-align: left;
-  margin-bottom: .1rem;
-}
-.infoSubHeader {
-  text-align: left;
-}
 
 /* Map filters */
 .map-filter-header {
