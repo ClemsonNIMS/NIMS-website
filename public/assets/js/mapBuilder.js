@@ -4,134 +4,112 @@ var mapMarkers,
 
 function initMap() {
 	var locations = [
-	{
-		"coordinates": {
-			"lat": 34.676071,
-			"lng": -82.837038
-		},
-		"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Makerspace</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Watt 110</H4><div style=\"text-align: center; margin-bottom: 10px\"><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dprinting.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">3D Printing</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dscanning.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">3D Scanning</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/laserCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Laser Cutting</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/cnc.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">CNC Milling</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Hand Tools</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vinylCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Vinyl Cutting</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/button.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Button Making</span></div></div><a href=\"http://cumaker.space/\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
-		"moreInfoURL": "http://cumaker.space/",
-		"name": "Makerspace",
-		"resources": [
-			"3D Printing",
-			"3D Scanning",
-			"Laser Cutting",
-			"CNC Milling",
-			"Hand Tools",
-			"Vinyl Cutting",
-			"Button Making"
+			{
+				"coordinates": {
+					"lat": 34.676071,
+					"lng": -82.837038
+				},
+				"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Makerspace</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Watt 110</H4><div style=\"text-align: center; margin-bottom: 20px\"><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dprinting.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">3D Printing</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dscanning.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">3D Scanning</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/laserCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Laser Cutting</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/cnc.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">CNC Milling</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Hand Tools</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vinylCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Vinyl Cutting</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/button.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Button Making</span></div></div><a href=\"http://cumaker.space/\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
+				"resources": [
+					"3D Printing",
+					"3D Scanning",
+					"Laser Cutting",
+					"CNC Milling",
+					"Hand Tools",
+					"Vinyl Cutting",
+					"Button Making"
+				]
+			},
+			{
+				"coordinates": {
+					"lat": 34.676003,
+					"lng": -82.837025
+				},
+				"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Immersive Space</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Watt 308</H4><div style=\"text-align: center; margin-bottom: 20px\"><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vr.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Virtual Reality</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dscanning.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">3D Scanning</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vrDev.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">VR Dev Kit</span></div></div><a href=\"http://vrclub.people.clemson.edu/index.html\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
+				"resources": [
+					"Virtual Reality",
+					"3D Scanning",
+					"VR Dev Kit"
+				]
+			},
+			{
+				"coordinates": {
+					"lat": 34.676536,
+					"lng": -82.837771
+				},
+				"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>ME Shop</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Cook labs</H4><div style=\"text-align: center; margin-bottom: 20px\"><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/lathe.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Lathes</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/bandsaw.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Bandsaws</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/drillpress.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Drill Press</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/cnc.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">CNC Milling</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/grinder.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Grinders</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/electricTools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Electric Tools</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Hand Tools</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dprinting.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">3D Printing</span></div></div><a href=\"https://cecas.clemson.edu/mestudentshop/\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
+				"resources": [
+					"Lathes",
+					"Bandsaws",
+					"Drill Press",
+					"CNC Milling",
+					"Grinders",
+					"Electric Tools",
+					"Hand Tools",
+					"3D Printing"
+				]
+			},
+			{
+				"coordinates": {
+					"lat": 34.680067,
+					"lng": -82.837398
+				},
+				"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>DML Labs</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Tillman 213</H4><div style=\"text-align: center; margin-bottom: 20px\"><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/microphone.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Audio Production</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/videocamera.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Video Production</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/greenscreen.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Green Screen</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dprinting.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">3D Printing</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vr.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Virtual Reality</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vrDev.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">VR Dev Kit</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/circuits.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Circuit Kits</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/microcontrollers.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Micro-controllers</span></div></div><a href=\"https://www.clemson.edu/education/dmll/dml-labs.html\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
+				"resources": [
+					"Audio Production",
+					"Video Production",
+					"Green Screen",
+					"3D Printing",
+					"Virtual Reality",
+					"VR Dev Kit",
+					"Circuit Kits",
+					"Micro-controllers"
+				]
+			},
+			{
+				"coordinates": {
+					"lat": 34.674526,
+					"lng": -82.838369
+				},
+				"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Digital Design Shop</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Lee Hall</H4><div style=\"text-align: center; margin-bottom: 20px\"><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/laserCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Laser Cutting</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/cnc.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">CNC Milling</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/bandsaw.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Bandsaws</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dprinting.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">3D Printing</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Hand Tools</span></div></div><a href=\"http://www.clemson.edu/caah/departments/architecture/campuses/cusa-dds/index.html\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
+				"resources": [
+					"Laser Cutting",
+					"CNC Milling",
+					"Bandsaws",
+					"3D Printing",
+					"Hand Tools"
+				]
+			},
+			{
+				"coordinates": {
+					"lat": 34.67549,
+					"lng": -82.839139
+				},
+				"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Design Innovation Studio</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Fluor Daniel 111</H4><div style=\"text-align: center; margin-bottom: 20px\"><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Hand Tools</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/soldering.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Soldering</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/laserCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Laser Cutting</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/cnc.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">CNC Milling</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Hand Tools</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vinylCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Vinyl Cutting</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/button.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Button Making</span></div></div><a href=\"https://www.clemson.edu/cecas/departments/me/academics/undergraduate/design/design_innovation_studio.html\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
+				"resources": [
+					"Hand Tools",
+					"Soldering",
+					"Laser Cutting",
+					"CNC Milling",
+					"Hand Tools",
+					"Vinyl Cutting",
+					"Button Making"
+				]
+			},
+			{
+				"coordinates": {
+					"lat": 34.676776,
+					"lng": -82.836178
+				},
+				"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Adobe Creative Studio</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Cooper 5th Floor</H4><div style=\"text-align: center; margin-bottom: 20px\"><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/microphone.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Audio Production</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/videocamera.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Video Production</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/greenscreen.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Green Screen</span></div><div style=\"display: inline-block; padding: 10px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/teleprompter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 14px\">Teleprompter</span></div></div><a href=\"http://coe.clemson.edu/adobe-digital-studio/\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
+				"resources": [
+					"Audio Production",
+					"Video Production",
+					"Green Screen",
+					"Teleprompter"
+				]
+			}
 		],
-		"room": "Watt 110"
-	},
-	{
-		"coordinates": {
-			"lat": 34.676003,
-			"lng": -82.837025
-		},
-		"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Immersive Space</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Watt 308</H4><div style=\"text-align: center; margin-bottom: 10px\"><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vr.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Virtual Reality</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dscanning.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">3D Scanning</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vrDev.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">VR Dev Kit</span></div></div><a href=\"http://vrclub.people.clemson.edu/index.html\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
-		"moreInfoURL": "http://vrclub.people.clemson.edu/index.html",
-		"name": "Immersive Space",
-		"resources": [
-			"Virtual Reality",
-			"3D Scanning",
-			"VR Dev Kit"
-		],
-		"room": "Watt 308"
-	},
-	{
-		"coordinates": {
-			"lat": 34.676536,
-			"lng": -82.837771
-		},
-		"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>ME Shop</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Cook labs</H4><div style=\"text-align: center; margin-bottom: 10px\"><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/lathe.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Lathes</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/bandsaw.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Bandsaws</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/drillpress.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Drill Press</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/cnc.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">CNC Milling</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/grinder.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Grinders</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/electricTools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Electric Tools</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Hand Tools</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dprinting.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">3D Printing</span></div></div><a href=\"https://cecas.clemson.edu/mestudentshop/\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
-		"moreInfoURL": "https://cecas.clemson.edu/mestudentshop/",
-		"name": "ME Shop",
-		"resources": [
-			"Lathes",
-			"Bandsaws",
-			"Drill Press",
-			"CNC Milling",
-			"Grinders",
-			"Electric Tools",
-			"Hand Tools",
-			"3D Printing"
-		],
-		"room": "Cook labs"
-	},
-	{
-		"coordinates": {
-			"lat": 34.680067,
-			"lng": -82.837398
-		},
-		"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>DML Labs</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Tillman 213</H4><div style=\"text-align: center; margin-bottom: 10px\"><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/microphone.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Audio Production</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/videocamera.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Video Production</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/greenscreen.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Green Screen</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dprinting.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">3D Printing</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vr.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Virtual Reality</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vrDev.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">VR Dev Kit</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/circuits.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Circuit Kits</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/microcontrollers.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Micro-controllers</span></div></div><a href=\"https://www.clemson.edu/education/dmll/dml-labs.html\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
-		"moreInfoURL": "https://www.clemson.edu/education/dmll/dml-labs.html",
-		"name": "DML Labs",
-		"resources": [
-			"Audio Production",
-			"Video Production",
-			"Green Screen",
-			"3D Printing",
-			"Virtual Reality",
-			"VR Dev Kit",
-			"Circuit Kits",
-			"Micro-controllers"
-		],
-		"room": "Tillman 213"
-	},
-	{
-		"coordinates": {
-			"lat": 34.674526,
-			"lng": -82.838369
-		},
-		"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Digital Design Shop</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Lee Hall</H4><div style=\"text-align: center; margin-bottom: 10px\"><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/laserCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Laser Cutting</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/cnc.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">CNC Milling</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/bandsaw.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Bandsaws</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/3dprinting.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">3D Printing</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Hand Tools</span></div></div><a href=\"http://www.clemson.edu/caah/departments/architecture/campuses/cusa-dds/index.html\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
-		"moreInfoURL": "http://www.clemson.edu/caah/departments/architecture/campuses/cusa-dds/index.html",
-		"name": "Digital Design Shop",
-		"resources": [
-			"Laser Cutting",
-			"CNC Milling",
-			"Bandsaws",
-			"3D Printing",
-			"Hand Tools"
-		],
-		"room": "Lee Hall"
-	},
-	{
-		"coordinates": {
-			"lat": 34.67549,
-			"lng": -82.839139
-		},
-		"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Design Innovation Studio</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Fluor Daniel 111</H4><div style=\"text-align: center; margin-bottom: 10px\"><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Hand Tools</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/soldering.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Soldering</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/laserCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Laser Cutting</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/cnc.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">CNC Milling</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/tools.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Hand Tools</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/vinylCutter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Vinyl Cutting</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/button.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Button Making</span></div></div><a href=\"https://www.clemson.edu/cecas/departments/me/academics/undergraduate/design/design_innovation_studio.html\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
-		"moreInfoURL": "https://www.clemson.edu/cecas/departments/me/academics/undergraduate/design/design_innovation_studio.html",
-		"name": "Design Innovation Studio",
-		"resources": [
-			"Hand Tools",
-			"Soldering",
-			"Laser Cutting",
-			"CNC Milling",
-			"Hand Tools",
-			"Vinyl Cutting",
-			"Button Making"
-		],
-		"room": "Fluor Daniel 111"
-	},
-	{
-		"coordinates": {
-			"lat": 34.676776,
-			"lng": -82.836178
-		},
-		"infoWindowHTML": "<div style=\"padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem\"><div><H2>Adobe Creative Studio</H2><H4 style=\"font-size: 20px; margin-bottom: 25px\">Cooper 5th Floor</H4><div style=\"text-align: center; margin-bottom: 10px\"><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/microphone.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Audio Production</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/videocamera.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Video Production</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/greenscreen.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Green Screen</span></div><div style=\"display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top\"><img src=\"/assets/img/resourceIcons/teleprompter.svg\" style=\"display: block; margin: 0 5px\"><span style=\"display: block; text-align: center; font-size: 16px\">Teleprompter</span></div></div><a href=\"http://coe.clemson.edu/adobe-digital-studio/\" style=\"display: block; width: 110px; background: #007bff; color: #ffffff; padding: 6px 0; text-align: center; margin: 0 auto; border-radius: 8px; font-size: 18px\">More Info</a></div></div>",
-		"moreInfoURL": "http://coe.clemson.edu/adobe-digital-studio/",
-		"name": "Adobe Creative Studio",
-		"resources": [
-			"Audio Production",
-			"Video Production",
-			"Green Screen",
-			"Teleprompter"
-		],
-		"room": "Cooper 5th Floor"
-	}
-]
-,
 		mapOptions = {
 			zoom: 17,
 			center: {lat: 34.676071, lng: -82.837038},
@@ -225,12 +203,15 @@ function initMap() {
 		},
 		mapDiv = document.getElementById('mapBox'),
 		map = new google.maps.Map(mapDiv, mapOptions),
+		filterIcons = document.querySelectorAll('.filter-icons div'),
 		prevInfowindow,
 		infoWindow,
 		marker,
 		locClickFunction;
 
 	mapMarkers = [];
+	clearFiltersButton = document.querySelector('.clear-filters');
+	filterTexts = [];
 
 	function ClickFunction(infoWindow, marker) {
 		this.click = function () {
@@ -249,7 +230,8 @@ function initMap() {
 
 		marker = new google.maps.Marker({
 			'position': loc.coordinates,
-			'map': map
+			'map': map,
+			'location': loc
 		});
 
 		locClickFunction = new ClickFunction(infoWindow, marker);
@@ -257,31 +239,6 @@ function initMap() {
 		marker.addListener('click', locClickFunction.click);
 		mapMarkers.push(marker);
 	}
-
-	var locationResources,
-		mockInfoWindow,
-		markerCol4Divs,
-		filterIcons;
-
-	for (mapMarker of mapMarkers) {
-		// Google heavily abstracts their API from the DOM so instead of using
-		// regex to extract the resources from the HTML text, an element is
-		// created from it
-		mockInfoWindow = document.createElement('div');
-		mockInfoWindow.innerHTML = mapMarker[1];
-		markerCol4Divs = mockInfoWindow.querySelectorAll('div.col-4');
-		locationResources = [];
-
-		for (markerCol4Div of markerCol4Divs) {
-			locationResources.push(markerCol4Div.innerText);
-		}
-
-		mapMarker[1] = locationResources;
-	}
-
-	filterIcons = document.querySelectorAll('.filter-icons div');
-	clearFiltersButton = document.querySelector('.clear-filters');
-	filterTexts = [];
 
 	for (filterIcon of filterIcons) {
 		filterIcon.addEventListener('click', function () {
@@ -324,7 +281,7 @@ function filterMap(filterDiv) {
 		visible = true;
 
 		for (filterText of filterTexts) {
-			if (!mapMarkers[i][1].includes(filterText)) {
+			if (!mapMarkers[i].location.resources.includes(filterText)) {
 				visible = false;
 				break;
 			}
@@ -341,7 +298,7 @@ function filterMap(filterDiv) {
 			filterDiv.classList.toggle('selected');
 
 		for (var i = 0; i < mapMarkers.length; i++) {
-			mapMarkers[i][0].setVisible(visibleMapMarkers.includes(i));
+			mapMarkers[i].setVisible(visibleMapMarkers.includes(i));
 		}
 	} else {
 		filterTexts.pop();
@@ -350,8 +307,8 @@ function filterMap(filterDiv) {
 
 	// If there are filters applied, show the 'Clear filters' button
 	if (filterTexts.length > 0) {
-		$('.clear-filters').toggleClass('visible', true);
+		clearFiltersButton.classList.toggle('visible', true);
 	} else {
-		$('.clear-filters').toggleClass('visible', false);
+		clearFiltersButton.classList.toggle('visible', false);
 	}
 }

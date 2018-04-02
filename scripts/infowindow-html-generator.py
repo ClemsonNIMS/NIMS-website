@@ -40,16 +40,16 @@ for location in locations:
 	roomH4.set("style", "font-size: 20px; margin-bottom: 25px")
 	roomH4.text = location['room']
 	resourcesDiv = ET.Element("div")
-	resourcesDiv.set("style", "text-align: center; margin-bottom: 10px")
+	resourcesDiv.set("style", "text-align: center; margin-bottom: 20px")
 
 	for resource in location['resources']:
 		div = ET.Element("div")
-		div.set("style", "display: inline-block; padding: 10px 10px 20px; width: 85px; vertical-align: top")
+		div.set("style", "display: inline-block; padding: 10px; width: 85px; vertical-align: top")
 		img = ET.Element("img")
 		img.set("src", resourceIcons[resource])
 		img.set("style", "display: block; margin: 0 5px")
 		span = ET.Element("span")
-		span.set("style", "display: block; text-align: center; font-size: 16px")
+		span.set("style", "display: block; text-align: center; font-size: 14px")
 		span.text = resource
 
 		div.append(img)
@@ -67,6 +67,9 @@ for location in locations:
 	contentDIV.append(moreInfoA)
 	infoWindowDIV.append(contentDIV)
 
+	location.pop('name', None)
+	location.pop('room', None)
+	location.pop('moreInfoURL', None)
 	location['infoWindowHTML'] = ET.tostring(infoWindowDIV, encoding="unicode",
 		method='html')
 
