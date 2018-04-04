@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Makerday</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/css/common.css">
+</head>
+
+<body>
+    <div id="navbar">
+    </div>
+
+    <div class="header" style="background-image: url('assets/img/makerday/masks.jpg'); min-height: 20rem; margin-bottom: 0rem;">
+   		<div class="container">
+   			<h1 style="float:left;">Makerday<br/> 4</h1>
+   		</div>
+    </div>
+
+    <div class="jumbotron">
+    	<h3 style="text-align: center">Makerday is a celebration of Clemson's creators, innovators, and doers.</h3>
+    	<h3 class="d-none d-sm-block" style="text-align: center"> Bring your hobby builds, class projects, personal designs - anything you're excited to show others!</h3>
+    	<h3 style="text-align: center"><br/>April 26, 3pm - Watt Atrium</h3>
+    </div>
+
+    <div class="container mb-4">
+    	<div class="row">
+  			<div class="col-sm-12 col-md-6 mb-2">
+    			<div class="thumbnail" style="overflow: hidden;"> 
+    	  			<img class="mx-auto d-block" src="assets/img/makerday/tigerpaw.jpg" style="height:20rem;">
+    	  		</div>
+  			</div>
+  			<div class="col-sm-12 col-md-6 mb-2">
+    			<div class="thumbnail" style="overflow: hidden;">
+    	  			<img class="mx-auto d-block" src="assets/img/makerday/vr.jpg" style="height:20rem;">
+    	  		</div>
+  			</div>
+		</div>
+	</div>
+	
+	<div class="jumbotron">
+    	<h5>Makerday is an opportunity for any student, club, or organization to show off things that they have created this past year. Nothing is off limits - we've had virtrual reality demos, offroad cars, 3D printed armor, homemade instruments and much more!
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+	<!-- Core Javascript Files -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/mustache.js"></script>
+    <script src="assets/js/template-builder.js"></script>
+    <!-- Page Building -->
+    <script type="text/javascript">
+    buildNavbar();
+      setTimeout(function(){
+    buildFooter();
+    }, 500);
+    </script>
+</body>
