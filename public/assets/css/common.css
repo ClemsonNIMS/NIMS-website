@@ -23,6 +23,11 @@
   border-collapse: separate;
 }
 
+/* Navbar */
+#navbarSupportedContent{
+  font-size: 1.2rem;
+}
+
 /* Map */
 .mapWindow {
   height: 25rem;
