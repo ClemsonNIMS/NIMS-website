@@ -165,6 +165,28 @@
   justify-content: center;
 }
 
+/* Makerday */
+.makerday-blurbs .makerday-blurb-header{
+  font-weight:700; 
+  font-size: 3rem; 
+  line-height: 2.1rem; 
+  font-style: bold
+}
+
+.makerday-blurbs .container{
+  background-color: rgba(248,183,46,.8);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.makerday-container{
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Card Layout */
 .card.preview {
   margin: 0rem 1rem 1rem 1rem;
