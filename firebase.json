@@ -3,16 +3,46 @@
     "public": "public",
     "rewrites": [
       {
-      "source" : "/[Mm][Aa][Kk][Ee][Rr][Dd][Aa][Yy]",
+      "source" : "**/Makerday",
+      "destination" : "/makerday.html"
+      },
+      {
+      "source" : "/MakerDay",
+      "destination" : "/makerday.html"
+      },
+      {
+      "source" : "/map",
+      "destination" : "/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "cleanUrls": true
+  }
+}
+/*
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+      "source" : "/Makerday",
       "destination" : "/makerday",
       "type" : 301
       },
       {
       "source" : "/map",
-      "destination" : "/",
+      "destination" : "/index.html",
       "type" : 301
       }
     ],
     "cleanUrls": true
   }
 }
+*/
