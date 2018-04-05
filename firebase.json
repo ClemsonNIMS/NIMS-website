@@ -3,9 +3,16 @@
     "public": "public",
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
+      "source" : "/[Mm][Aa][Kk][Ee][Rr][Dd][Aa][Yy]",
+      "destination" : "/makerday",
+      "type" : 301
+      },
+      {
+      "source" : "/map",
+      "destination" : "/",
+      "type" : 301
       }
-    ]
+    ],
+    "cleanUrls": true
   }
 }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <title>Makerday</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:light,regular,medium,bold" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+      }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+    </div>
+
+    <div class="header" style="height: 25vw">
+		<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('assets/img/makerday/sandbox.svg'); background-size: auto 100%; background-position: top right; background-repeat: no-repeat">
+		</div>
+		<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('assets/img/makerday/Makerday_Title.svg'); background-size: 60%; background-position: 8% center; background-repeat: no-repeat">
+		</div>
+    </div>
+    <div class="makerday-container">
+        <div class="container mb-4">
+            <div class="makerday-header">
+                <h4>Makerday is a celebration of Clemson's creators, innovators, and doers.<br/></h4>
+                <hr/>
+                <h1>Thursday April 26, 3pm @ Watt Atrium</h1>
+                <hr/>
+            </div>
+        </div>
+
+    <section class="container makerday-blurbs">
+        <div class="container">
+            <h2>Details</h2>
+            <p>Makerday is an opportunity for any student, club, or organization to show off things that they have created this past year. Nothing is off limits - we've had virtual reality demos, offroad cars, 3D printed armor, homemade instruments and much more!</p>
+        </div>
+
+        <div class="container">
+            <h2>Demo</h2>
+            <p>Interested in bringing a project to show off? Click on the button below to let us know what you're bringin and what you need!</p>
+            <a target="_blank" class="btn btn-dark" style="text-align: center; width:8rem; display: block; margin-right: auto; margin-left: auto;" href="https://goo.gl/forms/TNcM5K0shMRL8Ufb2" role="button">Sign Up!</a>
+        </div>
+                        
+        <div class="container">
+            <h2>Attend</h2>
+            <p >No project? No problem! Makerday is for everyone - come check out the awesome stuff people have made, make new connections, and chow down on some pizza!</p>
+        </div>
+    </section>
+
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-6 col-md-4 mb-2">
+                <img class="img-fluid" src="assets/img/makerday/tigerpaw.jpg">
+            </div>
+            <div class="col-6 col-md-4 mb-2">
+                <img class="img-fluid" src="assets/img/makerday/vr.jpg">
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    <div id="footer">
+    </div>
+
+	<!-- Core Javascript Files -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/mustache.js"></script>
+    <script src="assets/js/template-builder.js"></script>
+    <!-- Page Building -->
+    <script type="text/javascript">
+    buildNavbar();
+      setTimeout(function(){
+    buildFooter();
+    }, 500);
+    </script>
+</body>
