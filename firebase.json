@@ -3,7 +3,7 @@
     "public": "public",
     "rewrites": [
       {
-      "source" : "**/Makerday",
+      "source" : "/Makerday",
       "destination" : "/makerday.html"
       },
       {
