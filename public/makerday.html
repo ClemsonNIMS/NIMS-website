@@ -59,7 +59,9 @@
         <div class="row">
             <div class="col-12 col-lg-7 mx-auto">
                 <div class="embed-responsive embed-responsive-1by1 mb-4 makerday-hype-vid">
-                    <iframe class="embed-responsive-item" src="/assets/img/makerday/hypevid.mp4"></iframe>
+                    <video loop muted class="embed-responsive-item">
+                        <source src="/assets/img/makerday/hypevid.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
@@ -73,7 +75,6 @@
             <div class="col-6 col-md-4 mb-2">
                 <img class="img-fluid" src="assets/img/makerday/vr.jpg">
             </div>
-
         </div>
     </div>
 
@@ -88,6 +89,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="assets/js/mustache.js"></script>
     <script src="assets/js/template-builder.js"></script>
+    <script src="assets/js/vidplayer.js"></script>
     <!-- Page Building -->
     <script type="text/javascript">
     buildNavbar();
