@@ -32,7 +32,7 @@ with open(locationsFilePath, 'r') as locationsFile:
 
 for location in locations:
 	infoWindowDIV = ET.Element("div")
-	infoWindowDIV.set("style", "padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 20rem")
+	infoWindowDIV.set("style", "padding: 0 0 10px 10px; width: 55vw; max-width: 400px; max-height: 18rem")
 	contentDIV = ET.Element("div")
 	nameH2 = ET.Element("H2")
 	nameH2.text = location['name']

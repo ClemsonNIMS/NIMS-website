@@ -25,7 +25,7 @@
 
 /* Navbar */
 #navbarSupportedContent{
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Map */
@@ -163,6 +163,66 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Makerday */
+.makerday-header {
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .makerday-container *{
+    font-size: 18px;
+  }
+  .makerday-container {
+    margin-right: auto;
+    margin-left: auto;
+    width : 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .makerday-container *{
+    font-size: 24px;
+  }
+  .makerday-container {
+    margin-right: auto;
+    margin-left: auto;
+    width : 80%;
+  }
+}
+
+.makerday-container p{
+  font-weight:400; 
+  font-size: 1em; 
+  line-height: 1em; 
+}
+.makerday-container h1{
+  font-weight:700; 
+  font-size: 1.5em; 
+  line-height: 1em; 
+}
+.makerday-container h2{
+  font-weight:700; 
+  font-size: 1.3em; 
+  line-height: 1.3em; 
+}
+.makerday-container h4{
+  font-weight:400; 
+  font-size: 1.5em; 
+  line-height: 1em; 
+}
+
+.makerday-container hr{
+  border-top: 2px solid orange; 
+  margin-top: 1em;
+  margin-bottom: 1em; 
+  width:100%
+}
+
+.makerday-blurbs .container{
+  background-color: rgba(248,183,46,.8);
+  margin-bottom: 1em;
+  padding: 1em;
 }
 
 /* Card Layout */
