@@ -192,37 +192,60 @@
 }
 
 .makerday-container p{
-  font-weight:400; 
-  font-size: 1em; 
-  line-height: 1em; 
+  font-weight:400;
+  font-size: 1em;
+  line-height: 1em;
 }
 .makerday-container h1{
-  font-weight:700; 
-  font-size: 1.5em; 
-  line-height: 1em; 
+  font-weight:700;
+  font-size: 1.5em;
+  line-height: 1em;
 }
 .makerday-container h2{
-  font-weight:700; 
-  font-size: 1.3em; 
-  line-height: 1.3em; 
+  font-weight:700;
+  font-size: 1.3em;
+  line-height: 1.3em;
 }
 .makerday-container h4{
-  font-weight:400; 
-  font-size: 1.5em; 
-  line-height: 1em; 
+  font-weight:400;
+  font-size: 1.5em;
+  line-height: 1em;
 }
 
 .makerday-container hr{
-  border-top: 2px solid orange; 
+  border-top: 2px solid orange;
   margin-top: 1em;
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
   width:100%
 }
 
 .makerday-blurbs .container{
-  background-color: rgba(248,183,46,.8);
+  background-color: rgb(249,197,88);
   margin-bottom: 1em;
   padding: 1em;
+}
+
+.whos-coming {
+	position: relative;
+	padding-bottom: 50px !important;
+	overflow: hidden;
+	height: calc(24px + 1.8em + 50px);
+}
+
+.whos-coming.more {
+	height: auto;
+}
+
+.see-more-less {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 50px;
+    background: linear-gradient(rgba(249,197,88,0.6), rgba(249,197,88,1));
 }
 
 /* Card Layout */
