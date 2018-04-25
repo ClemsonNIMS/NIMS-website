@@ -229,11 +229,21 @@
 	position: relative;
 	padding-bottom: 50px !important;
 	overflow: hidden;
-	height: calc(24px + 1.8em + 50px);
+	height: 230px;
 }
 
 .whos-coming.more {
 	height: auto;
+}
+
+.demo-list {
+	columns: 400px;
+	column-gap: 2em;
+}
+
+.demo-list div {
+	margin-bottom: 1.2em;
+	break-inside: avoid;
 }
 
 .see-more-less {
@@ -241,11 +251,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
+	padding-top: 50px;
     text-align: center;
     font-weight: 500;
     cursor: pointer;
     line-height: 50px;
-    background: linear-gradient(rgba(249,197,88,0.6), rgba(249,197,88,1));
+    background: linear-gradient(rgba(249,197,88,0), rgba(249,197,88,1));
 }
 
 /* Card Layout */
