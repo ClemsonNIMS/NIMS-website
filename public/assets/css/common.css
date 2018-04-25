@@ -259,6 +259,10 @@
     background: linear-gradient(rgba(249,197,88,0), rgba(249,197,88,1));
 }
 
+.whos-coming.more .see-more-less {
+	background: none;
+}
+
 /* Card Layout */
 .card.preview {
   margin: 0rem 1rem 1rem 1rem;
