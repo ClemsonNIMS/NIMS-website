@@ -220,7 +220,7 @@
 }
 
 .makerday-blurbs .container{
-  background-color: rgb(249,197,88);
+  background-color: #f9c769;
   margin-bottom: 1em;
   padding: 1em;
 }
@@ -246,12 +246,29 @@
 	break-inside: avoid;
 }
 
+.demo-list h3 {
+	margin: 0.5em 0;
+	font-weight: 600;
+}
+
+.demo-list ul {
+	padding-left: 0px;
+	margin-top: 0.5em;
+}
+
+.demo-list li {
+	padding: 0 12px;
+	margin-bottom: 6px;
+	background: #f7b939;
+	list-style: none;
+}
+
 .see-more-less {
 	position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-	padding-top: 50px;
+	padding-top: 75px;
     text-align: center;
     font-weight: 500;
     cursor: pointer;
