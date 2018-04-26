@@ -3,14 +3,20 @@
     "public": "public",
     "rewrites": [
       {
-      "source" : "/[Mm][Aa][Kk][Ee][Rr][Dd][Aa][Yy]",
-      "destination" : "/makerday",
-      "type" : 301
+      "source" : "/Makerday",
+      "destination" : "/makerday.html"
+      },
+      {
+      "source" : "/MakerDay",
+      "destination" : "/makerday.html"
       },
       {
       "source" : "/map",
-      "destination" : "/",
-      "type" : 301
+      "destination" : "/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ],
     "cleanUrls": true
