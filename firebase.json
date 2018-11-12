@@ -3,6 +3,18 @@
     "public": "public",
     "rewrites": [
       {
+      "source" : "/Makerday",
+      "destination" : "/makerday.html"
+      },
+      {
+      "source" : "/MakerDay",
+      "destination" : "/makerday.html"
+      },
+      {
+      "source" : "/map",
+      "destination" : "/index.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

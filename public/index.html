@@ -1,150 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-  <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
-	<title>CECAS Spark</title>
-	
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/common.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-</head>
-
-<body id="body">
-  <div id="navbar">
-  </div>
-
-  <div class="container">
-    <img src="/assets/img/banner.JPG" class="img-fluid" alt="Responsive image">
-  </div>
-
-  <!-- Start About -->
-  <section id="about">
-    <div class="container">
-      <h1 class="section-header">Ignite Your Spark</h1>
-      <p>
-        The CECAS Spark Challenge is Clemson's premier pitch competiion designed specifically for CECAS students. Submit your idea, buisiness, product, or service for funding and a change to visit Silicon Valley!
-      </p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+    <title>Resources</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/css/common.css">
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-103290240-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <div id="navbar">
     </div>
-  </section>
-  <!-- End About -->
-
-
-  <!-- Start Timeline -->
-
-  <section id=timeline>
-  <h1>How to Enter Spark</h1>
-  <div class="demo-card-wrapper">
-    <div class="demo-card demo-card--step1">
-      <div class="head">
-        <div class="number-box">
-          <span>01</span>
+    <div class="header content-middle" style="background-image: url('/assets/img/topopattern.svg');">
+      <div class="container">
+        <h1>Available Resources</h1>
+      </div>
+    </div>
+    <div class="mapWindow" id="mapBox"></div>
+    <h2 class="map-filter-header">
+    Map Filter <span class="clear-filters">Clear Filters</span>
+    </h2>
+    <div class="filter-icons">
+      <div>
+        <img src="/assets/img/resourceIcons/3dprinting.svg">
+        <span>3D Printing</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/3dscanning.svg">
+        <span>3D Scanning</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/vr.svg">
+        <span>Virtual Reality</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/laserCutter.svg">
+        <span>Laser Cutting</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/cnc.svg">
+        <span>CNC Milling</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/electricTools.svg">
+        <span>Electric Tools</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/tools.svg">
+        <span>Hand Tools</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/vinylCutter.svg">
+        <span>Vinyl Cutting</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/button.svg">
+        <span>Button Making</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/microphone.svg">
+        <span>Audio Production</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/videocamera.svg">
+        <span>Video Production</span>
+      </div>
+      <div>
+        <img src="/assets/img/resourceIcons/circuits.svg">
+        <span>Circuit Kits</span>
+      </div>
+    </div>
+    <div class="modal no-matches" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">No matches found</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>No spaces were found that match the selected filters.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
-        <h2><span class="small">Subtitle</span> Technology</h2>
-      </div>
-      <div class="body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-        <img src="http://placehold.it/1000x500" alt="Graphic">
       </div>
     </div>
-
-    <div class="demo-card demo-card--step2">
-      <div class="head">
-        <div class="number-box">
-          <span>02</span>
-        </div>
-        <h2><span class="small">Subtitle</span> Confidence</h2>
-      </div>
-      <div class="body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-        <img src="http://placehold.it/1000x500" alt="Graphic">
-      </div>
+    <div class="container org-spacing" id="org-previews"></div>
+    <div id="footer">
     </div>
-
-    <div class="demo-card demo-card--step3">
-      <div class="head">
-        <div class="number-box">
-          <span>03</span>
-        </div>
-        <h2><span class="small">Subtitle</span> Adaptation</h2>
-      </div>
-      <div class="body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-        <img src="http://placehold.it/1000x500" alt="Graphic">
-      </div>
-    </div>
-
-    <div class="demo-card demo-card--step4">
-      <div class="head">
-        <div class="number-box">
-          <span>04</span>
-        </div>
-        <h2><span class="small">Subtitle</span> Consistency</h2>
-      </div>
-      <div class="body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-        <img src="http://placehold.it/1000x500" alt="Graphic">
-      </div>
-    </div>
-
-    <div class="demo-card demo-card--step5">
-      <div class="head">
-        <div class="number-box">
-          <span>05</span>
-        </div>
-        <h2><span class="small">Subtitle</span> Conversion</h2>
-      </div>
-      <div class="body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-        <img src="http://placehold.it/1000x500" alt="Graphic">
-      </div>
-    </div>
-    
-  </div>
-</section>
-  
-  <!-- End Timeline -->
-
-  <div id="footer">
-  </div>
-
-  
-  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBkLkBLpbi0u8jgNoZOFvh8_kCv4xh2Ju8",
-    authDomain: "cecasspark.firebaseapp.com",
-    databaseURL: "https://cecasspark.firebaseio.com",
-    projectId: "cecasspark",
-    storageBucket: "",
-    messagingSenderId: "173370275942"
-  };
-  firebase.initializeApp(config);
-  </script>
-
-  <!-- Core Javascript Files -->
-  <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-  <script src="assets/js/template-builder.js"></script>
-
-  <!-- Page Building -->
-  <script type="text/javascript">
+    <!-- Core Javascript Files -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/mustache.js"></script>
+    <script src="assets/js/template-builder.js"></script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3zanHNt38Cu-YVsTQfT7AArYlZnpOlEI&callback=initMap">
+    </script>
+    <script src="assets/js/mapBuilder.js"></script>
+    <script src="assets/js/toggles.js"></script>
+    <!-- Page Building -->
+    <script type="text/javascript">
     buildNavbar();
-    setTimeout(function(){
-      buildFooter();
-    }, 10);
-  </script>
-
-</body>
-
-</html>
+      setTimeout(function(){
+    buildFooter();
+    }, 500);
+    </script>
+  </body>

@@ -1,0 +1,179 @@
+[
+	{
+	"name" : "Makerspace",
+	"shortDescription" : "The Clemson Makerspace is the first 3D printing lab available to all students, free of charge.",
+	"resources" : ["Type A 3D FDM Printer", "Lulzbot Mini 3D Printer", "Formlabs SLA 3D Printer", "Epilog Fusion Laser Cutter", "CNC Mill",
+		"CAD Software", "Adobe Illustrator", "Button Maker"],
+	"restrictions" : ["Open to all Majors"],
+	"hours" : [
+		{"day" : "Monday", "time" : "9-10am, 3-8pm"},
+		{"day" : "Tuesday", "time" : "9-10am, 3-8pm"},
+		{"day" : "Wednesday", "time" : "9-10am, 3-8pm"},
+		{"day" : "Thursday", "time" : "9-10am, 3-8pm"},
+		{"day" : "Friday", "time" : "9-10am, 12-4pm"}
+	],
+	"contact" : [{"position" : "General Info", "name" : "", "email" : "makerspace@g.clemson.edu"}, 
+				 {"position" : "Student Director", "name" : "Owen Phillips", "email" : "ophilli@g.clemson.edu"}
+				 ],
+	"location" : "Watt 110",
+	"website" : "http://cumaker.space/",
+	"uuid" : 1
+	},
+	{
+	"name" : "Design and Entrepreneurship Network",
+	"shortDescription" : "The DEN is a student-led open mic platform where students share ideas for a product or service, form interdisciplinary business teams, and receive instant feedback from DEN mentors- real entrepreneurs, designers, CEOs, founders and innovators. The DEN is made up of people with new ideas they'd like to see further developed as well as those who just want to help out with other people's projects. Mentors are key to this improvement process- we have mentors that help lead specific teams as well as those that give advice to any ] groups that could use their expertise.",
+	"resources" : ["Weekly Expert Speakers","Prototyping Supplies","Electronic Prototyping Supplies","Ideation Material","Seed Funding","Modeling Clay","Sewing Machine",
+					"Various Fabrics","PVC Piping","1 iMac Computer","1 3D Printer","Meeting Space","Whiteboards"],
+	"restrictions" : ["Open to all Majors","DEN meets every Monday 5:30-7:30pm in Watt 208 to develop and spread ideas. Come check us out!"],
+	"hours" : [
+		{"day" : "Monday", "time" : "9am-10pm"},
+		{"day" : "Tuesday", "time" : "9am-10pm"},
+		{"day" : "Wednesday", "time" : "9am-10pm"},
+		{"day" : "Thursday", "time" : "9am-10pm"},
+		{"day" : "Friday", "time" : "9am-10pm"}
+	],
+	"contact" : [{"position" : "General Info", "name" : "", "email" : "theDEN@clemson.edu"},
+				 {"position" : "Faculty Director", "name" : "John Desjardins", "email" : "jdesjar@clemson.edu"}, 
+				 {"position" : "Student Director", "name" : "Collin Braeuning", "email" : "cbraeun@g.clemson.edu"},
+				 {"position" : "Space Director", "name" : "Madison Maddox", "email" : "mmaddox@g.clemson.edu"}
+				 ],
+	"location" : "Rhodes 214",
+	"website" : "https://www.thedenwebsite.com/",
+	"uuid" : 2
+	},
+	{
+	"name" : "Visualization Studio",
+	"shortDescription" : "The visualization studio gives students a chance to explore the fascinating worlds of virtual and augmented reality.",
+	"resources" : ["Oculus Rift","HTC Vive","Microsoft Hololens","Playstation VR","Samsung Gear 360","Samsung Gear VR","Gamer Infinity 8800 Pro SE",
+		"MSI VR ONE","Intel RealSense Dev Kits"],
+	"restrictions" : ["Open to all Majors"],
+	"hours" : [
+		{"day" : "Monday", "time" : "TBA"},
+		{"day" : "Tuesday", "time" : "TBA"},
+		{"day" : "Wednesday", "time" : "TBA"},
+		{"day" : "Thursday", "time" : "TBA"},
+		{"day" : "Friday", "time" : "TBA"}
+	],
+	"contact" : [{"position" : "General Info", "name" : "", "email" : "vrclub@clemson.edu"},
+				 {"position" : "Student Director", "name" : "Thomas Birdsong", "email" : "tbirdso@g.clemson.edu"},
+				 {"position" : "Faculty Advisor", "name" : "Dr. Oyewole Oyekoya", "email" : "ooyekoy@clemson.edu"}],
+	"location" : "Watt 308",
+	"website" : "",
+	"uuid" : 3
+	},
+	{
+	"name" : "Digital Media and Learning Labs",
+	"shortDescription" : "The Digital Media and Learning labs at Clemson University's College of Education are innovative, 21st century spaces created to connect students, teachers, researchers, and partners to ideas and projects in physical and virtual environments.",
+	"resources" : ["Audio Production","Video Production","Cameras","Studio Microphones","Green Screen","Mac Computers","Game Maker","Scratch",
+					"MIT App Inventor","Final Cut Pro","Adobe CC Suite","Lego NXT"," Makey Makey kits","Snap Circuits","Arduino Kits","Board Games",
+					"Gaming Consoles", "Video Games", "iPads", "Nexus 7s"],
+	"restrictions" : ["Open to all Majors"],
+	"hours" : [
+		{"day" : "Monday", "time" : "9am-9pm"},
+		{"day" : "Tuesday", "time" : "9am-9pm"},
+		{"day" : "Wednesday", "time" : "9am-9pm"},
+		{"day" : "Thursday", "time" : "9am-9pm"},
+		{"day" : "Friday", "time" : "9am-5pm"}
+	],
+	"contact" : [{"position" : "General Info", "name" : "", "email" : "dmll@clemson.edu"},
+				 {"position" : "Faculty Director", "name" : "Dr. Matthew Boyer", "email" : "dmboyer@clemson.edu"},
+				 {"position" : "Faculty Director", "name" : "Dr. Danielle Herro", "email" : "dherro@clemson.edu"}],
+	"location" : "Tillman 213/219",
+	"website" : "https://www.clemson.edu/education/dmll/dml-labs.html",
+	"uuid" : 4
+	},
+	{
+	"name" : "Digital Design Shop",
+	"shortDescription" : "The Clemson University School of Architecture Digital Design Shop (cusa.dds) is a cad/cam research lab for students and faculty experimenting with digital fabrication, cad/cam, and rapid prototyping. This building is fully equipped wood shop facility that enables students to work with wood and various other materials. Students are encouraged to use the shop for academic assignments and other projects, and courses are offered in furniture and product design.",
+	"resources" : ["Woodworking equipment","Basic hand tools","2 Saw Stops","2 Band Saws","Jointer","Plainer","CNC Routers","Vacuum Former",
+		"CNC Plasma Cutter","CNC Software","VCarve Software","RhinoCAM Software","4 ULS VLS660 Laser Cutters",
+		"9 Type A 3D FDM Printers","3D Plotterbot 7","NEXT Engine 3D scanner","3D Digitize It","12 Computer workstations"],
+	"restrictions" : ["Open to: Architecture, Landscape Architecture, Art, and Construction Science students","Training Required","Personal projects not permitted","Max 15 occupants"],
+	"contact" : [{"position" : "Shop Manager", "name" : "Brian Leounis", "email" : "leounis@clemson.edu"}],
+	"location" : "Lee Hall - Ground Floor",
+	"website" : "http://www.clemson.edu/caah/departments/architecture/campuses/cusa-dds/index.html",
+	"uuid" : 5
+	},
+	{
+	"name" : "Cook Machine Shop",
+	"shortDescription" : "Ut nulla arcu, dictum sit amet nisl ac, suscipit iaculis mauris. Donec gravida congue est at vulputate.",
+	"resources" : ["Hand tools","Mills","Lathes","Grinders","MIG Welder","Plasma Cutter","Industrial Precision Machines","Drill Press",
+					"HAAS CNC Mill","CNC Press","1 3D Printer","SolidWorks","MasterCam Software"],
+	"restrictions" : ["Open to: Mech. Engineering and members of SME ($10 fee)","Training Required"],
+	"hours" : [
+		{"day" : "Monday", "time" : "1-9pm"},
+		{"day" : "Tuesday", "time" : "1-9pm"},
+		{"day" : "Wednesday", "time" : "1-9pm"},
+		{"day" : "Thursday", "time" : "1-9pm"},
+		{"day" : "Friday", "time" : "1-5pm"},
+		{"day" : "https://cecas.clemson.edu/mestudentshop/hours/"}
+	],
+	"contact" : [{"position" : "Faculty Director", "name" : "Dr. Todd Schweisinger", "email" : "todds@clemson.edu"},
+				 {"position" : "Manager", "name" : "Ben Abernathy", "email" : "baabern@g.clemson.edu"},
+				 {"position" : "Asst. Manager", "name" : "Candela Kechkian", "email" : "ckechki@g.clemson.edu"},
+				 {"position" : "Equipment Manager", "name" : "Jassmyn McQuillen", "email" : "jassmym@g.clemson.edu"}],
+	"location" : "Cook Lab - First Floor",
+	"website" : "https://cecas.clemson.edu/mestudentshop/",
+	"uuid" : 6
+	},
+	{
+	"name" : "Design Innovation Studio",
+	"shortDescription" : "",
+	"resources" : ["30 Storage Lockers","4 Work Benches","Basic Hand Tools","Soldering Station","Basic Electrical Material","2 Touchscreen TVs",
+					"Nails","Screws"],
+	"restrictions" : ["Open to Mech. Engineering students, ASME members","Other students may request access","Personal projects not permitted","Training Required"],
+	"hours" : [
+		{"day" : "Monday", "time" : "10-12pm, 1-5pm"},
+		{"day" : "Tuesday", "time" : "10-12pm, 1-5pm"},
+		{"day" : "Wednesday", "time" : "10-12pm, 1-5pm"},
+		{"day" : "Thursday", "time" : "8-12pm, 1-5pm"},
+		{"day" : "Friday", "time" : "10-12pm, 1-5pm"}
+	],
+	"contact" : [{"position" : "Faculty Director", "name" : "Dr. Gregory Mocko", "email" : "gmocko@clemson.edu"}],
+	"location" : "Fluor Daniel - EIB 111",
+	"website" : "https://www.clemson.edu/cecas/departments/me/academics/undergraduate/design/design_innovation_studio.html",
+	"uuid" : 7
+	},
+	{
+	"name" : "Adobe Creative Studio",
+	"shortDescription" : "The Adobe Digital Studio is an open-access learning space dedicated to providing students with digital production skills and the technology to use them. Our mission is to ensure the digital literacy of our students in order to guarantee their success both in the classroom and on the job market.",
+	"resources" : ["27/55/75-inch Displays","Airplay Enabled Displays","9-display Behance Wall","Blackmagic 4K Camera","ProLine 11-inch Teleprompter",
+					"Smith-Victor Lights","Green Screen Room","Blackmagic H.264 Converter","Apogee Digital Quartet","RØDE Audio Recording",
+					"Audio Technica Microphones","Sennheiser Headphones","Photoshop","After Effects","Premiere Pro","InDesign"],
+	"restrictions" : ["Open to all Majors"],
+	"hours" : [
+		{"day" : "Monday", "time" : "9am-8pm"},
+		{"day" : "Tuesday", "time" : "9am-8pm"},
+		{"day" : "Wednesday", "time" : "9am-8pm"},
+		{"day" : "Thursday", "time" : "9am-8pm"},
+		{"day" : "Friday", "time" : "5pm-8pm"},
+		{"day" : "Saturday", "time" : "Closed"},
+		{"day" : "Sunday", "time" : "5pm-8pm"}
+	],
+	"contact" : [{"position" : "Director", "name" : "Wesley Smith", "email" : "wesley4@clemson.edu"}],
+	"location" : "Cooper Library - 5th Floor",
+	"website" : "http://coe.clemson.edu/adobe-digital-studio/",
+	"uuid" : 8
+	},
+	{
+	"name" : "Educational Media Center",
+	"shortDescription" : "The Education Media Center (EMC) is a curriculum materials library that primarily supports the students, faculty and staff of Clemson University’s College of Education by providing spaces, resources and services to facilitate the development of educators, counselors, administrators, training and development specialists, and all learners.",
+	"resources" : ["Educational Material","Reading Mastery Books","Literacy Games","Math Lessons","VHS Player","2 Smartboards","Meeting Spaces",
+					"Lamination Services","Book Binding Services","VHS to DVD Converter","Video Cameras","iPads","Laptops","Video Games"],
+	"restrictions" : ["Open to all Majors","Only Education majors can rent equipment"],
+	"hours" : [
+		{"day" : "Monday", "time" : "7:30am-9pm"},
+		{"day" : "Tuesday", "time" : "7:30am-9pm"},
+		{"day" : "Wednesday", "time" : "7:30am-9pm"},
+		{"day" : "Thursday", "time" : "7:30am-9pm"},
+		{"day" : "Friday", "time" : "7:30am-6pm"},
+		{"day" : "https://libraries.clemson.edu/services/hours-of-operation/tillman/"}
+	],
+	"contact" : [{"position" : "General Info", "name" : "", "email" : "emclib@clemson.edu"},
+				 {"position" : "Manager", "name" : "Tara Gleason", "email" : "tweekes@clemson.edu"},
+				 {"position" : "Reference Librarian", "name" : "Gordon Cochrane", "email" : "gmcochr@clemson.edu"}],
+	"location" : "Tillman 212",
+	"website" : "https://libraries.clemson.edu/education-media-center/",
+	"uuid" : 9
+	}
+]

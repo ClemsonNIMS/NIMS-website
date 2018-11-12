@@ -1,3 +1,3 @@
-https://CECASspark.com <br />
-Clemson University Innovation Fellows <br />
-A pitch competition for CECAS students at Clemson
+https://nims-b755e.firebaseapp.com/ <br />
+Clemson Network for Innovation and Marketable Skills <br />
+Connecting students with resources
