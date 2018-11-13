@@ -114,9 +114,9 @@
   background: none;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .highlight-main{
-    height:300vh
+    height:350vh
   }
 
   .highlight-container{
@@ -146,6 +146,8 @@
   }
   
   .call-to-action1{
+    font-size: 2rem;
+    font-weight: 700;
     position: absolute; 
     left: 50%; 
     top: 15%;
@@ -158,7 +160,7 @@
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .highlight-main{
     height:150vh
   }
@@ -169,7 +171,7 @@
   }
 
   .highlight-2{
-    margin-top: -15vh;
+    margin-top: -10vh;
   }
 
   .helmet-img{
@@ -191,6 +193,7 @@
   
   .call-to-action1{
     font-size: 1.2rem;
+    font-weight: 700;
     font-style: bold;
     position: absolute; 
     left: 45%; 
