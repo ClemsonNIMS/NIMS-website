@@ -111,5 +111,99 @@
 }
 
 .whos-coming.more .see-more-less {
-	background: none;
+  background: none;
 }
+
+@media only screen and (min-width: 992px) {
+  .highlight-main{
+    height:300vh
+  }
+
+  .highlight-container{
+    position: relative; 
+    height:50vh;
+  }
+
+  .highlight-2{
+    margin-top: 30vh;
+  }
+
+  .helmet-img{
+    position: absolute;  
+    left: 35%; 
+    top: 60%;
+    width:70%; 
+    float: right
+  }
+  
+  .paw-img{
+    position: absolute;  
+    left: 0%; 
+    top: 10%; 
+    width: 40%; 
+    float: left; 
+    z-index: 2;
+  }
+  
+  .call-to-action1{
+    position: absolute; 
+    left: 50%; 
+    top: 15%;
+  }
+  
+  .desc-1{
+    position: absolute; 
+    left: 50%; 
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .highlight-main{
+    height:150vh
+  }
+
+  .highlight-container{
+    position: relative; 
+    height:50vh;
+  }
+
+  .highlight-2{
+    margin-top: -15vh;
+  }
+
+  .helmet-img{
+    position: absolute;  
+    left: 25%; 
+    top: 35%;
+    width:70%; 
+    float: right
+  }
+  
+  .paw-img{
+    position: absolute;  
+    left: 0%; 
+    top: 0%; 
+    width: 42%; 
+    float: left; 
+    z-index: 2;
+  }
+  
+  .call-to-action1{
+    font-size: 1.2rem;
+    font-style: bold;
+    position: absolute; 
+    left: 45%; 
+    top: 0%;
+  }
+  
+  .desc-1{
+    font-size: 1rem;
+    line-height: 1rem;
+    position: absolute; 
+    left: 45%; 
+    top: 8%;
+  }
+}
+
+
