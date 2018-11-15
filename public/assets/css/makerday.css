@@ -114,50 +114,47 @@
   background: none;
 }
 
-.makerdayTitleText{ 
+.makerdayText{ 
   font-family: 'Barlow', sans-serif;
+}
+
+.makerdayText h1{
   text-align: center;
-}
-
-.makerdayTitleText h1{
-  font-size: 3rem;
-  font-weight: 800;
-  color: #06D6A0;
-  text-shadow: 3px 0px #FF5E5B;
-}
-
-.makerdayTitleText h2{
   font-size: 1.5rem;
   font-weight: 600;
   color: #7678ED;
 
 }
- .makerdayTitleText h3{
+ .makerdayText h2{
+  text-align: center;
   font-size: 1.3rem;
   font-weight: 400;
   color: #7678ED;
  }
 
-.makerdayTitleText span{
-  color: #7678ED;
-}
-
-.makerdayCalltoAction{
-  font-family: 'Barlow', sans-serif;
-  text-align: left;
- }
-
-.makerdayCalltoAction h1{
+.makerdayText h3{
   font-size: 1rem;
   font-weight: 800;
   color: #06D6A0;
 }
 
-.makerdayCalltoAction p{
+.makerdayText h4{
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FF5E5B;
+}
+
+.makerdayText h5{
+  font-size: 1rem;
+  font-weight: 800;
+  color: #7678ED;
+}
+
+.makerdayText .description p{
   margin-bottom: .5rem;
 }
 
-.makerdayCalltoAction a{
+.makerdayText a{
   font-size: 1rem;
   font-weight: 800;
   color: #FF5E5B;
