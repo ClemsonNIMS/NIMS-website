@@ -150,7 +150,7 @@
   color: #7678ED;
 }
 
-.makerdayText .description p{
+.subtitle{
   margin-bottom: .5rem;
 }
 
@@ -161,6 +161,38 @@
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 992px) {
+  .makerdayText h1{
+    font-size: 2rem;
+    text-align: left;
+  }
+  .makerdayText h2{
+    font-size: 1.8rem;
+    text-align: left;
+  }
+  .makerdayText h3{
+    font-size: 1.8rem;
+  }
+  .makerdayText h4{
+    font-size: 1.5rem;
+  }
+  .makerdayText h5{
+    font-size: 1.5rem;
+  }
+  .makerdayText a{
+    font-size: 1.8rem;
+  }
+  .subtitle{
+    font-size: 1.8rem;
+  }
+  .description{
+    font-size: 1.3rem;
+  }
+}
+
+.block1{
+  background: url(../img/makerday/blockGroup1.svg);
+}
 .paw{
   background: url(../img/makerday/tigerPaw.png);
 }
