@@ -161,5 +161,29 @@
   text-decoration: underline;
 }
 
+.paw{
+  background: url(../img/makerday/tigerPaw.png);
+}
+.legos{
+  background: url(../img/makerday/legos.png);
+}
+.printStatue{
+  background: url(../img/makerday/3dprintStatue.png);
+}
+.imgCover {
+  min-height: 200px;
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%, cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
+.reducedGutters{
+  padding: 0rem .3rem;
+}
+
+
+
 
 
