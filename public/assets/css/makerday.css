@@ -114,99 +114,55 @@
   background: none;
 }
 
-@media only screen and (min-width: 768px) {
-  .highlight-main{
-    height:350vh
-  }
-
-  .highlight-container{
-    position: relative; 
-    height:50vh;
-  }
-
-  .highlight-2{
-    margin-top: 30vh;
-  }
-
-  .helmet-img{
-    position: absolute;  
-    left: 35%; 
-    top: 60%;
-    width:70%; 
-    float: right
-  }
-  
-  .paw-img{
-    position: absolute;  
-    left: 0%; 
-    top: 10%; 
-    width: 40%; 
-    float: left; 
-    z-index: 2;
-  }
-  
-  .call-to-action1{
-    font-size: 2rem;
-    font-weight: 700;
-    position: absolute; 
-    left: 50%; 
-    top: 15%;
-  }
-  
-  .desc-1{
-    position: absolute; 
-    left: 50%; 
-    top: 30%;
-  }
+.makerdayTitleText{ 
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
-  .highlight-main{
-    height:150vh
-  }
-
-  .highlight-container{
-    position: relative; 
-    height:50vh;
-  }
-
-  .highlight-2{
-    margin-top: -10vh;
-  }
-
-  .helmet-img{
-    position: absolute;  
-    left: 25%; 
-    top: 35%;
-    width:70%; 
-    float: right
-  }
-  
-  .paw-img{
-    position: absolute;  
-    left: 0%; 
-    top: 0%; 
-    width: 42%; 
-    float: left; 
-    z-index: 2;
-  }
-  
-  .call-to-action1{
-    font-size: 1.2rem;
-    font-weight: 700;
-    font-style: bold;
-    position: absolute; 
-    left: 45%; 
-    top: 0%;
-  }
-  
-  .desc-1{
-    font-size: 1rem;
-    line-height: 1rem;
-    position: absolute; 
-    left: 45%; 
-    top: 8%;
-  }
+.makerdayTitleText h1{
+  font-size: 3rem;
+  font-weight: 800;
+  color: #06D6A0;
+  text-shadow: 3px 0px #FF5E5B;
 }
+
+.makerdayTitleText h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #7678ED;
+
+}
+ .makerdayTitleText h3{
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #7678ED;
+ }
+
+.makerdayTitleText span{
+  color: #7678ED;
+}
+
+.makerdayCalltoAction{
+  font-family: 'Barlow', sans-serif;
+  text-align: left;
+ }
+
+.makerdayCalltoAction h1{
+  font-size: 1rem;
+  font-weight: 800;
+  color: #06D6A0;
+}
+
+.makerdayCalltoAction p{
+  margin-bottom: .5rem;
+}
+
+.makerdayCalltoAction a{
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FF5E5B;
+  text-decoration: underline;
+}
+
 
 
