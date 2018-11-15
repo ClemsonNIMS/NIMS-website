@@ -170,6 +170,9 @@
 .printStatue{
   background: url(../img/makerday/3dprintStatue.png);
 }
+.screenprinting{
+  background: url(../img/makerday/screenprinting.png);
+}
 .imgCover {
   min-height: 200px;
   width: 100%;
