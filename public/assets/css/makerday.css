@@ -188,9 +188,19 @@
   .description{
     font-size: 1.3rem;
   }
+  .headerImg{
+    height: 50vh;
+  }
+  .block1{
+    height: 50vh !important;
+  }
 }
 
 .block1{
+  height: 25vh;
+  width: 100%;
+  background-size: 100% 100%, cover;
+  background-repeat:no-repeat;
   background: url(../img/makerday/blockGroup1.svg);
 }
 .paw{
